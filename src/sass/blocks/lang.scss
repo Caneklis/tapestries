@@ -1,0 +1,22 @@
+.lang {
+  position: relative;
+  z-index: 102;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+
+  &--active {
+    .lang__link {
+      color: $m-color;
+    }
+  }
+}
+
+.lang__link {
+  font-size: 30px;
+  color: $s-color;
+
+  @media (max-width: $mobile) {
+    font-size: 24px;
+  }
+}

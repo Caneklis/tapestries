@@ -1,0 +1,15 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/swiper/swiper-bundle";
+@import "../../node_modules/swiper/components/effect-coverflow/effect-coverflow.scss";
+@import "../../node_modules/locomotive-scroll/dist/locomotive-scroll";
+@import "global/mixins";
+@import "global/variables";
+@import "global/fonts";
+@import "global//reboot";
+@import "global/scafoldings";
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/lang";
+@import "blocks/main-nav";
+@import "blocks/social";
+@import "blocks/section";
