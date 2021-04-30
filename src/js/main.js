@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 let dropdown = document.querySelectorAll('.main-nav__item--with-dropdown')
 
 dropdown.forEach(element => element.addEventListener('click', event => {
-  event.preventDefault();
-  event.stopPropagation();
+  // event.preventDefault();
+  // event.stopPropagation();
 
   document.querySelectorAll('.main-nav__item--with-dropdown').forEach((element) => {
    element.classList.remove('main-nav__item--open')

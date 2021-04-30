@@ -34,6 +34,10 @@
   line-height: 1.4;
   font-family: $s-font;
 
+  a {
+    color: inherit;
+  }
+
   @media (max-width: $sm-width) {
     font-size: 35px;
   }
