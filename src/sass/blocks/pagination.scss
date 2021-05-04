@@ -1,3 +1,6 @@
+.pagination {
+  background-color: $s-color;
+}
 .pagination__list {
   @include list-reset;
   display: flex;
@@ -27,5 +30,10 @@
   a[href] {
     color: inherit;
     border-bottom: 1px dashed $m-color;
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }

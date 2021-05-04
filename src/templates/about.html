@@ -8,13 +8,15 @@ description: Description index
 
 {% block content %}
 
+
+<div class="pagination">
+  <ul class="pagination__list">
+    <li class="pagination__item"><a href="index.html">На главную</a></li>
+    <li class="pagination__item"><a>О шпалере</a></li>
+  </ul>
+</div>
+
 <div data-scroll-container class="container">
-  <div class="pagination">
-    <ul class="pagination__list">
-      <li class="pagination__item"><a href="#">На главную</a></li>
-      <li class="pagination__item"><a>О шпалере</a></li>
-    </ul>
-  </div>
   <section class="section  section--hero">
     <div class="section__text" data-scroll data-scroll-speed="3">
       <blockquote>
@@ -27,32 +29,32 @@ description: Description index
         <p>Сверху я бы вставил цитату, как мы делали на миниатюрах в Надежде</p>
         <p>Справа я предлагаю добавить фрагмент шпалеры.</p>
         <p>Ниже можно добавить навигацию</p>
-        <ul class="section__nav">
+        <ol class="section__nav">
           <li class="section__nav-item" data-scroll="">
             <a href="#section-research" data-scroll-to="">
-              01. Исследование нитей шпалеры
-              <span class="c-summary_list_icon u-icon">
-                ↓
-              </span>
+              Исследование нитей шпалеры
+              <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
             </a>
           </li>
           <li class="section__nav-item" data-scroll="">
             <a href="#section-conservation" data-scroll-to="">
-              02. Реставрация
-              <span class="c-summary_list_icon u-icon">
-                ↓
-              </span>
+              Реставрация
+              <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
             </a>
           </li>
           <li class="section__nav-item" data-scroll="">
             <a href="#section-stories" data-scroll-to="">
-              03. Истории
-              <span class="c-summary_list_icon u-icon">
-                ↓
-              </span>
+              Истории
+              <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
             </a>
           </li>
-        </ul>
+        </ol>
       </div>
     </div>
     <div class="section__image-wrapper">

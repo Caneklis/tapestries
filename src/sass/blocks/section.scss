@@ -142,7 +142,7 @@
 }
 
 .section__nav {
-  @include list-reset;
+  margin: 0;
   font-size: 30px;
 
   a {
@@ -193,5 +193,33 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+}
+
+.section__nav-item {
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 2px;
+      background-color: $m-color;
+      transform: scaleX(0);
+      transition: $transition;
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
   }
 }
