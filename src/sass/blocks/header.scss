@@ -1,12 +1,17 @@
 .header {
   padding: 20px 0;
 
-  &--inner {
-    background-color: $m-color;
-    position: relative;
-    z-index: 11;
-    box-shadow: 0 2px 15px 0px $m-color;
-  }
+  background-color: $m-color;
+  position: relative;
+  z-index: 11;
+  box-shadow: 0 2px 15px 0px $m-color;
+
+  // &--inner {
+  //   background-color: $m-color;
+  //   position: relative;
+  //   z-index: 11;
+  //   box-shadow: 0 2px 15px 0px $m-color;
+  // }
 }
 
 .header__wrapper {

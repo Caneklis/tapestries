@@ -13,7 +13,7 @@ const browserSync = require("browser-sync").create();
 const del = require("del");
 
 const plumber = require("gulp-plumber");
-const csscomb = require('gulp-csscomb');
+const csscomb = require("gulp-csscomb");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
@@ -91,7 +91,7 @@ const styles = () => {
         }),
       ])
     )
-    .pipe(csscomb({ configPath: './csscomb.json'  }))
+    .pipe(csscomb({ configPath: "./csscomb.json" }))
     .pipe(dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
@@ -122,6 +122,7 @@ const server = () => {
     parallel("nunjucks", refresh)
   );
   watch("src/js/**/*.{js,json}", series(js, refresh));
+  watch("src/js/openseadragon/**", series(deepzoom, refresh));
 };
 
 const svgo = () => {
@@ -147,6 +148,12 @@ const sprite = () => {
     .pipe(dest("build/images"));
 };
 
+const deepzoom = () => {
+  return src(["src/js/openseadragon/**"], {
+    base: "src",
+  }).pipe(dest("build"));
+};
+
 //Copy files
 const copy = () => {
   return src(
@@ -154,6 +161,7 @@ const copy = () => {
       "src/*.html",
       "src/images/**/*.{png,jpg,gif,svg}",
       "src/fonts/**",
+      "src/js/openseadragon/**", //Для дипзума
       "src/favicon/**",
       "src/data/**",
       "src/file/**",

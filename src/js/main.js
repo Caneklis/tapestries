@@ -1,11 +1,41 @@
+import $ from "jquery";
+window.jQuery = $;
+window.$ = $;
 import Swiper from "swiper/bundle";
 import { gsap } from "../../node_modules/gsap/dist/gsap";
 import { ScrollTrigger } from "../../node_modules/gsap/ScrollTrigger";
 
 import LocomotiveScroll from "../../node_modules/locomotive-scroll/dist/locomotive-scroll";
 
+const menuButton = document.querySelector(".main-nav__button");
+const menuList = document.querySelector(".main-nav__list");
+const body = document.querySelector("body");
+const lang = document.querySelector(".lang");
+
+if (menuButton) {
+  menuButton.addEventListener("click", () => {
+    let expanded = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", !expanded);
+    menuButton.classList.toggle("main-nav__button--open");
+    menuList.classList.toggle("main-nav__list--open");
+    body.classList.toggle("page__body--fade");
+    lang.classList.toggle("lang--active");
+  });
+
+  document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+      menuButton.classList.remove("main-nav__button--open");
+      menuList.classList.remove("main-nav__list--open");
+      body.classList.remove("page__body--fade");
+      lang.classList.remove("lang--active");
+    }
+  };
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  const mainSlider = new Swiper(".swiper-container", {
+  // Слайдер на главной
+  const mainSlider = new Swiper(".promo-slider .swiper-container", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -30,49 +60,48 @@ document.addEventListener("DOMContentLoaded", () => {
     slideToClickedSlide: true,
   });
 
-  const mainSliderFade = new Swiper(".swiper-container1", {
+  //Слайдр с фейдом на лендиге
+  const sectionFadeSlider = new Swiper(".swiper-fade-slider", {
     effect: "fade",
     fadeEffect: {
       crossFade: true,
     },
     autoplay: {
       waitForTransition: false,
-      delay: 4500,
+      delay: 2500,
       disableOnInteraction: false,
     },
-    speed: 3500,
+    speed: 2500,
     loop: true,
     simulateTouch: false,
   });
+
+  //Слайдер карусель на лендинге
+  const sectionSlider = new Swiper(".section .swiper-container", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    mousewheelControl: true,
+    initialSlide: 1,
+    coverflowEffect: {
+      //rotate: 5,
+      rotate: 5,
+      stretch: 20,
+      depth: 100,
+      modifier: 3,
+      slideShadows: false,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    mousewheel: {
+      sensitivity: 1,
+    },
+    slideToClickedSlide: true,
+  });
 });
-
-(() => {
-  const menuButton = document.querySelector(".main-nav__button");
-  const menuList = document.querySelector(".main-nav__list");
-  const body = document.querySelector("body");
-  const lang = document.querySelector(".lang");
-
-  if (menuButton) {
-    menuButton.addEventListener("click", () => {
-      let expanded = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", !expanded);
-      menuButton.classList.toggle("main-nav__button--open");
-      menuList.classList.toggle("main-nav__list--open");
-      body.classList.toggle("page__body--fade");
-      lang.classList.toggle("lang--active");
-    });
-
-    document.onkeydown = function (evt) {
-      evt = evt || window.event;
-      if (evt.keyCode == 27) {
-        menuButton.classList.remove("main-nav__button--open");
-        menuList.classList.remove("main-nav__list--open");
-        body.classList.remove("page__body--fade");
-        lang.classList.remove("lang--active");
-      }
-    };
-  }
-})();
 
 let dropdown = document.querySelectorAll(".main-nav__item--with-dropdown");
 
@@ -157,3 +186,5 @@ if (document.querySelector("[data-scroll-container]")) {
 
   ScrollTrigger.refresh();
 }
+
+import OpenSeadragon from "../js/openseadragon/openseadragon";
