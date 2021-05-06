@@ -7,6 +7,10 @@ import { ScrollTrigger } from "../../node_modules/gsap/ScrollTrigger";
 
 import LocomotiveScroll from "../../node_modules/locomotive-scroll/dist/locomotive-scroll";
 
+// import OpenSeadragon from "../js/openseadragon/openseadragon";
+require("/js/openseadragon/openseadragon");
+require("../../node_modules/magnific-popup/dist/jquery.magnific-popup");
+
 const menuButton = document.querySelector(".main-nav__button");
 const menuList = document.querySelector(".main-nav__list");
 const body = document.querySelector("body");
@@ -186,5 +190,3 @@ if (document.querySelector("[data-scroll-container]")) {
 
   ScrollTrigger.refresh();
 }
-
-import OpenSeadragon from "../js/openseadragon/openseadragon";

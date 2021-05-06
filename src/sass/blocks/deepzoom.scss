@@ -22,10 +22,10 @@
     padding-left: 80px;
     padding-right: 70px;
 
-    @media (max-width: $tablet) {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+    // @media (max-width: $tablet) {
+    //   padding-left: 20px;
+    //   padding-right: 20px;
+    // }
   }
 
   &.ssb__info-expanded .ssb__info {
@@ -100,6 +100,24 @@
       width: 60%;
       height: 60%;
       background-color: $m-color;
+    }
+
+    &.blue {
+      border-color: blue;
+      border-radius: 50%;
+
+      &::before {
+        border-radius: 50%;
+        background-color: blue;
+      }
+    }
+
+    &.red {
+      border-color: red;
+
+      &::before {
+        background-color: red;
+      }
     }
   }
 
@@ -280,5 +298,37 @@
       color: inherit;
       text-decoration: underline;
     }
+  }
+}
+
+.ssb__before-after-slider {
+  display: none;
+
+  @media (max-width: $mobile) {
+    display: block;
+  }
+}
+
+.ssb__before-after {
+  display: flex;
+
+  img {
+    width: 50%;
+    height: auto;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.ssb__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .ssb__gallery-popup-link {
+    max-width: 200px;
   }
 }

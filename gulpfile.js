@@ -162,6 +162,7 @@ const copy = () => {
       "src/images/**/*.{png,jpg,gif,svg}",
       "src/fonts/**",
       "src/js/openseadragon/**", //Для дипзума
+      "src/js/libs/**/*", // Библиотеки не из npm
       "src/favicon/**",
       "src/data/**",
       "src/file/**",
@@ -197,6 +198,7 @@ const optimizeImages = () => {
     .pipe(dest("build/images"));
 };
 
+exports.copy = copy;
 exports.sprite = sprite;
 exports.build = build;
 exports.start = start;
