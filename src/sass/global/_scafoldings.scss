@@ -148,6 +148,18 @@ img {
   align-items: center;
 }
 
+.back-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 1000;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;

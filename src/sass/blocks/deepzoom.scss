@@ -8,7 +8,7 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  background-color: $m-color;
+  background-color: $s-color;
 
   .ssb__info {
     transition: opacity 0.3s;
@@ -151,7 +151,7 @@
 
     .ssb__info-toggle-icon-popup {
       display: block;
-      fill: $s-color;
+      fill: $m-color;
     }
   }
 
@@ -192,7 +192,7 @@
   width: 200px;
   height: 60px;
   padding: 12px 5px 15px 14px;
-  background-color: $s-color;
+  background-color: $m-color;
 }
 
 .ssb .ssb__controls .ssb__controls-button {
@@ -217,7 +217,7 @@
 }
 
 .ssb__controls-button-icon {
-  fill: $m-color;
+  fill: $s-color;
 }
 
 .ssb .ssb__controls .ssb__controls-button:last-child {
@@ -250,7 +250,7 @@
   line-height: 60px;
   border-radius: 0 10px 10px 0;
   color: #000;
-  background-color: $s-color;
+  background-color: $m-color;
 
   &--open {
     .ssb__controls-button-icon {
