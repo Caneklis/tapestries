@@ -6,27 +6,116 @@ var map = (function (me, undefined) {
       w: 40,
       h: 40,
       id: "1",
-      link: "#2",
-      image: "img/parts/1.jpg",
-      audio: "audio/1.mp3",
-      checkResize: false,
+      link: "1",
+      image: "",
+      audio: "",
+      // checkResize: false,
       category: "",
-      title: "Название точки",
+      title: "Точка 1",
       description: `
-      <div id="page">
-        <div class="wrapper">
-          <div class="before">
-            <img class="content-image" src="https://farm2.staticflickr.com/1638/26145024230_06acd55d1b_b.jpg" draggable="false"/>   </div>
-          <div class="after">
-            <img class="content-image" src="https://farm2.staticflickr.com/1663/25814974803_d4c55ff708_b.jpg" draggable="false"/>
-          </div>
-          <div class="scroller">
-            <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><polygon points="0 50 37 68 37 32 0 50" style="fill:#fff"/><polygon points="100 50 64 32 64 68 100 50" style="fill:#fff"/></svg>
-          </div>
-        </div>
+      <div class="ssb__full-text">
+        <p>Сюда пишется весь текст</p>
+      </div>
+
+      <!-- Изображение до/после на пк и планшете -->
+      <div class="ssb__before-after">
+        <!-- Изображение до -->
+        <img src="images/before-after/before-after-thumb-1.jpg" />
+        <!-- Изображение после -->
+        <img src="images/before-after/before-after-thumb-1b.jpg" />
+      </div>
+
+      <div class="before-after  ssb__before-after-slider">
+        <!-- Изображение до -->
+        <img src="images/before-after/before-after-thumb-1.jpg" />
+        <!-- Изображение после -->
+        <img src="images/before-after/before-after-thumb-1b.jpg" />
       </div>
 			`,
       data: "red",
+    },
+    {
+      x: 1500,
+      y: 2500,
+      w: 40,
+      h: 40,
+      id: "2",
+      link: "2",
+      image: "",
+      audio: "",
+      // checkResize: false,
+      category: "",
+      title: "Точка 2",
+      description: `
+      <div class="ssb__before-after">
+        <!-- Изображение до -->
+        <img src="images/before-after/before-after-thumb-2.jpg" />
+        <img src="images/before-after/before-after-thumb-2b.jpg" />
+      </div>
+      <div class="before-after  ssb__before-after-slider">
+        <img src="images/before-after/before-after-thumb-2.jpg" />
+        <img src="images/before-after/before-after-thumb-2b.jpg" />
+      </div>
+			`,
+      data: "blue",
+    },
+    {
+      x: 1500,
+      y: 1500,
+      w: 40,
+      h: 40,
+      id: "3",
+      link: "3",
+      image: "",
+      audio: "",
+      // checkResize: false,
+      category: "",
+      title: "Точка 3",
+      description: `
+      <div class="ssb__full-text">
+      <p>Сюда пишется весь текст</p>
+    </div>
+
+      <div class="ssb__gallery">
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-1.jpg">
+          <img src="images/before-after/before-after-thumb-1.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-1b.jpg">
+          <img src="images/before-after/before-after-thumb-1b.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2.jpg">
+          <img src="images/before-after/before-after-thumb-2.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2b.jpg">
+          <img src="images/before-after/before-after-thumb-2b.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-1.jpg">
+          <img src="images/before-after/before-after-thumb-1.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-1b.jpg">
+          <img src="images/before-after/before-after-thumb-1b.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2.jpg">
+          <img src="images/before-after/before-after-thumb-2.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2b.jpg">
+          <img src="images/before-after/before-after-thumb-2b.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-1.jpg">
+          <img src="images/before-after/before-after-thumb-1.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-1b.jpg">
+          <img src="images/before-after/before-after-thumb-1b.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2.jpg">
+          <img src="images/before-after/before-after-thumb-2.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2b.jpg">
+          <img src="images/before-after/before-after-thumb-2b.jpg" />
+        </a>
+      </div>
+			`,
+      data: "green",
     },
   ];
 
