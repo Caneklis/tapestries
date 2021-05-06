@@ -1597,6 +1597,22 @@ img {
   height: 100%;
 }
 
+.back-btn {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 1000; 
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60px;
+  height: 60px;
+
+  background-color: red;
+  border-radius: 50%;
+}
+
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -2081,11 +2097,12 @@ img {
 }
 
 .pagination__item {
-  position: relative; 
+  position: relative;
 
   padding-right: 10px;
 
   font-size: 25px;
+  color: #1f1f1f;
 }
 @media (max-width: 767px) {
   .pagination__item {
@@ -2114,19 +2131,23 @@ img {
 
 .container {
   padding-bottom: 150px;
+
+  background-color: #e2dac7;
 }
 
-.section {
+.section__wrapper {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
+}
 
+.section {
   font-family: "Playfair Display", Georgia, serif; 
   color: #1f1f1f;
 
   background-color: #e2dac7;
 }
-.section--hero {
+.section--hero .section__wrapper {
   position: relative;
 
   display: -ms-grid;
@@ -2138,12 +2159,12 @@ img {
   grid-template-columns: 60% 40%;
 }
 @media (max-width: 1024px) {
-  .section--hero {
+  .section--hero .section__wrapper {
     padding: 0;
   }
 }
 @media (max-width: 767px) {
-  .section--hero {
+  .section--hero .section__wrapper {
     padding-bottom: 20px; 
 
     -ms-grid-columns: 70% 30%;
@@ -2198,19 +2219,22 @@ img {
 .section--text-right {
   position: relative;
 
-  display: -ms-grid;
-  display:     grid;
   min-height: 100vh;
   overflow-y: hidden; 
 
   color: #e2dac7;
-  -webkit-column-gap: 10%;
-     -moz-column-gap: 10%;
-          column-gap: 10%;
 
   background-color: #1f1f1f;
   background-color: #1f1f1f;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='38.4' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23e2dac7' stroke-width='3.2' stroke-opacity='0.11'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+.section--text-right .section__wrapper {
+  display: -ms-grid;
+  display:     grid;
+
+  -webkit-column-gap: 10%;
+     -moz-column-gap: 10%;
+          column-gap: 10%; 
 
   -ms-grid-columns: 30% 60%;
   grid-template-columns: 30% 60%;
@@ -2328,23 +2352,26 @@ img {
   }
 }
 .section--deepzoom {
+  background-color: #e2dac7;
+}
+.section--deepzoom .section__wrapper {
   display: -ms-grid;
   display:     grid;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  padding-top: 100px;
+  padding-top: 100px; 
   padding-bottom: 100px;
-
-  background-color: #e2dac7; 
 
   -ms-grid-columns: 60% 40%;
   grid-template-columns: 60% 40%;
 }
 @media (max-width: 1024px) {
-  .section--deepzoom {
+  .section--deepzoom .section__wrapper {
     padding-top: 40px;
   }
+}
+@media (max-width: 1024px) {
   .section--deepzoom .section__text {
     padding-top: 0;
   }
@@ -2676,7 +2703,7 @@ img {
   line-height: 26px;
   color: #666666;
 
-  background-color: #1f1f1f;
+  background-color: #e2dac7;
 }
 .ssb .ssb__info {
   position: absolute;
@@ -2829,7 +2856,7 @@ img {
 .ssb__info-toggle-button--open .ssb__info-toggle-icon-popup {
   display: block;
 
-  fill: #e2dac7;
+  fill: #1f1f1f;
 }
 .ssb__info-toggle-button--close {
   right: 25px;
@@ -2879,7 +2906,7 @@ img {
   height: 60px;
   padding: 12px 5px 15px 14px;
 
-  background-color: #e2dac7;
+  background-color: #1f1f1f;
 }
 
 .ssb .ssb__controls .ssb__controls-button {
@@ -2906,7 +2933,7 @@ img {
 }
 
 .ssb__controls-button-icon {
-  fill: #1f1f1f;
+  fill: #e2dac7;
 }
 
 .ssb .ssb__controls .ssb__controls-button:last-child {
@@ -2940,7 +2967,7 @@ img {
   line-height: 60px;
   color: #000000;
 
-  background-color: #e2dac7; 
+  background-color: #1f1f1f; 
   border-radius: 0 10px 10px 0;
 }
 .ssb__controls .ssb__controls-toggle--open .ssb__controls-button-icon {

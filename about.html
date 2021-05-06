@@ -159,56 +159,64 @@
         <li class="pagination__item"><a>Дети Венеры - О шпалере</a></li>
       </ul>
     </div>
-    <div data-scroll-container class="container">
-      <section class="section  section--hero">
-        <div class="section__text" data-scroll data-scroll-speed="3">
-          <h1 class="section__main-title">
-            <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="5"> ДЕТИ </div>
-            <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="3"> ВЕНЕРЫ </div>
-          </h1>
-          <!-- <h3 class="section__subtitle">Автор или какая-то другая информация</h3> -->
-          <blockquote> Изложение смысла естественной истории через изображение первоэлементов, времен года и планеты был одним из главных источников назидательных тем и сюжетов для писателей и художников </blockquote>
-          <div>
-            <ol class="section__nav">
-              <li class="section__nav-item" data-scroll="">
-                <a href="#section-story" data-scroll-to=""> Сюжет <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
-                    <use href="images/sprite_auto.svg#arrow-down"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="section__nav-item" data-scroll="">
-                <a href="#section-research-conservation" data-scroll-to=""> Исследование и реставрация <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
-                    <use href="images/sprite_auto.svg#arrow-down"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="section__nav-item" data-scroll="">
-                <a href="#section-plants" data-scroll-to=""> Растения и птицы <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
-                    <use href="images/sprite_auto.svg#arrow-down"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="section__nav-item" data-scroll="">
-                <a href="#section-clothes" data-scroll-to=""> Одежда и мода <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
-                    <use href="images/sprite_auto.svg#arrow-down"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="section__nav-item" data-scroll="">
-                <a href="#section-themes" data-scroll-to=""> Тема «детей Венеры» в разных видах искусств <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
-                    <use href="images/sprite_auto.svg#arrow-down"></use>
-                  </svg>
-                </a>
-              </li>
-            </ol>
+    <div data-scroll-container class="container" id="fixed-target">
+      <!-- <a href="#start" data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
+    Вверх
+    <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
+      <use href="images/sprite_auto.svg#arrow-down"></use>
+    </svg>
+  </a> -->
+      <section class="section  section--hero" id="start">
+        <div class="section__wrapper">
+          <div class="section__text" data-scroll data-scroll-speed="3">
+            <h1 class="section__main-title">
+              <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="5"> ДЕТИ </div>
+              <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="3"> ВЕНЕРЫ </div>
+            </h1>
+            <!-- <h3 class="section__subtitle">Автор или какая-то другая информация</h3> -->
+            <blockquote> Изложение смысла естественной истории через изображение первоэлементов, времен года и планеты был одним из главных источников назидательных тем и сюжетов для писателей и художников </blockquote>
+            <div>
+              <ol class="section__nav">
+                <li class="section__nav-item" data-scroll="">
+                  <a href="#section-story" data-scroll-to=""> Сюжет <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
+                      <use href="images/sprite_auto.svg#arrow-down"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="section__nav-item" data-scroll="">
+                  <a href="#section-research-conservation" data-scroll-to=""> Исследование и реставрация <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
+                      <use href="images/sprite_auto.svg#arrow-down"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="section__nav-item" data-scroll="">
+                  <a href="#section-plants" data-scroll-to=""> Растения и птицы <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
+                      <use href="images/sprite_auto.svg#arrow-down"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="section__nav-item" data-scroll="">
+                  <a href="#section-clothes" data-scroll-to=""> Одежда и мода <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
+                      <use href="images/sprite_auto.svg#arrow-down"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="section__nav-item" data-scroll="">
+                  <a href="#section-themes" data-scroll-to=""> Тема «детей Венеры» в разных видах искусств <svg class="section__nav-item-icon" aria-hidden="true" width="20" height="20">
+                      <use href="images/sprite_auto.svg#arrow-down"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ol>
+            </div>
           </div>
-        </div>
-        <div class="section__image-wrapper">
-          <img src="images/intro-venera.jpg" alt="Фрагмент шпалеры Дети Венеры">
-        </div>
-        <div class="section__text  section__text--full" id="section-story" data-scroll-speed="2" data-scroll>
-          <p>Астрологическое значение планет и их влияние на Землю, природные явления, политические события и, прежде всего, на характер, судьбу и род деятельности человека, были излюбленной темой в Позднем Средневековье и эпоху Возрождения. В шпалере «Дети Венеры» композиция строится вокруг изображения летящей колесницы Венеры. Всеобщий праздник любви и веселое пиршество детей Венеры изображены в центральной части шпалеры.</p>
-          <p>Нажмите на изображение шпалеры внизу, чтобы узнать ее сюжет</p>
+          <div class="section__image-wrapper">
+            <img src="images/intro-venera.jpg" alt="Фрагмент шпалеры Дети Венеры">
+          </div>
+          <div class="section__text  section__text--full" id="section-story" data-scroll-speed="2" data-scroll>
+            <p>Астрологическое значение планет и их влияние на Землю, природные явления, политические события и, прежде всего, на характер, судьбу и род деятельности человека, были излюбленной темой в Позднем Средневековье и эпоху Возрождения. В шпалере «Дети Венеры» композиция строится вокруг изображения летящей колесницы Венеры. Всеобщий праздник любви и веселое пиршество детей Венеры изображены в центральной части шпалеры.</p>
+            <p>Нажмите на изображение шпалеры внизу, чтобы узнать ее сюжет</p>
+          </div>
         </div>
       </section>
       <section class="section  section--zoom-in-image">
@@ -218,59 +226,63 @@
         </a>
       </section>
       <section class="section">
-        <h2 class="section__main-title">Шпалеры «Дети Венеры»</h2>
-        <section class="promo-slider">
-          <!-- Slider main container -->
-          <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <div class="swiper-slide  swiper-slide--custom">
-                <img src="images/main-slider-2/full-1.png" loading="lazy" alt="">
-                <p>ВСТРЕЧА ИСАВА И ИАКОВА</p>
+        <div class="section__wrapper">
+          <h2 class="section__main-title">Шпалеры «Дети Венеры»</h2>
+          <section class="promo-slider">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide  swiper-slide--custom">
+                  <img src="images/main-slider-2/full-1.png" loading="lazy" alt="">
+                  <p>ВСТРЕЧА ИСАВА И ИАКОВА</p>
+                </div>
+                <div class="swiper-slide  swiper-slide--custom">
+                  <img src="images/main-slider-2/full-2.png" loading="lazy" alt="">
+                  <p>ВСТРЕЧА ИСАВА И ИАКОВА</p>
+                </div>
+                <div class="swiper-slide  swiper-slide--custom">
+                  <img src="images/main-slider-2/full-4.png" loading="lazy" alt="">
+                  <p>ВСТРЕЧА ИСАВА И ИАКОВА</p>
+                </div>
+                <div class="swiper-slide  swiper-slide--custom">
+                  <img src="images/main-slider-2/full-1.png" loading="lazy" alt="">
+                  <p>ВСТРЕЧА ИСАВА И ИАКОВА</p>
+                </div>
               </div>
-              <div class="swiper-slide  swiper-slide--custom">
-                <img src="images/main-slider-2/full-2.png" loading="lazy" alt="">
-                <p>ВСТРЕЧА ИСАВА И ИАКОВА</p>
-              </div>
-              <div class="swiper-slide  swiper-slide--custom">
-                <img src="images/main-slider-2/full-4.png" loading="lazy" alt="">
-                <p>ВСТРЕЧА ИСАВА И ИАКОВА</p>
-              </div>
-              <div class="swiper-slide  swiper-slide--custom">
-                <img src="images/main-slider-2/full-1.png" loading="lazy" alt="">
-                <p>ВСТРЕЧА ИСАВА И ИАКОВА</p>
-              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          </div>
-        </section>
+          </section>
+        </div>
       </section>
       <section class="section  section--text-right" id="section-research-conservation">
-        <div class="image-wrapper">
-          <div class="swiper-fade-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/research-thumb.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="images/research-thumb-2.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="images/research-thumb-3.jpg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="images/research-thumb-4.jpg" alt="">
+        <div class="section__wrapper">
+          <div class="image-wrapper">
+            <div class="swiper-fade-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/research-thumb.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/research-thumb-2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/research-thumb-3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/research-thumb-4.jpg" alt="">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="section__text  section__text--no-padding">
-          <div data-scroll-speed="2" data-scroll>
-            <h2>Исследование и реставрация</h2>
-            <p>В ходе предварительных исследований было выявлено, что более 85% поверхности мозаичного набора находится в стадии отслоения. Из-за деструкции мастики под ним образовались многочисленные пустоты. Для укрепления набора было решено проклеить выявленные пустоты. После составления картограммы состояния сохранности был изготовлен «кондуктор» — лист прозрачного оргстекла толщиной 5 мм в размер столешницы. В местах отслоения мозаичного набора, в зонах черного мрамора через «кондуктор» было проведено сверление отверстий диаметром 1 мм.</p>
-            <p><a href="#">Узнать подробнее про исследования</a></p>
-            <p><a href="#">Узнать подробнее про реставрацию</a></p>
+          <div class="section__text  section__text--no-padding">
+            <div data-scroll-speed="2" data-scroll>
+              <h2>Исследование и реставрация</h2>
+              <p>В ходе предварительных исследований было выявлено, что более 85% поверхности мозаичного набора находится в стадии отслоения. Из-за деструкции мастики под ним образовались многочисленные пустоты. Для укрепления набора было решено проклеить выявленные пустоты. После составления картограммы состояния сохранности был изготовлен «кондуктор» — лист прозрачного оргстекла толщиной 5 мм в размер столешницы. В местах отслоения мозаичного набора, в зонах черного мрамора через «кондуктор» было проведено сверление отверстий диаметром 1 мм.</p>
+              <p><a href="#">Узнать подробнее про исследования</a></p>
+              <p><a href="#">Узнать подробнее про реставрацию</a></p>
+            </div>
           </div>
         </div>
       </section>
@@ -289,60 +301,66 @@
       <img src="images/conservation-thumb.jpg" alt="">
     </div>
   </section> -->
-      <section class="section  section--deepzoom" id="section-plants">
-        <div class="section__text" data-scroll data-scroll-sticky data-scroll-target="#section-plants">
-          <h2>Растения и птицы</h2>
-          <p>Традиция изображать растения и животных, наделяя их символическим значением, появилась в Античности. В эпоху Позднего Средневековья и Ренессанса изображения растений и птиц воспроизводились на шпалерах с удивительно точностью. И если изначально они служили только для украшения, то позднее в XVI–XVII веках, стали кладезью символов и знаков, особенно в религиозных сюжетах. На протяжении многих веков разгадывание смысловой многозначности, аллегории и символизма было интеллектуальной забавой любителей искусства. </p>
-        </div>
-        <div class="images-container">
-          <a href="#" class="section__image-deepzoom-link">
-            <img src="images/type-thumb-1.jpg" alt="Изображение растения">
-            <div class="section__image-deepzoom-description"> Растения </div>
-          </a>
-          <a href="#" class="section__image-deepzoom-link">
-            <img src="images/type-thumb-2.jpg" alt="Изображение птицы">
-            <div class="section__image-deepzoom-description"> Птицы </div>
-          </a>
+      <section class="section  section--deepzoom" id="section-plants" data-scroll-speed="2" data-scroll>
+        <div class="section__wrapper">
+          <div class="section__text">
+            <h2>Растения и птицы</h2>
+            <p>Традиция изображать растения и животных, наделяя их символическим значением, появилась в Античности. В эпоху Позднего Средневековья и Ренессанса изображения растений и птиц воспроизводились на шпалерах с удивительно точностью. И если изначально они служили только для украшения, то позднее в XVI–XVII веках, стали кладезью символов и знаков, особенно в религиозных сюжетах. На протяжении многих веков разгадывание смысловой многозначности, аллегории и символизма было интеллектуальной забавой любителей искусства. </p>
+          </div>
+          <div class="images-container">
+            <a href="#" class="section__image-deepzoom-link">
+              <img src="images/type-thumb-1.jpg" alt="Изображение растения">
+              <div class="section__image-deepzoom-description"> Растения </div>
+            </a>
+            <a href="#" class="section__image-deepzoom-link">
+              <img src="images/type-thumb-2.jpg" alt="Изображение птицы">
+              <div class="section__image-deepzoom-description"> Птицы </div>
+            </a>
+          </div>
         </div>
       </section>
       <section class="section  section--deepzoom" id="section-clothes">
-        <div class="section__text" data-scroll data-scroll-sticky data-scroll-target="#section-clothes">
-          <h2>Одежда и мода</h2>
-          <p>Как в живописных произведениях, так и в искусстве шпалерного ткачества, одежды изображенных на шпалерах персонажей соответствовали моде того времени, когда создавалось художественное произведение. И хотя многие детали костюма не освобождены от условной художественности, изучение деталей, образов и символов в одежде, изображенных на шпалерах XVI в. является увлекательным занятием. </p>
-        </div>
-        <div class="images-container">
-          <a href="#" class="section__image-deepzoom-link">
-            <img src="images/type-thumb-0.jpg" alt="Изображение одежды">
-            <div class="section__image-deepzoom-description"> Одежда и мода </div>
-          </a>
+        <div class="section__wrapper">
+          <div class="section__text" data-scroll-speed="2" data-scroll>
+            <h2>Одежда и мода</h2>
+            <p>Как в живописных произведениях, так и в искусстве шпалерного ткачества, одежды изображенных на шпалерах персонажей соответствовали моде того времени, когда создавалось художественное произведение. И хотя многие детали костюма не освобождены от условной художественности, изучение деталей, образов и символов в одежде, изображенных на шпалерах XVI в. является увлекательным занятием. </p>
+          </div>
+          <div class="images-container">
+            <a href="#" class="section__image-deepzoom-link">
+              <img src="images/type-thumb-0.jpg" alt="Изображение одежды">
+              <div class="section__image-deepzoom-description"> Одежда и мода </div>
+            </a>
+          </div>
         </div>
       </section>
       <section class="section  section--deepzoom  section--dark" id="section-themes">
-        <div class="section__text" data-scroll data-scroll-sticky data-scroll-target="#section-themes">
-          <h2>Тема «детей Венеры» в разных видах искусств</h2>
-          <p>Добавить какой-нибудь текст.</p>
-        </div>
-        <div class="images-container">
-          <a href="#" class="section__image-deepzoom-link">
-            <img src="images/type-thumb-3.jpg" alt="Изображение одежды">
-            <div class="section__image-deepzoom-description"> Серия гравюр Хемскерка-Мюллера </div>
-          </a>
-          <a href="#" class="section__image-deepzoom-link">
-            <img src="images/type-thumb-4.jpg" alt="Изображение одежды">
-            <div class="section__image-deepzoom-description"> Шпалеры «Дети Планет» </div>
-          </a>
-          <a href="#" class="section__image-deepzoom-link">
-            <img src="images/type-thumb-5.jpg" alt="Изображение одежды">
-            <div class="section__image-deepzoom-description"> «Дети Венеры» в гравюре </div>
-          </a>
-          <a href="#" class="section__image-deepzoom-link">
-            <img src="images/type-thumb-4.jpg" alt="Изображение одежды">
-            <div class="section__image-deepzoom-description"> «Дети Венеры» в книжной миниатюре и прикладном искусстве </div>
-          </a>
-          <a href="#" class="section__image-deepzoom-link">
-            <img src="images/type-thumb-3.jpg" alt="Изображение одежды">
-            <div class="section__image-deepzoom-description"> Астрологические сюжеты в монументальных искусствах </div>
-          </a>
+        <div class="section__wrapper">
+          <div class="section__text" data-scroll data-scroll-sticky data-scroll-target="#section-themes">
+            <h2>Тема «детей Венеры» в разных видах искусств</h2>
+            <p>Добавить какой-нибудь текст.</p>
+          </div>
+          <div class="images-container">
+            <a href="#" class="section__image-deepzoom-link">
+              <img src="images/type-thumb-3.jpg" alt="Изображение одежды">
+              <div class="section__image-deepzoom-description"> Серия гравюр Хемскерка-Мюллера </div>
+            </a>
+            <a href="#" class="section__image-deepzoom-link">
+              <img src="images/type-thumb-4.jpg" alt="Изображение одежды">
+              <div class="section__image-deepzoom-description"> Шпалеры «Дети Планет» </div>
+            </a>
+            <a href="#" class="section__image-deepzoom-link">
+              <img src="images/type-thumb-5.jpg" alt="Изображение одежды">
+              <div class="section__image-deepzoom-description"> «Дети Венеры» в гравюре </div>
+            </a>
+            <a href="#" class="section__image-deepzoom-link">
+              <img src="images/type-thumb-4.jpg" alt="Изображение одежды">
+              <div class="section__image-deepzoom-description"> «Дети Венеры» в книжной миниатюре и прикладном искусстве </div>
+            </a>
+            <a href="#" class="section__image-deepzoom-link">
+              <img src="images/type-thumb-3.jpg" alt="Изображение одежды">
+              <div class="section__image-deepzoom-description"> Астрологические сюжеты в монументальных искусствах </div>
+            </a>
+          </div>
         </div>
       </section>
     </div>
