@@ -50,20 +50,20 @@ var map = (function (me, undefined) {
       audio: "",
       // checkResize: false,
       category: "",
-      title: "Точка 2",
+      title: "Мода",
       description: `
       <div class="ssb__before-after">
         <!-- Изображение до -->
-        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2.jpg">
-          <img src="images/before-after/before-after-thumb-2.jpg" />
+        <a class="ssb__gallery-popup-link" href="images/fashion-1.jpg">
+          <img src="images/fashion-1.jpg" />
         </a>
-        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2b.jpg">
-          <img src="images/before-after/before-after-thumb-2b.jpg" />
+        <a class="ssb__gallery-popup-link" href="images/fashion-1b.jpg">
+          <img src="images/fashion-1b.jpg" />
         </a>
       </div>
       <div class="before-after  ssb__before-after-slider">
-        <img src="images/before-after/before-after-thumb-2.jpg" />
-        <img src="images/before-after/before-after-thumb-2b.jpg" />
+        <img src="images/fashion-1.jpg" />
+        <img src="images/fashion-1b.jpg" />
       </div>
 			`,
       data: "research",
@@ -83,15 +83,19 @@ var map = (function (me, undefined) {
       description: `
       <div class="ssb__before-after">
         <!-- Изображение до -->
-        <img src="images/before-after/before-after-thumb-2.jpg" />
-        <img src="images/before-after/before-after-thumb-2b.jpg" />
+        <a class="ssb__gallery-popup-link" href="images/bird-1.jpg">
+          <img src="images/bird-1.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/bird-1b.jpg">
+          <img src="images/bird-1b.jpg" />
+        </a>
       </div>
       <div class="before-after  ssb__before-after-slider">
-        <img src="images/before-after/before-after-thumb-2.jpg" />
-        <img src="images/before-after/before-after-thumb-2b.jpg" />
+        <img src="images/bird-1.jpg" />
+        <img src="images/bird-1b.jpg" />
       </div>
 			`,
-      data: "fashion",
+      data: "bird",
     },
     {
       x: 1500,
