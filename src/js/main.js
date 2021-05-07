@@ -105,6 +105,50 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     slideToClickedSlide: true,
   });
+
+  const swiper = new Swiper(".textpage__slider", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  const tooltips = Array.from(document.querySelectorAll(".tooltip"));
+  const tooltipContainer = document.querySelector(".tooltip-content");
+
+  let tooltipID;
+  tooltips.forEach((tooltip) => {
+    if (tooltip) {
+      tooltip.addEventListener("mouseenter", (e) => {
+        console.log("check");
+        tooltipID = e.target.getAttribute("data-id");
+        tooltipContainer.classList.add("tooltip-content--fade-in");
+        tooltipContainer.style.left = `${e.pageX}px`;
+        tooltipContainer.style.top = `${e.pageY}px`;
+        tooltipContainer.innerHTML = tooltipData[tooltipID - 1].txt;
+      });
+
+      tooltip.addEventListener("mouseout", (e) => {
+        tooltipContainer.classList.remove("tooltip-content--fade-in");
+      });
+    }
+  });
+
+  if (tooltipContainer) {
+    tooltipContainer.addEventListener("mouseenter", () => {
+      tooltipContainer.classList.add("tooltip-content--fade-in");
+    });
+    tooltipContainer.addEventListener("mouseout", () => {
+      tooltipContainer.classList.remove("tooltip-content--fade-in");
+    });
+  }
 });
 
 let dropdown = document.querySelectorAll(".main-nav__item--with-dropdown");
@@ -189,4 +233,37 @@ if (document.querySelector("[data-scroll-container]")) {
   ScrollTrigger.addEventListener("refresh", () => scroller.update());
 
   ScrollTrigger.refresh();
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 1023) {
+      console.log("eppp");
+      scroller.destroy();
+    }
+  });
 }
+
+$(".textpage__img-popup").magnificPopup({
+  type: "image",
+  closeOnContentClick: true,
+  closeBtnInside: false,
+  mainClass: "mfp-with-zoom mfp-img-mobile",
+  image: {
+    verticalFit: true,
+    titleSrc: function (item) {
+      return item.el.attr("title");
+    },
+  },
+  zoom: {
+    enabled: true,
+  },
+});
+
+$(".textpage__iframe-popup").magnificPopup({
+  disableOn: 700,
+  type: "iframe",
+  mainClass: "mfp-with-zoom mfp-img-mobile",
+  removalDelay: 160,
+  preloader: false,
+
+  fixedContentPos: false,
+});
