@@ -3607,6 +3607,15 @@ img {
   -webkit-transition: opacity 0.3s;
           transition: opacity 0.3s;
 }
+@media (max-width: 1024px) {
+  .ssb .ssb__info {
+    right: calc(-100% + 40px);
+
+    width: 100%;
+
+    background-color: rgba(226, 218, 199, 0.8);
+  }
+}
 .ssb .ssb__info::before {
   content: "";
   position: absolute;
@@ -3696,6 +3705,11 @@ img {
 
 .ssb__info-expanded .ssb-banner {
   right: 35%;
+}
+@media (max-width: 1024px) {
+  .ssb__info-expanded .ssb-banner {
+    right: 0;
+  }
 }
 
 .ssb-hotspot.is-hidden {
@@ -3907,10 +3921,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.ssb__before-after img {
-  width: 50%;
-  height: auto;
 }
 @media (max-width: 767px) {
   .ssb__before-after {
