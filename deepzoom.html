@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary Meta Tags -->
     <title>Шпалера</title>
-    <meta type="description" content="Description index">
+    <meta name="description" content="Description index">
     <link rel="stylesheet" media="all" href="css/style.min.css" />
     <!-- BEGIN social data -->
     <!-- Open Graph / Facebook -->
@@ -22,6 +22,10 @@
     <meta property="twitter:description" content="">
     <meta property="twitter:image" content="">
     <!-- END social data -->
+    <link rel="preload" href="fonts/playfair-display-v22-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/playfair-display-v22-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="icon" href="favicon/favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><!-- 180×180 -->
@@ -29,7 +33,7 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <hav class="header__wrapper  main-nav">
+      <nav class="header__wrapper  main-nav">
         <div class="logo"><a class="logo__link" href="#"><img src="images/gmii-logo.svg" width="200" alt=""></a></div>
         <h1 class="header__title"><a href="index.html">Тканое великолепие</a></h1>
         <div class="header__user-block">
@@ -43,7 +47,7 @@
             </svg>
           </button>
         </div>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list" id="main-nav__list">
           <li class="main-nav__item"><a href="#">О проекта</a></li>
           <li class="main-nav__item"><a href="#">История шпалерного ткачества</a></li>
           <li class="main-nav__item  main-nav__item--with-dropdown">
@@ -150,7 +154,7 @@
             <p><a href="#">Назад на сайт Отдела реставрации</a></p>
           </li>
         </ul>
-      </hav>
+      </nav>
     </header>
     <!-- BEGIN content -->
     <style>
@@ -167,93 +171,98 @@
         <li class="pagination__item"><a>Сюжеты</a></li>
       </ul>
     </div>
-    <div class="ssb ssb__info-expanded  ssb--theme-1">
-      <div id="ssb-banner" class="ssb-banner"></div>
-      <div id="ssb__info" class="ssb__info">
-        <div class="ssb__info-toggle-button ssb__info-toggle-button--close">
-          <svg class="ssb__info-toggle__icon" aria-hidden="true" width="50" height="50">
-            <use class="ssb__info-toggle-icon-popup" href="images/sprite_auto.svg#pop-up"></use>
-            <use class="ssb__info-toggle-icon-cross" href="images/sprite_auto.svg#cross"></use>
-          </svg>
-        </div>
-        <div class="ssb__info-inner">
-          <!-- <div class="ssb__info-sidebar-control">
-          <button class="mute-audio">
-            <span class="tooltip">Нажмите, чтобы послушать</span> Звук
+    <main class="page__content">
+      <div class="ssb ssb__info-expanded  ssb--theme-1">
+        <div id="ssb-banner" class="ssb-banner"></div>
+        <div id="ssb__info" class="ssb__info">
+          <button class="ssb__info-toggle-button ssb__info-toggle-button--close" type="button">
+            <!-- <svg class="ssb__info-toggle__icon" aria-hidden="true" width="50" height="50">
+          <use class="ssb__info-toggle-icon-popup" href="images/sprite_auto.svg#pop-up"></use>
+          <use class="ssb__info-toggle-icon-cross" href="images/sprite_auto.svg#cross"></use>
+        </svg> -->
+            <svg class="ssb__info-toggle-button" aria-hidden="true" width="15" height="15">
+              <use href="images/sprite_auto.svg#arrow-down"></use>
+            </svg>
           </button>
-        </div> -->
-          <div class="ssb__welcome">
-            <h1 class="ssb__welcome-title">Столешница с изображением фруктов, цветов и птиц</h1>
-            <p>На столешнице, с которой мы начинаем работу по исследованию и реставрации данной группы произведений из фонда ГМИИ, представлен роскошный райский сад с различными спелыми плодами, хрупкими живыми цветами, разнообразными насекомыми и птицами. Разумеется, скрытая символика каждого цветка и фрукта была известна просвещенным собирателям, но она не главенствовала в таких каменных панно. Основным оставалось любование <a href="../glossary.html#dz1" target="_blank">натуралиями</a> и природой, как самым изысканным шедевром. Первичным назначением как мозаик, так и объемных предметов в технике <a href="../glossary.html#2" target="_blank">pietre dure</a>, было улучшение эстетических и естественных качеств камней и демонстрация их завораживающего соединения. Монах-доминиканец <a href="../glossary.html#dz2" target="_blank">Агостино дель Риччио (1541–1598</a>) в своем трактате 1597 года писал о работе с полудрагоценными камнями, как о прекрасной возможности использования древнего материала — камня местного происхождения — для того, чтобы отразить современную страсть к науке и искусству<sup>1</sup>. В свою очередь, о том же материале француз <a href="../glossary.html#dz3" target="_blank">аббат Ришар (1720(?) — около 1800</a>) в труде «Историческое и критическое описание Италии» (1770) писал: «Флорентийские мозаики стоят очень дорого вследствие ценности материалов, которые для них употребляются, и вследствие долгого времени, которое нужно для их изготовления. Наиболее ценные мраморы, агаты, гранаты, сардониксы, кораллы, перламутр, лазурит, яшмы, изумруды и топазы входят в состав этих необычайных картин»<sup>2</sup>.</p>
-            <p>Композиция, рисунок, подбор камней, некоторые декоративные приемы, присутствующие в оформлении столешницы из ГМИИ, указывают на то, что создателями памятника являются мастера <a href="../glossary.html#1" target="_blank">Galleria dei Lavori</a>. Временем изготовления предмета, опираясь на сравнения с известными мозаиками, можно считать период второй половины XVII века. Самая близкая аналогия данному произведению — <a href=" https://www.louvrelens.fr/work/plateau-de-table-a-decor-floral/">столешница из собрания Лувра</a>. Ее соотносят с записью в сохранившейся описи коллекции <a href="../glossary.html#dz4" target="_blank">Людовика XIV (1638–1715)</a> о заказе парных столешниц с цветочными венками в 1663 году и их доставке во дворец в 1668-м<sup>3</sup>. Вторая аналогия — <a href="https://www.khm.at/de/object/eac419c3f4/">мозаичный набор</a>, принадлежащий Музею истории искусств в Вене и датируемый первой половиной XVII века<sup>4</sup>. Здесь манера рисунка немного отличается от столешниц из собраний Лувра и ГМИИ, но цвета и основные элементы явно указывают на происхождение от одного композиционного эскиза. Еще одним аналогичным по композиции предметом можно назвать мозаичную столешницу с гербами (добавлены позднее), происходящую из коллекции сэра Уильяма Пастона (1610–1663)<sup>5</sup> и хранящуюся в настоящее время в частном собрании<sup>6</sup>. Мозаика близка венской и датируется примерно 1625 годом.</p>
-            <p>Наличие нескольких найденных схожих наборов разного времени может говорить об узнаваемости и популярности конкретной композиции и, вероятно, о существовавшем ранее <a href="../glossary.html#dz5" target="_blank">моделло</a>, которое демонстрировали иностранным заказчикам. Мозаики должны были в первую очередь «заявлять о себе», как о творении <a href="../glossary.html#1" target="_blank">Мастерской великого герцога</a>, поэтому, несмотря на вариативность манеры работы резчика по камню и подбора уникального природного рисунка материалов, колористическая гамма и основы композиции не должны были меняться. </p>
-            <p>Считается, что подготовительные рисунки для этой группы столешниц восходят к графическим работам <a href="../glossary.html#dz6" target="_blank">Якопо Лигоцци</a><sup>7</sup>, который стал первым художественным руководителем <a href="../glossary.html#1" target="_blank">Мастерской</a>. Еще до назначения на эту должность <a href="../glossary.html#dz6" target="_blank">Лигоцци</a> успел заявить о себе как о художнике, создававшем великолепные натуралистичные зарисовки флоры и фауны, ярких представителей которых он мог наблюдать в том числе во Флоренции. Семейство Медичи не только коллекционировало античную скульптуру, геммы и прочие уникальные творения человека, но и в нескольких поколениях увлекалось садовым искусством, разведением диковинных и модных растений, а также содержанием птиц и животных. Все это красочное живое разнообразие Лигоцци и другие не менее талантливые художники с невероятной щепетильностью переносили в произведения искусства, создаваемые <a href="../glossary.html#1" target="_blank"">Galleria dei Lavori</a>. Складывается впечатление, что в каменных мозаиках этой <a
-							href=" ../glossary.html#1" target="_blank">Мастерской</a> навсегда застыл в своей хрупкой минутной красоте фрагмент одного из лучших ботанических садов Европы того времени — сада Медичи. </p>
-            <p>Если говорить об определении отдельных видов флоры и фауны в мозаике, то нередко это можно сделать очень условно. Окраска цветков, оперения птиц может зависеть как от фантазии художника, так и от наличия поделочного камня определенного оттенка. При определении нельзя опираться и на размеры представителей отдельных видов, так как при сохранении пропорций между частями одного растения соотношение между размерами различных видов не соответствует действительности (например, размеры плодов сливы и груши). Количество видов растений и птиц, изображенных на флорентийских мозаиках изучаемого периода, ограничено: около 40 видов растений и 15–20 видов птиц. К тому же разные мастера могли одно и то же растение изображать, например, с различным количеством лепестков. Так, представленное на рассматриваемой столешнице растение, условно названное кизил головчатый, имеет четыре лепестка, а на аналогичных других работах цветок имеет уже пять лепестков. В этом случае растение не может относиться к указанному виду. Кроме того, на этом растении не может быть одновременно цветков и созревших плодов.</p>
-            <p>Излюбленным мотивом на флорентийской мозаике является попугай. Эти птицы содержались в большом количестве в неволе, легко приручались, могли говорить на нескольких языках, а также ценились за яркость и неповторимость оперения. Частыми героями флорентийских мозаик становятся щеглы и синицы —типичные представители фауны северной Италии. Художники ценили их за яркий наряд и звонкое оригинальное пение. Этих птиц было не только легко поймать, но и содержать в неволе, к тому же они почти весь год услаждали слух хозяина райскими трелями. Нельзя исключать и наличие фантазийных образов. Так, с нашей точки зрения, птицы, изображенные на бордюре столешницы (на длинной стороне) не имеют точных прообразов в природе. Что касается насекомых, то образы их противоречивы и неоднозначны. Большинство из них с трудом поддается определению — максимум до семейства. Элементы символизма не чужды и данному виду искусства. Если всю композицию столешницы условно принять за изображение райского сада, то становится ясна роль змейки, обвивающей ветку яблони.</p>
-            <p>На интерактивной репродукции столешницы помещено несколько точек, при нажатии на которые открывается небольшой комментарий с названиями представителей флоры и фауны, минералов, использовавшихся при создании данного участка, и с небольшим историческим пояснением или объяснением возможной символики, которую образованный человек прошлого прекрасно знал и волей-неволей сразу считывал в таких произведениях. Мы постарались сделать изображение максимально близким к оригиналу, чтобы каждый смог получить эстетическое удовольствие от любования обработанными камнями, сложенными в великолепной технике в очень натуралистичный рисунок.</p>
-            <hr>
-            <ol>
-              <li>Giusti A. Roman Inlay and Florentine Mosaics: the New Art of Pietre Dure // Art of the Royal Court: Treasures in Pietre Dure from Palaces of Europe. New York, 2008. </li>
-              <li>Цит. по: Макаров В.К. Цветной камень в собрании Эрмитажа. Л., 1938. С. 5.</li>
-              <li>Castelluccio S. Les meubles de pierres dures de Louis XIV et L’Atelier des Gobelins. Dijon: Editions Faton, 2007. P. 34.</li>
-              <li>Стол с инкрустацией в технике pietre dure. Флоренция, первая половина XVII века, инв. номер 3415.</li>
-              <li>Moore A., Flis N., Vanke F. The Paston Treasure: Microcosm of the Known World. Yale University Press, 2018. P. 468. </li>
-              <li>Jervis S.S. One Rich Stone Table Inlaid // Furniture History Society Newsletter. No. 215 (August 2019). P. 20–22.</li>
-              <li>Ibid. P. 21.</li>
-            </ol>
-            <audio class="ssb__info-audio">
-            </audio>
-            <!--<div class="ssb-touch-to-begin">Begin</div>-->
-          </div>
-          <div class="ssb__info-container">
-            <h2 class="ssb__info-main-title"></h2>
-            <div class="ssb__info-img-container">
-              <img class="ssb__info-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="">
+          <div class="ssb__info-inner">
+            <!-- <div class="ssb__info-sidebar-control">
+            <button class="mute-audio">
+              <span class="tooltip">Нажмите, чтобы послушать</span> Звук
+            </button>
+          </div> -->
+            <div class="ssb__welcome">
+              <h1>ШПАЛЕРА «САД ЛЮБВИ» <br> («ДЕТИ ВЕНЕРЫ»)</h1>
+              <p>На столешнице, с которой мы начинаем работу по исследованию и реставрации данной группы произведений из фонда ГМИИ, представлен роскошный райский сад с различными спелыми плодами, хрупкими живыми цветами, разнообразными насекомыми и птицами. Разумеется, скрытая символика каждого цветка и фрукта была известна просвещенным собирателям, но она не главенствовала в таких каменных панно. Основным оставалось любование <span class="tooltip" data-id="3"><a href="#">натуралиями</a></span> и природой, как самым изысканным шедевром. Первичным назначением как мозаик, так и объемных предметов в технике <span class="tooltip" data-id="1"><a href="#">pietre dure</a></span>, было улучшение эстетических и естественных качеств камней и демонстрация их завораживающего соединения. Монах-доминиканец <a href="../glossary.html#dz2" target="_blank">Агостино дель Риччио (1541–1598</a>) в своем трактате 1597 года писал о работе с полудрагоценными камнями, как о прекрасной возможности использования древнего материала — камня местного происхождения — для того, чтобы отразить современную страсть к науке и искусству<sup>1</sup>. В свою очередь, о том же материале француз <a href="../glossary.html#dz3" target="_blank">аббат Ришар (1720(?) — около 1800</a>) в труде «Историческое и критическое описание Италии» (1770) писал: «Флорентийские мозаики стоят очень дорого вследствие ценности материалов, которые для них употребляются, и вследствие долгого времени, которое нужно для их изготовления. Наиболее ценные мраморы, агаты, гранаты, сардониксы, кораллы, перламутр, лазурит, яшмы, изумруды и топазы входят в состав этих необычайных картин»<sup>2</sup>.</p>
+              <p>Композиция, рисунок, подбор камней, некоторые декоративные приемы, присутствующие в оформлении столешницы из ГМИИ, указывают на то, что создателями памятника являются мастера <a href="../glossary.html#1" target="_blank">Galleria dei Lavori</a>. Временем изготовления предмета, опираясь на сравнения с известными мозаиками, можно считать период второй половины XVII века. Самая близкая аналогия данному произведению — <a href=" https://www.louvrelens.fr/work/plateau-de-table-a-decor-floral/">столешница из собрания Лувра</a>. Ее соотносят с записью в сохранившейся описи коллекции <a href="../glossary.html#dz4" target="_blank">Людовика XIV (1638–1715)</a> о заказе парных столешниц с цветочными венками в 1663 году и их доставке во дворец в 1668-м<sup>3</sup>. Вторая аналогия — <a href="https://www.khm.at/de/object/eac419c3f4/">мозаичный набор</a>, принадлежащий Музею истории искусств в Вене и датируемый первой половиной XVII века<sup>4</sup>. Здесь манера рисунка немного отличается от столешниц из собраний Лувра и ГМИИ, но цвета и основные элементы явно указывают на происхождение от одного композиционного эскиза. Еще одним аналогичным по композиции предметом можно назвать мозаичную столешницу с гербами (добавлены позднее), происходящую из коллекции сэра Уильяма Пастона (1610–1663)<sup>5</sup> и хранящуюся в настоящее время в частном собрании<sup>6</sup>. Мозаика близка венской и датируется примерно 1625 годом.</p>
+              <p>Наличие нескольких найденных схожих наборов разного времени может говорить об узнаваемости и популярности конкретной композиции и, вероятно, о существовавшем ранее <a href="../glossary.html#dz5" target="_blank">моделло</a>, которое демонстрировали иностранным заказчикам. Мозаики должны были в первую очередь «заявлять о себе», как о творении <a href="../glossary.html#1" target="_blank">Мастерской великого герцога</a>, поэтому, несмотря на вариативность манеры работы резчика по камню и подбора уникального природного рисунка материалов, колористическая гамма и основы композиции не должны были меняться. </p>
+              <p>Считается, что подготовительные рисунки для этой группы столешниц восходят к графическим работам <a href="../glossary.html#dz6" target="_blank">Якопо Лигоцци</a><sup>7</sup>, который стал первым художественным руководителем <a href="../glossary.html#1" target="_blank">Мастерской</a>. Еще до назначения на эту должность <a href="../glossary.html#dz6" target="_blank">Лигоцци</a> успел заявить о себе как о художнике, создававшем великолепные натуралистичные зарисовки флоры и фауны, ярких представителей которых он мог наблюдать в том числе во Флоренции. Семейство Медичи не только коллекционировало античную скульптуру, геммы и прочие уникальные творения человека, но и в нескольких поколениях увлекалось садовым искусством, разведением диковинных и модных растений, а также содержанием птиц и животных. Все это красочное живое разнообразие Лигоцци и другие не менее талантливые художники с невероятной щепетильностью переносили в произведения искусства, создаваемые <a href="../glossary.html#1" target="_blank"">Galleria dei Lavori</a>. Складывается впечатление, что в каменных мозаиках этой <a
+                href=" ../glossary.html#1" target="_blank">Мастерской</a> навсегда застыл в своей хрупкой минутной красоте фрагмент одного из лучших ботанических садов Европы того времени — сада Медичи. </p>
+              <p>Если говорить об определении отдельных видов флоры и фауны в мозаике, то нередко это можно сделать очень условно. Окраска цветков, оперения птиц может зависеть как от фантазии художника, так и от наличия поделочного камня определенного оттенка. При определении нельзя опираться и на размеры представителей отдельных видов, так как при сохранении пропорций между частями одного растения соотношение между размерами различных видов не соответствует действительности (например, размеры плодов сливы и груши). Количество видов растений и птиц, изображенных на флорентийских мозаиках изучаемого периода, ограничено: около 40 видов растений и 15–20 видов птиц. К тому же разные мастера могли одно и то же растение изображать, например, с различным количеством лепестков. Так, представленное на рассматриваемой столешнице растение, условно названное кизил головчатый, имеет четыре лепестка, а на аналогичных других работах цветок имеет уже пять лепестков. В этом случае растение не может относиться к указанному виду. Кроме того, на этом растении не может быть одновременно цветков и созревших плодов.</p>
+              <p>Излюбленным мотивом на флорентийской мозаике является попугай. Эти птицы содержались в большом количестве в неволе, легко приручались, могли говорить на нескольких языках, а также ценились за яркость и неповторимость оперения. Частыми героями флорентийских мозаик становятся щеглы и синицы —типичные представители фауны северной Италии. Художники ценили их за яркий наряд и звонкое оригинальное пение. Этих птиц было не только легко поймать, но и содержать в неволе, к тому же они почти весь год услаждали слух хозяина райскими трелями. Нельзя исключать и наличие фантазийных образов. Так, с нашей точки зрения, птицы, изображенные на бордюре столешницы (на длинной стороне) не имеют точных прообразов в природе. Что касается насекомых, то образы их противоречивы и неоднозначны. Большинство из них с трудом поддается определению — максимум до семейства. Элементы символизма не чужды и данному виду искусства. Если всю композицию столешницы условно принять за изображение райского сада, то становится ясна роль змейки, обвивающей ветку яблони.</p>
+              <p>На интерактивной репродукции столешницы помещено несколько точек, при нажатии на которые открывается небольшой комментарий с названиями представителей флоры и фауны, минералов, использовавшихся при создании данного участка, и с небольшим историческим пояснением или объяснением возможной символики, которую образованный человек прошлого прекрасно знал и волей-неволей сразу считывал в таких произведениях. Мы постарались сделать изображение максимально близким к оригиналу, чтобы каждый смог получить эстетическое удовольствие от любования обработанными камнями, сложенными в великолепной технике в очень натуралистичный рисунок.</p>
+              <hr>
+              <ol>
+                <li>Giusti A. Roman Inlay and Florentine Mosaics: the New Art of Pietre Dure // Art of the Royal Court: Treasures in Pietre Dure from Palaces of Europe. New York, 2008. </li>
+                <li>Цит. по: Макаров В.К. Цветной камень в собрании Эрмитажа. Л., 1938. С. 5.</li>
+                <li>Castelluccio S. Les meubles de pierres dures de Louis XIV et L’Atelier des Gobelins. Dijon: Editions Faton, 2007. P. 34.</li>
+                <li>Стол с инкрустацией в технике pietre dure. Флоренция, первая половина XVII века, инв. номер 3415.</li>
+                <li>Moore A., Flis N., Vanke F. The Paston Treasure: Microcosm of the Known World. Yale University Press, 2018. P. 468. </li>
+                <li>Jervis S.S. One Rich Stone Table Inlaid // Furniture History Society Newsletter. No. 215 (August 2019). P. 20–22.</li>
+                <li>Ibid. P. 21.</li>
+              </ol>
+              <audio class="ssb__info-audio">
+              </audio>
+              <!--<div class="ssb-touch-to-begin">Begin</div>-->
             </div>
-            <h3 class="ssb__info-title"></h3>
-            <div class="ssb__info-description"></div>
-            <audio class="ssb__info-audio" src="../audio/main-theme.mp3">
-              <source type="audio/wav" />
-            </audio>
+            <div class="ssb__info-container">
+              <h2 class="ssb__info-main-title"></h2>
+              <div class="ssb__info-img-container">
+                <img class="ssb__info-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="">
+              </div>
+              <h3 class="ssb__info-title"></h3>
+              <div class="ssb__info-description"></div>
+              <audio class="ssb__info-audio" src="../audio/main-theme.mp3">
+                <source type="audio/wav" />
+              </audio>
+            </div>
+          </div>
+        </div>
+        <div id="ssb-controls" class="ssb__controls is-expanded">
+          <div class="ssb__controls-buttons">
+            <div class="ssb__controls-button  ssb__controls-zoom-in icon-zoom-in" title="Увеличить">
+              <svg class="ssb__controls-button-icon" aria-hidden="true" width="18" height="18">
+                <use href="images/sprite_auto.svg#plus"></use>
+              </svg>
+            </div>
+            <div class="ssb__controls-button  ssb__controls-zoom-out icon-zoom-out" title="Уменьшить">
+              <svg class="ssb__controls-button-icon" aria-hidden="true" width="18" height="18">
+                <use href="images/sprite_auto.svg#minus"></use>
+              </svg>
+            </div>
+            <div class="ssb__controls-button  ssb__controls-reset icon-reset" title="Вернуться к исходному размеру">
+              <svg class="ssb__controls-button-icon" aria-hidden="true" width="36" height="36">
+                <use href="images/sprite_auto.svg#back"></use>
+              </svg>
+            </div>
+            <div class=" ssb__controls-button ssb__controls-toggle-hotspots icon-hide-hotspots" title="Выключить метки">
+              <svg class="ssb__controls-button-icon" aria-hidden="true" width="36" height="36">
+                <use href="images/sprite_auto.svg#marker"></use>
+              </svg>
+            </div>
+            <div class="ssb__controls-button ssb__controls-toggle-info icon-info" title="О проекте">
+              <svg class="ssb__controls-button-icon" aria-hidden="true" width="36" height="36">
+                <use href="images/sprite_auto.svg#info"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="ssb__controls-toggle ssb__controls-toggle--open" title="Свернуть панель управления">
+            <svg class="ssb__controls-button-icon" aria-hidden="true" width="15" height="15">
+              <use href="images/sprite_auto.svg#arrow-down"></use>
+            </svg>
           </div>
         </div>
       </div>
-      <div id="ssb-controls" class="ssb__controls is-expanded">
-        <div class="ssb__controls-buttons">
-          <div class="ssb__controls-button  ssb__controls-zoom-in icon-zoom-in" title="Увеличить">
-            <svg class="ssb__controls-button-icon" aria-hidden="true" width="18" height="18">
-              <use href="images/sprite_auto.svg#plus"></use>
-            </svg>
-          </div>
-          <div class="ssb__controls-button  ssb__controls-zoom-out icon-zoom-out" title="Уменьшить">
-            <svg class="ssb__controls-button-icon" aria-hidden="true" width="18" height="18">
-              <use href="images/sprite_auto.svg#minus"></use>
-            </svg>
-          </div>
-          <div class="ssb__controls-button  ssb__controls-reset icon-reset" title="Вернуться к исходному размеру">
-            <svg class="ssb__controls-button-icon" aria-hidden="true" width="36" height="36">
-              <use href="images/sprite_auto.svg#back"></use>
-            </svg>
-          </div>
-          <div class=" ssb__controls-button ssb__controls-toggle-hotspots icon-hide-hotspots" title="Выключить метки">
-            <svg class="ssb__controls-button-icon" aria-hidden="true" width="36" height="36">
-              <use href="images/sprite_auto.svg#marker"></use>
-            </svg>
-          </div>
-          <div class="ssb__controls-button ssb__controls-toggle-info icon-info" title="О проекте">
-            <svg class="ssb__controls-button-icon" aria-hidden="true" width="36" height="36">
-              <use href="images/sprite_auto.svg#info"></use>
-            </svg>
-          </div>
-        </div>
-        <div class="ssb__controls-toggle ssb__controls-toggle--open" title="Свернуть панель управления">
-          <svg class="ssb__controls-button-icon" aria-hidden="true" width="15" height="15">
-            <use href="images/sprite_auto.svg#arrow-down"></use>
-          </svg>
-        </div>
-      </div>
-    </div>
+    </main>
     <style>
       /* You can remove this page div in your website */
       #page
@@ -381,8 +390,59 @@
 
     </style>
     <!-- END content -->
+    <div class="tooltip-content">
+    </div>
     <!-- BEGIN scripts -->
     <!-- <script src="js/libs.min.js"></script> -->
+    <script>
+      const tooltipData = [
+      {
+        id: 1,
+        txt: `
+						<div class="tooptip-content__text">
+							<p>Шпале́ра (польск. szраlerа, нем. Spalier от итал. spalliera, из spalla «опора, плечо»):
+							<ul>
+								<li>
+									<p>Шпалера (садоводство) — решётка, служащая опорой для растений. Шпалера (ковёр) — безворсовый тканый
+										настенный ковёр с сюжетными и орнаментальными композициями. </p>
+								<li>
+									<p>Шпалера (военное дело) — шеренга войск по сторонам пути следования кого-нибудь.</p>
+								</li>
+							</ul>
+						</div>
+						<div class="tooltip-content__image">
+							<img src="images/tooltip-thumb.jpg" alt="">
+						</div>
+					`,
+      },
+      {
+        id: 2,
+        txt: `
+						<div class="tooptip-content__text">
+							<p>Вторая половина XV века
+							<ul>
+								<li>
+									<p>Византийская империя (395—1453) прекратила существование после падения Константинополя (1453).</p>
+								<li>
+									<p>Тринадцатилетняя война (1454—1466). Польша покоряет Тевтонский орден и получает выход к Балтийскому морю.</p>
+								</li>
+								<li>
+									<p>Война Алой и Белой розы (1455—1487). Начало династии Тюдоров.</p>
+								</li>
+							</ul>
+						</div>
+					`,
+      },
+      {
+        id: 3,
+        txt: `
+						<div class="tooltip-content__image">
+							<img src="images/tooltip-thumb.jpg" alt="">
+						</div>
+					`,
+      }, ];
+
+    </script>
     <script src="js/main.min.js"></script>
     <!-- <script src="js/main.min.js"></script> -->
     <script src="js/openseadragon/hotspots.js"></script>
@@ -583,10 +643,10 @@
             var $hotspot = $("<a/>").addClass("ssb-hotspot"),
               x = hotspot.x,
               y = hotspot.y,
-              w = hotspot.w,
-              h = hotspot.h,
-              // w = 270,
-              // h = 270,
+              w = hotspot.w, //выводит размеры из hotspots
+              h = hotspot.h, //выводит размеры из hotspots
+              // w = 270,//фикс размеры
+              // h = 270,//фикс размеры
               center = new OpenSeadragon.Point(
                 (x + w / 2) / viewer.source.width,
                 (y + h / 2) / viewer.source.height / aspectRatio),

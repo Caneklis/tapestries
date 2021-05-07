@@ -21,9 +21,13 @@ var map = (function (me, undefined) {
       <!-- Изображение до/после на пк и планшете -->
       <div class="ssb__before-after">
         <!-- Изображение до -->
-        <img src="images/before-after/before-after-thumb-1.jpg" />
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-1.jpg">
+          <img src="images/before-after/before-after-thumb-1.jpg" />
+        </a>
         <!-- Изображение после -->
-        <img src="images/before-after/before-after-thumb-1b.jpg" />
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-1b.jpg">
+          <img src="images/before-after/before-after-thumb-1b.jpg" />
+        </a>
       </div>
 
       <div class="before-after  ssb__before-after-slider">
@@ -50,8 +54,12 @@ var map = (function (me, undefined) {
       description: `
       <div class="ssb__before-after">
         <!-- Изображение до -->
-        <img src="images/before-after/before-after-thumb-2.jpg" />
-        <img src="images/before-after/before-after-thumb-2b.jpg" />
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2.jpg">
+          <img src="images/before-after/before-after-thumb-2.jpg" />
+        </a>
+        <a class="ssb__gallery-popup-link" href="images/before-after/before-after-thumb-2b.jpg">
+          <img src="images/before-after/before-after-thumb-2b.jpg" />
+        </a>
       </div>
       <div class="before-after  ssb__before-after-slider">
         <img src="images/before-after/before-after-thumb-2.jpg" />
