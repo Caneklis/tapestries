@@ -272,7 +272,7 @@
     }
   }
 
-  &--deepzoom--text-left {
+  &--deepzoom--text-right {
     .section__wrapper {
       grid-template-columns: 40% 60%;
     }
@@ -284,6 +284,10 @@
       @media (max-width: $tablet) {
         order: unset;
       }
+    }
+
+    .section__text {
+      padding-left: 60px;
     }
   }
 

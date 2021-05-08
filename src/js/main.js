@@ -15,6 +15,7 @@ const menuButton = document.querySelector(".main-nav__button");
 const menuList = document.querySelector(".main-nav__list");
 const body = document.querySelector("body");
 const lang = document.querySelector(".lang");
+const playBtn = document.querySelector(".volume__button");
 
 if (menuButton) {
   menuButton.addEventListener("click", () => {
@@ -24,6 +25,7 @@ if (menuButton) {
     menuList.classList.toggle("main-nav__list--open");
     body.classList.toggle("page__body--fade");
     lang.classList.toggle("lang--active");
+    playBtn.classList.toggle("volume__button--active");
   });
 
   document.onkeydown = function (evt) {
@@ -35,6 +37,12 @@ if (menuButton) {
       lang.classList.remove("lang--active");
     }
   };
+}
+
+if (playBtn) {
+  playBtn.addEventListener("click", () => {
+    playBtn.classList.toggle("volume__button--play");
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
