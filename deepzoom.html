@@ -27,7 +27,6 @@
     <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="icon" href="favicon/favicon.ico"><!-- 32×32 -->
-    <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><!-- 180×180 -->
     <link rel="manifest" href="favicon/manifest.webmanifest">
   </head>
@@ -37,6 +36,14 @@
         <div class="logo"><a class="logo__link" href="#"><img src="images/gmii-logo.svg" width="200" alt=""></a></div>
         <h1 class="header__title"><a href="index.html">Тканое великолепие</a></h1>
         <div class="header__user-block">
+          <div class="volume">
+            <button class="volume__button" type="button">
+              <svg class="volume__button-icon" aria-hidden="true" width="30" height="30">
+                <use class="volume__button-icon-play" href="images/sprite_auto.svg#icon-volume"></use>
+                <use class="volume__button-icon-mute" href="images/sprite_auto.svg#icon-mute"></use>
+              </svg>
+            </button>
+          </div>
           <div class="lang">
             <a href="#" class="lang__link">EN</a>
           </div>
@@ -129,8 +136,8 @@
               <li class="main-nav__sublist-nav__item"><a href="#">Тема «детей Венеры» в разных видах искусств</a></li>
             </ul>
           </li>
-          <li class="main-nav__item"><a href="#">Глоссарий</a></li>
-          <li class="main-nav__item"><a href="#">Над проектом работали</a></li>
+          <li class="main-nav__item"><a href="glossary.html">Глоссарий</a></li>
+          <li class="main-nav__item"><a href="contributors.html">Над проектом работали</a></li>
           <li class="main-nav__item"><a href="#">Партнеры и участники проекта</a></li>
           <li class="main-nav__item"><a href="#">Квесты и квизы</a></li>
           <li class="main-nav__item"><a href="#">Шпалеры в Москве и МО</a></li>
