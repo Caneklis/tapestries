@@ -2381,6 +2381,54 @@ img {
   padding: 0;
 }
 
+.mfp-title,
+.mfp-counter {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.mfp-arrow {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  margin-top: -20px; 
+  padding: 10px;
+
+  background: red;
+}
+.mfp-arrow::before,
+.mfp-arrow::after {
+  margin: 0; 
+
+  border: none;
+}
+.mfp-arrow:active {
+  margin-top: -20px;
+}
+.mfp-arrow::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+
+  background-image: url("../images/sprite/arrow-down.svg");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.mfp-arrow-left {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.mfp-arrow-right {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.mfp-close {
+  font-size: 60px;
+}
+
 .page__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3819,10 +3867,10 @@ img {
   background-color: #02c480;
 }
 .ssb .ssb-hotspot.story {
-  border-color: #7f2888;
+  border-color: #ff0000;
 }
 .ssb .ssb-hotspot.story::before {
-  background-color: #7f2888;
+  background-color: #ff0000;
 }
 .ssb .ssb-hotspot.research {
   border-color: #021485;
@@ -4017,10 +4065,20 @@ img {
   }
 }
 
+.ssd__main-img {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .ssb__before-after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.ssb__before-after img {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
 }
 @media (max-width: 767px) {
   .ssb__before-after {
