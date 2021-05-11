@@ -104,7 +104,14 @@
 		{% if pageDeepzoom %}
 
 		<!-- <script src="js/main.min.js"></script> -->
+		{% if fashion %}
+		<script src="js/data/fashion/hotspots.js"></script>
+		{% elif plants %}
+		<script src="js/data/plants/hotspots.js"></script>
+		{% else %}
 		<script src="js/openseadragon/hotspots.js"></script>
+		{% endif %}
+
 		<script src="js/libs/jquery.event.move.js"></script>
 		<script src="js/libs/jquery.twentytwenty.js"></script>
 
@@ -117,10 +124,11 @@
 				}, 1000);
 
 			}
+
 			var map = (function (me, $) {
 				"use strict";
 
-				me.name = "map";
+				me.name = 'map';
 
 				var viewer, pad, $window, $ssb, $info, $controls;
 
@@ -241,6 +249,10 @@
 				var showWelcome = function () {
 					$(".ssb__info-container").hide();
 
+
+					$(".volume__button").removeClass("volume__button--play");
+					$("audio")[0].pause();
+
 					var $welcome = $(".ssb__welcome");
 
 					if (!$welcome.is(":visible") && $ssb.is(".ssb__info-expanded")) {
@@ -277,6 +289,8 @@
 						.siblings()
 						.removeClass("is-active");
 
+					$(".volume__button").removeClass("volume__button--play");
+
 					showInfo();
 
 					$hotspotImg.attr("src", $hotspot.data("image")).show();
@@ -287,7 +301,7 @@
 					$hotspotAudio.attr("src", $hotspot.data("audio")).show();
 					$(".ssb-hotspot").on("click", function () {
 						$(".ssb__info-inner").scrollTop(0);
-						$(".mute-audio").removeClass("unmute-audio");
+						// $(".volume__button").removeClass("volume__button--play");
 					});
 
 					viewer.viewport.fitBounds($hotspot.data("zoomTo"));
@@ -302,7 +316,18 @@
 						type: "image",
 						// delegate: "a",
 
-						gallery: { enabled: true },
+
+						gallery: {
+							tCounter: '<span class="mfp-counter">%curr% / %total%</span>', // markup of counter
+							enabled: true,
+							tPrev: 'Предыдущее изображение', // Alt text on left arrow
+							tNext: 'Следущее изображение', // Alt text on right arrow
+
+							arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+						},
+						image: {
+							titleSrc: 'data-caption'
+						},
 						callbacks: {
 							buildControls: function () {
 								// re-appends controls inside the main container
@@ -397,9 +422,7 @@
 
 		</script>
 
-		<script>
-
-
+		<!-- <script>
 
 			document.querySelectorAll('.ssb-hotspot').forEach(item => {
 				item.addEventListener('click', (event) => {
@@ -469,7 +492,7 @@
 				})
 			})
 
-		</script>
+		</script> -->
 
 
 		{% endif %}

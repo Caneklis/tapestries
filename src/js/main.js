@@ -40,8 +40,23 @@ if (menuButton) {
 }
 
 if (playBtn) {
-  playBtn.addEventListener("click", () => {
-    playBtn.classList.toggle("volume__button--play");
+  setTimeout(() => {
+    playBtn.addEventListener("click", (e) => {
+      if (playBtn.classList.contains("volume__button--play")) {
+        document.querySelector("audio").pause();
+        playBtn.classList.remove("volume__button--play"); // changing icon for button
+      } else {
+        document.querySelector("audio").play();
+        playBtn.classList.add("volume__button--play");
+      }
+      //playBtn.classList.toggle("volume__button--play");
+    });
+  }, 500);
+}
+
+if (document.querySelector("audio")) {
+  document.querySelector("audio").addEventListener("ended", (e) => {
+    playBtn.classList.remove("volume__button--play");
   });
 }
 
@@ -70,6 +85,44 @@ document.addEventListener("DOMContentLoaded", () => {
       sensitivity: 1,
     },
     slideToClickedSlide: true,
+  });
+
+  //Слайдр для серии на лендинге
+  const swiperThumbs = new Swiper(".mySwiper", {
+    effect: "fade",
+    spaceBetween: 10,
+    slidesPerView: 1,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  const swiperGallery = new Swiper(".mySwiper2", {
+    effect: "coverflow",
+    spaceBetween: 10,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    mousewheelControl: true,
+    initialSlide: 2,
+    coverflowEffect: {
+      //rotate: 5,
+      rotate: 5,
+      stretch: 20,
+      depth: 100,
+      modifier: 3,
+      slideShadows: false,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    mousewheel: {
+      sensitivity: 1,
+    },
+    slideToClickedSlide: true,
+    thumbs: {
+      swiper: swiperThumbs,
+    },
   });
 
   //Слайдр с фейдом на лендиге
@@ -255,10 +308,11 @@ $(".textpage__img-popup").magnificPopup({
   closeOnContentClick: true,
   closeBtnInside: false,
   mainClass: "mfp-with-zoom mfp-img-mobile",
+  tCounter: '<span class="mfp-counter">%curr% / %total%</span>', // markup of counter
   image: {
     verticalFit: true,
     titleSrc: function (item) {
-      return item.el.attr("title");
+      return item.el.attr("data-caption");
     },
   },
   zoom: {

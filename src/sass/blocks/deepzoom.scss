@@ -156,42 +156,42 @@
     }
 
     &.bird {
-      border-color: #ffff00;
+      border-color: $bird-color;
 
       &::before {
-        background-color: #ffff00;
+        background-color: $bird-color;
       }
     }
 
     &.fashion {
-      border-color: #c9227d;
+      border-color: $fashion-color;
 
       &::before {
-        background-color: #c9227d;
+        background-color: $fashion-color;
       }
     }
 
     &.plants {
-      border-color: #02c480;
+      border-color: $plants-color;
 
       &::before {
-        background-color: #02c480;
+        background-color: $plants-color;
       }
     }
 
     &.story {
-      border-color: #7f2888;
+      border-color: $story-color;
 
       &::before {
-        background-color: #7f2888;
+        background-color: $story-color;
       }
     }
 
     &.research {
-      border-color: #021485;
+      border-color: $research-color;
 
       &::before {
-        background-color: #021485;
+        background-color: $research-color;
       }
     }
   }
@@ -389,13 +389,19 @@
   }
 }
 
+.ssd__main-img {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .ssb__before-after {
   display: flex;
 
-  // img {
-  //   width: 50%;
-  //   height: auto;
-  // }
+  img {
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+  }
 
   @media (max-width: $mobile) {
     display: none;

@@ -123,6 +123,8 @@ const server = () => {
   );
   watch("src/js/**/*.{js,json}", series(js, refresh));
   watch("src/js/openseadragon/**", series(deepzoom, refresh));
+  watch("src/js/openseadragon/**", series(deepzoom, refresh));
+  watch("src/js/data/**/*", series(deepzoom, refresh));
 };
 
 const svgo = () => {
@@ -149,7 +151,7 @@ const sprite = () => {
 };
 
 const deepzoom = () => {
-  return src(["src/js/openseadragon/**"], {
+  return src(["src/js/openseadragon/**", "src/js/data/**/*"], {
     base: "src",
   }).pipe(dest("build"));
 };
@@ -161,7 +163,8 @@ const copy = () => {
       "src/*.html",
       "src/images/**/*.{png,jpg,gif,svg}",
       "src/fonts/**",
-      "src/js/openseadragon/**", //Для дипзума
+      "src/js/openseadragon/**", //Для дипзума'
+      "src/js/data/**/*", //данные для дипзума
       "src/js/libs/**/*", // Библиотеки не из npm
       "src/favicon/**",
       "src/data/**",
@@ -198,6 +201,7 @@ const optimizeImages = () => {
     .pipe(dest("build/images"));
 };
 
+exports.deepzoom = deepzoom;
 exports.copy = copy;
 exports.sprite = sprite;
 exports.build = build;

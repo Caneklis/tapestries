@@ -108,3 +108,48 @@ img {
 .mfp-no-margins .mfp-container {
   padding: 0;
 }
+
+.mfp-title,
+.mfp-counter {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.mfp-arrow {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background: red;
+  margin: 0;
+  margin-top: -20px;
+  &::before,
+  &::after {
+    border: none;
+    margin: 0;
+  }
+
+  &:active {
+    margin-top: -20px;
+  }
+
+  &::before {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-image: url("../images/sprite/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &-left {
+    transform: rotate(90deg);
+  }
+
+  &-right {
+    transform: rotate(-90deg);
+  }
+}
+
+.mfp-close {
+  font-size: 60px;
+}
