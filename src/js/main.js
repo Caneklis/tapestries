@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //Слайдр для серии на лендинге
-  const swiperThumbs = new Swiper(".mySwiper", {
+  const swiperThumbs = new Swiper(".swiper-text-slider", {
     effect: "fade",
     spaceBetween: 10,
     slidesPerView: 1,
@@ -96,14 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
   });
-  const swiperGallery = new Swiper(".mySwiper2", {
+  const swiperGallery = new Swiper(".swiper-gallery", {
     effect: "coverflow",
     spaceBetween: 10,
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    mousewheelControl: true,
-    initialSlide: 2,
+    mousewheelControl: false,
+    initialSlide: 0,
     coverflowEffect: {
       //rotate: 5,
       rotate: 5,
@@ -115,9 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     keyboard: {
       enabled: true,
       onlyInViewport: false,
-    },
-    mousewheel: {
-      sensitivity: 1,
     },
     slideToClickedSlide: true,
     thumbs: {
