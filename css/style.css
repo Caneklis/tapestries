@@ -4175,11 +4175,18 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  gap: 20px;
 }
 .ssb__before-after img {
-  width: 50%;
+  width: 45%;
   max-width: 100%;
   height: auto;
+}
+.ssb__before-after--split-image img {
+  width: 100%;
 }
 @media (max-width: 767px) {
   .ssb__before-after {
@@ -4452,12 +4459,18 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 80%;
   margin: 0;
   margin: 0 auto; 
   padding: 0;
 
   list-style: none;
+}
+@media (max-width: 1024px) {
+  .textpage__gallery-list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 .textpage__gallery-item {
@@ -4474,12 +4487,23 @@ img {
   width: 350px;
   margin: 12px;
 }
+@media (max-width: 1024px) {
+  .textpage__gallery-item {
+    width: 320px;
+  }
+}
 .textpage__gallery-item a {
   width: 350px;
   height: 350px;
   overflow: hidden; 
 
   border-radius: 50%;
+}
+@media (max-width: 1024px) {
+  .textpage__gallery-item a {
+    width: 320px;
+    height: 320px;
+  }
 }
 .textpage__gallery-item a img {
   -webkit-transition: all 0.3s ease-in-out;
