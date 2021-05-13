@@ -396,11 +396,19 @@
 
 .ssb__before-after {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 
   img {
     max-width: 100%;
-    width: 50%;
+    width: 45%;
     height: auto;
+  }
+
+  &--split-image {
+    img {
+      width: 100%;
+    }
   }
 
   @media (max-width: $mobile) {

@@ -108,6 +108,8 @@
 		<script src="js/data/fashion/hotspots.js"></script>
 		{% elif plants %}
 		<script src="js/data/plants/hotspots.js"></script>
+		{% elif research %}
+		<script src="js/data/research/hotspots.js"></script>
 		{% else %}
 		<script src="js/openseadragon/hotspots.js"></script>
 		{% endif %}
@@ -314,7 +316,7 @@
 
 					$(".ssb__gallery-popup-link").magnificPopup({
 						type: "image",
-						// delegate: "a",
+						//delegate: "a",
 
 
 						gallery: {
@@ -327,12 +329,6 @@
 						},
 						image: {
 							titleSrc: 'data-caption'
-						},
-						callbacks: {
-							buildControls: function () {
-								// re-appends controls inside the main container
-								this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
-							},
 						},
 					});
 

@@ -28,23 +28,16 @@ description: Description index
     <div id="ssb-banner" class="ssb-banner"></div>
     <div id="ssb__info" class="ssb__info">
       <button class="ssb__info-toggle-button ssb__info-toggle-button--close" type="button">
-        <!-- <svg class="ssb__info-toggle__icon" aria-hidden="true" width="50" height="50">
-          <use class="ssb__info-toggle-icon-popup" href="images/sprite_auto.svg#pop-up"></use>
-          <use class="ssb__info-toggle-icon-cross" href="images/sprite_auto.svg#cross"></use>
-        </svg> -->
-
         <svg class="ssb__info-toggle-button" aria-hidden="true" width="15" height="15">
           <use href="images/sprite_auto.svg#arrow-down"></use>
         </svg>
       </button>
       <div class="ssb__info-inner">
         <div class="ssb__info-sidebar-control">
-          <!-- <button class="mute-audio" type="button">
-            <span class="tooltip">Нажмите, чтобы послушать</span> Звук
-          </button> -->
         </div>
         <div class="ssb__welcome">
           <h1>ШПАЛЕРА «ТРИУМФ НАДЕЖДЫ»</h1>
+          <h2>{{ title }}</h2>
           <p>Основная тема композиции шпалеры «Триумф Надежды» — сила искреннего религиозного чувства. Аллегорический
             смысл выражен в надписи, расположенной в верхней части бордюра, — прием, характерный для произведений эпохи
             готики. Двустишие на латинском языке гласит:
@@ -129,115 +122,4 @@ description: Description index
     </div>
   </div>
 </main>
-
-<style>
-  /* You can remove this page div in your website */
-  #page {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-
-  /* Our normalize css */
-  * {
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  /* Our wrapper */
-  .wrapper {
-    width: 900px;
-    height: 600px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  }
-
-  /* Our image information */
-  .before,
-  .after {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-color: white;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    overflow: hidden;
-  }
-
-  .content-image {
-    height: 100%;
-  }
-
-  .after {
-    width: 125px;
-  }
-
-  .scroller {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 100px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background-color: transparent;
-    opacity: 0.9;
-    pointer-events: auto;
-    cursor: pointer;
-  }
-
-  .scroller:hover {
-    opacity: 1;
-  }
-
-  .scrolling {
-    pointer-events: none;
-    opacity: 1;
-  }
-
-  .scroller__thumb {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-  }
-
-  .scroller:before,
-  .scroller:after {
-    content: " ";
-    display: block;
-    width: 7px;
-    height: 9999px;
-    position: absolute;
-    left: 50%;
-    margin-left: -3.5px;
-    z-index: 30;
-    transition: 0.1s;
-  }
-
-  .scroller:before {
-    top: 100%;
-  }
-
-  .scroller:after {
-    bottom: 100%;
-  }
-
-  /* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
-  .scroller {
-    border: 5px solid #fff;
-  }
-
-  .scroller:before,
-  .scroller:after {
-    background: #fff;
-  }
-</style>
 {% endblock %}
