@@ -129,7 +129,7 @@
   .ssb-hotspot {
     position: relative;
     cursor: pointer;
-    border: 3px solid #2f9599;
+    border: 2px solid #2f9599;
     background-color: transparent;
     border-radius: 50%;
 
@@ -157,38 +157,55 @@
 
     &.bird {
       border-color: $bird-color;
+      background-color: rgba($bird-color, 0.3);
 
       &::before {
+        display: none;
         background-color: $bird-color;
       }
     }
 
     &.fashion {
-      border-color: $fashion-color;
+      border-radius: 0;
+      transform: scaleX(0.5) translateX(-50%) rotate(45deg);
+      background-color: rgba($fashion-color, 0.3);
+      border-color: $fashion-color !important;
 
       &::before {
-        background-color: $fashion-color;
+        display: none;
       }
     }
 
     &.plants {
       border-color: $plants-color;
+      background-color: rgba($plants-color, 0.3);
 
       &::before {
+        display: none;
         background-color: $plants-color;
       }
     }
 
     &.story {
+      background-color: rgba($story-color, 0.2);
       border-color: $story-color;
 
       &::before {
+        display: none;
         background-color: $story-color;
       }
     }
 
     &.research {
+      transform: rotate(45deg);
+      border-radius: 0;
+      border-width: 2px;
       border-color: $research-color;
+      background-color: rgba($research-color, 0.3);
+
+      &:hover {
+        transform: rotate(45deg);
+      }
 
       &::before {
         background-color: $research-color;
@@ -429,17 +446,17 @@
 
 @keyframes pulse {
   0% {
-    transform: scale(0.95);
+    // transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(#fff, 0.7);
   }
 
   70% {
-    transform: scale(1);
+    // transform: scale(1);
     box-shadow: 0 0 0 10px rgba(#fff, 0);
   }
 
   100% {
-    transform: scale(0.95);
+    // transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(#fff, 0);
   }
 }

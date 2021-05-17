@@ -326,3 +326,22 @@ $(".textpage__iframe-popup").magnificPopup({
 
   fixedContentPos: false,
 });
+
+// const cardsVideo = document.querySelectorAll(".section__card-video");
+// const cardsVideo = document.querySelectorAll(
+//   ".section__image-deepzoom-link video"
+// );
+
+// if (cardsVideo) {
+//   cardsVideo.forEach((cardVideo) => {
+//     cardVideo.addEventListener("mouseover", function () {
+//       this.play();
+//       console.log("play");
+//     });
+
+//     cardVideo.addEventListener("mouseleave", function () {
+//       this.pause();
+//       console.log("stop");
+//     });
+//   });
+// }
