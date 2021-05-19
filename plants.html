@@ -300,7 +300,6 @@
 
     </script>
     <script src="js/main.min.js"></script>
-    <!-- <script src="js/main.min.js"></script> -->
     <script src="js/data/plants/hotspots.js"></script>
     <script src="js/libs/jquery.event.move.js"></script>
     <script src="js/libs/jquery.twentytwenty.js"></script>
@@ -326,11 +325,10 @@
           maxZoomPixelRatio: 1.0,
           animationTime: 3,
           minZoomLevel: 2,
-          //maxZoomLevel: 12,
           maxZoomLevel: 6,
           zoomPerClick: 1.0,
           prefixUrl: "../images/",
-          immediateRender: true, //было закомментировано
+          immediateRender: true,
           showNavigationControl: false,
           showNavigator: true,
           navigatorAutoFade: false,
@@ -452,7 +450,6 @@
           $(".ssb-hotspot").on("click", function()
           {
             $(".ssb__info-inner").scrollTop(0);
-            // $(".volume__button").removeClass("volume__button--play");
           });
           viewer.viewport.fitBounds($hotspot.data("zoomTo"));
           setTimeout(function()
@@ -504,8 +501,6 @@
               y = hotspot.y,
               w = hotspot.w, //выводит размеры из hotspots
               h = hotspot.h, //выводит размеры из hotspots
-              // w = 270,//фикс размеры
-              // h = 270,//фикс размеры
               center = new OpenSeadragon.Point(
                 (x + w / 2) / viewer.source.width,
                 (y + h / 2) / viewer.source.height / aspectRatio),
@@ -538,87 +533,12 @@
             $hotspot.on("click touchend", activateHotspot);
             viewer.drawer.addOverlay($hotspot[0], rect, hotspotPlacement);
           });
-          // $('.ssb__info-link').on('click touchend', function (e) {
-          // 	e.preventDefault();
-          // 	activateHotspot;
-          // });
         });
         return me;
       })(map ||
       {}, jQuery);
 
     </script>
-    <!-- <script>
-
-			document.querySelectorAll('.ssb-hotspot').forEach(item => {
-				item.addEventListener('click', (event) => {
-
-					console.log('bla')
-
-					// I hope this over-commenting helps. Let's do this!
-					// Let's use the 'active' variable to let us know when we're using it
-					let active = false;
-
-					// First we'll have to set up our event listeners
-					// We want to watch for clicks on our scroller
-					document.querySelector('.scroller').addEventListener('mousedown', function () {
-						active = true;
-						// Add our scrolling class so the scroller has full opacity while active
-						document.querySelector('.scroller').classList.add('scrolling');
-					});
-					// We also want to watch the body for changes to the state,
-					// like moving around and releasing the click
-					// so let's set up our event listeners
-					document.body.addEventListener('mouseup', function () {
-						active = false;
-						document.querySelector('.scroller').classList.remove('scrolling');
-					});
-					document.body.addEventListener('mouseleave', function () {
-						active = false;
-						document.querySelector('.scroller').classList.remove('scrolling');
-					});
-
-					// Let's figure out where their mouse is at
-					document.body.addEventListener('mousemove', function (e) {
-						if (!active) return;
-						// Their mouse is here...
-						let x = e.pageX;
-						// but we want it relative to our wrapper
-						x -= document.querySelector('.wrapper').getBoundingClientRect().left;
-						// Okay let's change our state
-						scrollIt(x);
-					});
-
-					// Let's use this function
-					function scrollIt(x) {
-						let transform = Math.max(0, (Math.min(x, document.querySelector('.wrapper').offsetWidth)));
-						document.querySelector('.after').style.width = transform + "px";
-						document.querySelector('.scroller').style.left = transform - 25 + "px";
-					}
-
-					// Let's set our opening state based off the width,
-					// we want to show a bit of both images so the user can see what's going on
-					scrollIt(150);
-
-					// And finally let's repeat the process for touch events
-					// first our middle scroller...
-					document.querySelector('.scroller').addEventListener('touchstart', function () {
-						active = true;
-						document.querySelector('.scroller').classList.add('scrolling');
-					});
-					document.body.addEventListener('touchend', function () {
-						active = false;
-						document.querySelector('.scroller').classList.remove('scrolling');
-					});
-					document.body.addEventListener('touchcancel', function () {
-						active = false;
-						document.querySelector('.scroller').classList.remove('scrolling');
-					});
-
-				})
-			})
-
-		</script> -->
     <!-- END scripts -->
   </body>
 </html>
