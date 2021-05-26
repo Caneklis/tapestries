@@ -3,12 +3,11 @@
 }
 .pagination__list {
   @include list-reset;
+  @include wrapper;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @media (max-width: $mobile) {
     padding: 20px 20px 40px;

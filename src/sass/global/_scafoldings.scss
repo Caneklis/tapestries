@@ -158,10 +158,45 @@ img {
   }
 }
 
-.mfp-close {
+.mfp-close,
+.mfp-iframe-holder .mfp-close {
+  top: 0;
+  right: 0;
   font-size: 60px;
 }
 
 .mfp-container {
   padding: 0 40px;
+}
+
+// .twentytwenty-container {
+//   width: 90%;
+//   height: auto;
+//   margin: 0 auto;
+// }
+.twentytwenty-container {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.before-after img,
+.twentytwenty-container img {
+  width: 100%;
+  height: auto;
+}
+
+.twentytwenty-container img {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+.mfp-close-btn-in .mfp-close {
+  width: 50px;
+  padding: 0;
+  font-size: 60px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
 }

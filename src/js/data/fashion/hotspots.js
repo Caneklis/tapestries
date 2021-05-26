@@ -17,25 +17,23 @@ var map = (function (me, undefined) {
       <a class="ssb__gallery-popup-link  ssd__main-img" href="images/fashion/fashion-full-1.jpg"  data-caption="Описание для картинки во всплывающем окне"><img src="images/fashion/fashion-thumb-1.jpg"></a>
         <div class="ssb__full-text">
           <p>Аарон облачен в альбу — длиннополую тунику, аналог стихаря или подризника, и далматику синего цвета с рисунком, характерным для итальянских тканей XV–XVI веков.На голове надета митра — часть литургического облачения символизировала языки пламени, сошедшие на апостолов в день Пятидесятницы.</p>
-          <!-- Изображение до/после на пк и планшете -->
-            <!-- Изображение до -->
-            <div class="ssb__gallery">
-              <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
-                <img src="images/fashion/fashion-example-thumb.jpg" />
-              </a>
-              <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
-                <img src="images/fashion/fashion-example-thumb.jpg" />
-              </a>
-              <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
-                <img src="images/fashion/fashion-example-thumb.jpg" />
-              </a>
-              <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
-                <img src="images/fashion/fashion-example-thumb.jpg" />
-              </a>
-              <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
-                <img src="images/fashion/fashion-example-thumb.jpg" />
-              </a>
-            </div>
+          <div class="ssb__gallery">
+            <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
+              <img src="images/fashion/fashion-example-thumb.jpg" />
+            </a>
+            <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
+              <img src="images/fashion/fashion-example-thumb.jpg" />
+            </a>
+            <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
+              <img src="images/fashion/fashion-example-thumb.jpg" />
+            </a>
+            <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
+              <img src="images/fashion/fashion-example-thumb.jpg" />
+            </a>
+            <a class="ssb__gallery-popup-link" href="images/fashion/fashion-full.jpg">
+              <img src="images/fashion/fashion-example-thumb.jpg" />
+            </a>
+          </div>
         </div>`,
     },
     // {

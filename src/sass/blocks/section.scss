@@ -7,21 +7,37 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 .section {
   background-color: $s-color;
   color: $m-color;
   font-family: $s-font;
+  background-image: repeating-linear-gradient(
+      150deg,
+      rgba(0, 0, 0, 0.02),
+      rgba(0, 0, 0, 0.02) 1px,
+      transparent 0,
+      transparent 21px
+    ),
+    repeating-linear-gradient(
+      -150deg,
+      rgba(0, 0, 0, 0.02),
+      rgba(0, 0, 0, 0.02) 1px,
+      transparent 0,
+      transparent 21px
+    );
+  background-size: cover;
 
   &--hero {
     .section__wrapper {
       position: relative;
-      // padding-top: 40px;
       display: grid;
       grid-template-columns: 60% 40%;
       min-height: 100vh;
       padding-left: 40px;
+      padding-top: 0;
 
       @media (max-width: $tablet) {
         padding: 0;
@@ -89,16 +105,21 @@
     color: $s-color;
     background-color: #1f1f1f;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='38.4' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23e2dac7' stroke-width='3.2' stroke-opacity='0.11'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 300px;
     overflow-y: hidden;
 
     .section__wrapper {
       display: grid;
       grid-template-columns: 30% 60%;
       column-gap: 10%;
+      padding-top: 0;
     }
 
     .section__text {
       padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 0;
+      padding-right: 20px;
     }
 
     @media (max-width: $tablet) {
@@ -131,18 +152,8 @@
         top: 0;
         right: 0;
         width: 30%;
-        // transform: translateY(-50%);
         opacity: 0.5;
         overflow-x: hidden;
-
-        // img {
-        //   position: absolute;
-        //   top: 0;
-        //   left: 0;
-        //   width: 100%;
-        //   height: 100%;
-        //   object-fit: cover;
-        // }
 
         img {
           max-width: 100%;
@@ -172,9 +183,6 @@
     position: relative;
     background-color: $m-color;
     color: $s-color;
-
-    background-color: #1f1f1f;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='38.4' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23e2dac7' stroke-width='3.2' stroke-opacity='0.11'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 
     .copy {
       padding-left: 40px;
@@ -210,28 +218,26 @@
       }
     }
   }
+  &--fixed {
+    min-height: calc(2000px + 200px);
+
+    @media (max-width: $tablet) {
+      min-height: unset;
+    }
+  }
 
   &--deepzoom {
-    // min-height: 100vh;
-    // min-height: calc(100vh + 32px + 16px);
     background-color: $s-color;
 
     .section__wrapper {
       display: grid;
       grid-template-columns: 60% 40%;
-      align-items: flex-start;
       padding-bottom: 100px;
       padding-top: 100px;
-
-      // @media (max-width: $tablet) {
-      //   display: flex;
-      //   flex-direction: column;
-      //   align-items: center;
-      //   padding-top: 40px;
-      // }
+      align-items: flex-start;
 
       @media (max-width: $mobile) {
-        padding-bottom: 0;
+        padding-bottom: 20px;
         padding-top: 0;
       }
     }
@@ -248,7 +254,7 @@
     }
 
     .section__text {
-      font-size: 30px;
+      font-size: 35px;
       padding-left: 40px;
 
       @media (max-width: $mobile) {
@@ -264,11 +270,17 @@
       gap: 20px;
       justify-content: center;
 
+      &--center {
+        grid-template-columns: auto;
+        justify-content: center;
+      }
+
       img {
         display: block;
         width: 100%;
         max-width: 100%;
         height: auto;
+        transition: $transition;
       }
 
       @media (max-width: $mobile) {
@@ -298,6 +310,11 @@
       order: -1;
       justify-content: flex-start;
 
+      &--center {
+        grid-template-columns: auto;
+        justify-content: center;
+      }
+
       @media (max-width: $tablet) {
         order: unset;
       }
@@ -322,28 +339,15 @@
   &--dark {
     color: $s-color;
     background-color: $m-color;
-    background-image: repeating-linear-gradient(
-        150deg,
-        rgba(255, 255, 255, 0.05),
-        rgba(255, 255, 255, 0.05) 1px,
-        transparent 0,
-        transparent 21px
-      ),
-      repeating-linear-gradient(
-        -150deg,
-        rgba(255, 255, 255, 0.05),
-        rgba(255, 255, 255, 0.05) 1px,
-        transparent 0,
-        transparent 21px
-      );
-    background-size: cover;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='38.4' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23e2dac7' stroke-width='3.2' stroke-opacity='0.11'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 300px;
   }
 }
 
 .section__text {
   padding-left: 40px;
   padding-right: 40px;
-  font-size: 40px;
+  font-size: 35px;
 
   a {
     position: relative;
@@ -400,7 +404,7 @@
     color: $m-color;
     font-family: $s-font;
     font-style: italic;
-    font-size: 40px;
+    font-size: 35px;
 
     @media (max-width: $tablet) {
       font-size: 20px;
@@ -410,7 +414,8 @@
 
   p {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-align: justify;
   }
 
   h2 {
@@ -447,7 +452,7 @@
 .section__main-title {
   margin: 0;
   margin-bottom: 40px;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 400;
   font-family: $s-font;
   text-align: center;
@@ -475,6 +480,7 @@
 .section__image-mask {
   width: 90vw;
   height: 90vh;
+  margin: auto;
   background: url("https://firebasestorage.googleapis.com/v0/b/hashnode-tutorials.appspot.com/o/bwimages%2Ftumblr_n92tblyC8d1s3sziio1_1280.jpg?alt=media&token=c5d75884-4bc3-46bb-815d-414d2ec68e4b");
   // background-attachment: fixed;
   background-size: contain;
@@ -620,12 +626,26 @@
 
 .section__slider {
   overflow-x: hidden;
+  padding-bottom: 50px;
 
   img {
     width: auto;
     max-width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
+  }
+
+  .swiper-wrapper {
+    align-items: center;
+  }
+
+  .swiper-slide--custom {
+    height: auto;
+
+    p {
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
   }
 }
 
@@ -647,5 +667,25 @@
 
   @media (max-width: $mobile) {
     padding: 0 20px;
+  }
+}
+
+.section__mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+
+  a {
+    color: inherit;
+  }
+
+  p {
+    font-size: 25px;
+    text-align: center;
+
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
   }
 }

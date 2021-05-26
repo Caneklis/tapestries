@@ -7,7 +7,6 @@ import { ScrollTrigger } from "../../node_modules/gsap/ScrollTrigger";
 
 import LocomotiveScroll from "../../node_modules/locomotive-scroll/dist/locomotive-scroll";
 
-// import OpenSeadragon from "../js/openseadragon/openseadragon";
 require("/js/openseadragon/openseadragon");
 require("../../node_modules/magnific-popup/dist/jquery.magnific-popup");
 
@@ -61,6 +60,7 @@ if (document.querySelector("audio")) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  require("/js/modules/tab-section");
   // Слайдер на главной
   const mainSlider = new Swiper(".promo-slider .swiper-container", {
     effect: "coverflow",
@@ -88,14 +88,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //Слайдр для серии на лендинге
-  const swiperThumbs = new Swiper(".swiper-text-slider", {
-    effect: "fade",
-    spaceBetween: 10,
-    slidesPerView: 1,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-  });
+  // const swiperThumbs = new Swiper(".swiper-text-slider", {
+  //   effect: "fade",
+  //   spaceBetween: 10,
+  //   slidesPerView: 1,
+  //   freeMode: true,
+  //   watchSlidesVisibility: true,
+  //   watchSlidesProgress: true,
+  // });
+
   const swiperGallery = new Swiper(".swiper-gallery", {
     effect: "coverflow",
     spaceBetween: 10,
@@ -117,9 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onlyInViewport: false,
     },
     slideToClickedSlide: true,
-    thumbs: {
-      swiper: swiperThumbs,
-    },
+    // thumbs: {
+    //   swiper: swiperThumbs,
+    // },
   });
 
   //Слайдр с фейдом на лендиге
@@ -207,124 +208,149 @@ document.addEventListener("DOMContentLoaded", () => {
       tooltipContainer.classList.remove("tooltip-content--fade-in");
     });
   }
-});
 
-let dropdown = document.querySelectorAll(".main-nav__item--with-dropdown");
+  let dropdown = document.querySelectorAll(".main-nav__item--with-dropdown");
 
-dropdown.forEach((element) =>
-  element.addEventListener("click", (event) => {
-    // event.preventDefault();
-    // event.stopPropagation();
+  dropdown.forEach((element) =>
+    element.addEventListener("click", (event) => {
+      // event.preventDefault();
+      // event.stopPropagation();
 
-    document
-      .querySelectorAll(".main-nav__item--with-dropdown")
-      .forEach((element) => {
-        element.classList.remove("main-nav__item--open");
-      });
-    element.classList.add("main-nav__item--open");
+      document
+        .querySelectorAll(".main-nav__item--with-dropdown")
+        .forEach((element) => {
+          element.classList.remove("main-nav__item--open");
+        });
+      element.classList.add("main-nav__item--open");
 
-    let innerLists = element.querySelector("ul");
-    if (innerLists) {
-      if (!innerLists.classList.contains("main-nav__sublist--open")) {
-        document
-          .querySelector("ul")
-          .querySelectorAll("ul")
-          .forEach((elm) => {
-            if (!isDescendant(elm, element)) {
-              elm.classList.remove("main-nav__sublist--open");
-            }
-          });
+      let innerLists = element.querySelector("ul");
+      if (innerLists) {
+        if (!innerLists.classList.contains("main-nav__sublist--open")) {
+          document
+            .querySelector("ul")
+            .querySelectorAll("ul")
+            .forEach((elm) => {
+              if (!isDescendant(elm, element)) {
+                elm.classList.remove("main-nav__sublist--open");
+              }
+            });
+        }
+
+        innerLists.classList.toggle("main-nav__sublist--open");
       }
+    })
+  );
 
-      innerLists.classList.toggle("main-nav__sublist--open");
+  function isDescendant(parent, child) {
+    let node = child.parentNode;
+    while (node != null) {
+      if (node === parent) {
+        return true;
+      }
+      node = node.parentNode;
     }
-  })
-);
-
-function isDescendant(parent, child) {
-  let node = child.parentNode;
-  while (node != null) {
-    if (node === parent) {
-      return true;
-    }
-    node = node.parentNode;
+    return false;
   }
-  return false;
-}
 
-if (document.querySelector("[data-scroll-container]")) {
-  const scroller = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-  });
+  if (document.querySelector("[data-scroll-container]")) {
+    const scroller = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
 
-  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-  scroller.on("scroll", ScrollTrigger.update);
+    scroller.on("scroll", ScrollTrigger.update);
 
-  ScrollTrigger.scrollerProxy(".container", {
-    scrollTop(value) {
-      return arguments.length
-        ? scroller.scrollTo(value, 0, 0)
-        : scroller.scroll.instance.scroll.y;
+    ScrollTrigger.scrollerProxy(".container", {
+      scrollTop(value) {
+        return arguments.length
+          ? scroller.scrollTo(value, 0, 0)
+          : scroller.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return {
+          left: 0,
+          top: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: ".section__image-mask",
+      scroller: ".container",
+      start: "top+=30% 50%",
+      end: "bottom-=40% 50%",
+      animation: gsap.to(".section__image-mask", { backgroundSize: "120%" }),
+      scrub: 5,
+      // markers: true
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => scroller.update());
+
+    ScrollTrigger.refresh();
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth < 1023) {
+        console.log("eppp");
+        scroller.destroy();
+      }
+    });
+  }
+
+  $(".textpage__img-popup").magnificPopup({
+    type: "image",
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    mainClass: "mfp-with-zoom mfp-img-mobile",
+    tCounter: '<span class="mfp-counter">%curr% / %total%</span>', // markup of counter
+    image: {
+      verticalFit: true,
+      titleSrc: function (item) {
+        return item.el.attr("data-caption");
+      },
     },
-    getBoundingClientRect() {
-      return {
-        left: 0,
-        top: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
+    zoom: {
+      enabled: true,
     },
   });
 
-  ScrollTrigger.create({
-    trigger: ".section__image-mask",
-    scroller: ".container",
-    start: "top+=30% 50%",
-    end: "bottom-=40% 50%",
-    animation: gsap.to(".section__image-mask", { backgroundSize: "120%" }),
-    scrub: 5,
-    // markers: true
+  $(".textpage__iframe-popup").magnificPopup({
+    disableOn: 700,
+    type: "iframe",
+    mainClass: "mfp-with-zoom mfp-img-mobile",
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false,
   });
 
-  ScrollTrigger.addEventListener("refresh", () => scroller.update());
+  $(".popup-inline").magnificPopup({
+    type: "inline",
+    preloader: false,
+    mainClass: "mfp-img-mobile  mfp-fade",
+    // closeBtnInside: false,
+    // fixedContentPos: true,
+    // gallery: {
+    // 	enabled: true
+    // },
 
-  ScrollTrigger.refresh();
+    callbacks: {
+      open: function () {
+        $(".before-after").twentytwenty({
+          before_label: "До реставрации",
+          after_label: "После реставрации",
+        });
 
-  window.addEventListener("resize", function () {
-    if (window.innerWidth < 1023) {
-      console.log("eppp");
-      scroller.destroy();
-    }
-  });
-}
-
-$(".textpage__img-popup").magnificPopup({
-  type: "image",
-  closeOnContentClick: true,
-  closeBtnInside: false,
-  mainClass: "mfp-with-zoom mfp-img-mobile",
-  tCounter: '<span class="mfp-counter">%curr% / %total%</span>', // markup of counter
-  image: {
-    verticalFit: true,
-    titleSrc: function (item) {
-      return item.el.attr("data-caption");
+        $(".before-after-eng").twentytwenty({
+          before_label: "Before restoration",
+          after_label: "Digital reconstruction",
+        });
+      },
     },
-  },
-  zoom: {
-    enabled: true,
-  },
-});
-
-$(".textpage__iframe-popup").magnificPopup({
-  disableOn: 700,
-  type: "iframe",
-  mainClass: "mfp-with-zoom mfp-img-mobile",
-  removalDelay: 160,
-  preloader: false,
-
-  fixedContentPos: false,
+  });
 });
 
 // const cardsVideo = document.querySelectorAll(".section__card-video");

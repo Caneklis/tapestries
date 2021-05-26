@@ -2,8 +2,9 @@
   "name": "tapestries",
   "browserslist": [
     "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "> 1%",
+    "Firefox ESR",
+    "not dead"
   ],
   "version": "1.0.0",
   "description": "",
