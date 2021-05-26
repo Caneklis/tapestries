@@ -2451,9 +2451,9 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
       flex-direction: column;
+  height: 100%;
 
   font-size: 16px;
-  line-height: 161.8%;
   font-family: "Montserrat", Arial, san-serif;
   color: #e2dac7; 
 
@@ -2485,9 +2485,6 @@ img {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.5);
-}
-.page__body--inner {
-  display: block;
 }
 
 .page__content {
@@ -3016,6 +3013,7 @@ img {
 .promo-slider__text {
   width: 100%;
   padding-top: 40px;
+  padding-bottom: 40px;
 
   font-family: "Playfair Display", Georgia, serif;
 }
@@ -3143,7 +3141,7 @@ img {
   color: #1f1f1f;
 
   background-color: #e2dac7;
-  background-image: repeating-linear-gradient(150deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 0, transparent 21px), repeating-linear-gradient(-150deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 0, transparent 21px);
+  background-image: repeating-linear-gradient(150deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02) 1px, transparent 0, transparent 21px), repeating-linear-gradient(-150deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02) 1px, transparent 0, transparent 21px);
   background-size: cover;
 }
 .section--hero .section__wrapper {
@@ -3243,6 +3241,9 @@ img {
 }
 .section--text-right .section__text {
   padding-top: 40px;
+  padding-right: 20px; 
+  padding-bottom: 40px;
+  padding-left: 0;
 }
 @media (max-width: 1024px) {
   .section--text-right {
@@ -3378,6 +3379,14 @@ img {
        object-fit: cover;
   }
 }
+.section--fixed {
+  min-height: calc(2000px + 200px);
+}
+@media (max-width: 1024px) {
+  .section--fixed {
+    min-height: unset;
+  }
+}
 .section--deepzoom {
   background-color: #e2dac7;
 }
@@ -3386,8 +3395,8 @@ img {
   display:     grid;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
-  padding-top: 100px; 
+  align-items: flex-start; 
+  padding-top: 100px;
   padding-bottom: 100px;
 
   -ms-grid-columns: 60% 40%;
@@ -3396,7 +3405,7 @@ img {
 @media (max-width: 767px) {
   .section--deepzoom .section__wrapper {
     padding-top: 0; 
-    padding-bottom: 0;
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 1024px) {
