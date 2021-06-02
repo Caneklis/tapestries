@@ -87,15 +87,19 @@ document.addEventListener("DOMContentLoaded", () => {
     slideToClickedSlide: true,
   });
 
-  //Слайдр для серии на лендинге
-  // const swiperThumbs = new Swiper(".swiper-text-slider", {
-  //   effect: "fade",
-  //   spaceBetween: 10,
-  //   slidesPerView: 1,
-  //   freeMode: true,
-  //   watchSlidesVisibility: true,
-  //   watchSlidesProgress: true,
-  // });
+  //Слайдр для карт
+  const swiperMap = new Swiper(".map__slider", {
+    spaceBetween: 30,
+    effect: "fade",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
   const swiperGallery = new Swiper(".swiper-gallery", {
     effect: "coverflow",
@@ -350,6 +354,39 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
     },
+  });
+
+  // var $items = $('path');
+  var $items = $(".map__img");
+  var $description = $(".description__item");
+
+  $(".btn-group").on("click", ".filter", function () {
+    // var value = $(this).data('filter');
+    // $items.removeClass();
+    // $items.not($selected).removeClass(value);
+
+    // var $selected = $items.filter(function () {
+    //   return $(this).data('filter').indexOf(value) != -1;
+    // }).addClass(value);
+
+    var value = $(this).data("filter");
+    $items.removeClass("active");
+    $items.not($selected).removeClass("active");
+
+    var $selected = $items
+      .filter(function () {
+        return $(this).data("filter").indexOf(value) != -1;
+      })
+      .addClass("active");
+    $(this).addClass("active").siblings().removeClass("active");
+
+    $description.removeClass("active");
+    var $selectedDescr = $description
+      .filter(function () {
+        return $(this).data("filter").indexOf(value) != -1;
+      })
+      .fadeIn();
+    $description.not($selectedDescr).fadeOut(10);
   });
 });
 
