@@ -4978,6 +4978,9 @@ img {
 
   background-color: #e2dac7;
 }
+.map__slider .map__slider-content h2 {
+  margin-bottom: 35px;
+}
 .map__slider .swiper-button-next,
 .map__slider .swiper-button-prev {
   top: 30px;
