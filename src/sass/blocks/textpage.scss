@@ -31,6 +31,7 @@
 .textpage__article {
   margin-bottom: 45px;
 
+  h1,
   h2,
   h3,
   h4 {
@@ -43,6 +44,14 @@
 
     @media (max-width: $mobile) {
       margin-bottom: 20px;
+    }
+  }
+
+  h1 {
+    font-size: 50px;
+
+    @media (max-width: $mobile) {
+      font-size: 25px;
     }
   }
 
@@ -91,11 +100,23 @@
   ul {
     padding: 0;
     list-style: none;
+
+    li {
+      p {
+        width: 100%;
+      }
+    }
   }
 
   ol {
     padding: 0;
     padding-left: 25px;
+
+    li {
+      p {
+        width: 100%;
+      }
+    }
   }
 
   a {

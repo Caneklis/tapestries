@@ -3,7 +3,9 @@ class TabController {
     this.container = document.querySelector(container);
     this.tablist = this.container.querySelector("[role=tablist]");
     this.tabs = this.container.querySelectorAll("[role=tab]");
-    this.tabpanels = this.container.querySelectorAll("[role=tabpanel]");
+    this.tabpanels = this.container.querySelectorAll(
+      ".tab-section__content-item"
+    );
     this.activeTab = this.container.querySelector(
       "[role=tab][aria-selected=true]"
     );
