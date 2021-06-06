@@ -36,8 +36,8 @@ var map = (function (me, undefined) {
       </div>`,
     },
     {
-      x: 976,
-      y: 710,
+      x: 10,
+      y: 1050,
       w: 220,
       h: 220,
       image: "",
