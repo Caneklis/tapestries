@@ -4588,6 +4588,10 @@ img {
 .textpage__article a {
   color: inherit;
 }
+.textpage__article p + img {
+  min-width: 100%;
+  height: auto;
+}
 
 .textpage__slider {
   max-width: 80%;
