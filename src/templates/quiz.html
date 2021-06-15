@@ -1,0 +1,357 @@
+---
+title: Тканое великолепие - Спецпроект отдела реставрации
+description: Description index
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<main class="page__content">
+  <section class="quiz">
+    <div class="quiz-start">
+      <button class="start-btn " id="start-btn" type="button">
+        Старт
+        <span>Викторины</span>
+      </button>
+      <div class="quiz-start-text">Проверьте, насколько хорошо вы <br>
+        знаете историю атомной отрасли!</div>
+      <img src="img/start-logo.svg" alt="" class="quiz-start-logo" width="1166">
+    </div>
+
+    <section class="quiz  hide">
+      <header class="quiz-header">
+        <div class="question-theme">
+          <h1 class="question-theme-title"></h1>
+          <h2 class="question-theme-subtitle"><span>тема вопроса</span></h2>
+        </div>
+        <button class="finish-quiz" type="button" onclick="quizOver()">закончить тест</button>
+      </header>
+      <article class="quiz-box  custom-box">
+        <!-- <img src="img/map.svg" alt="" class="map" width="773"> -->
+        <img src="" alt="" class="question-picture">
+        <div class="question-text"></div>
+        <div class="option-container"></div>
+        <div class="next-question-btn">
+          <!-- <button type="button" class="btn" onclick="next()">Следующий вопрос</button> -->
+        </div>
+
+        <!-- <img src="img/logo_orbit.svg" alt="" class="logo" width="470"> -->
+      </article>
+      <div class="results-box hide"></div>
+
+      <footer class="quiz-footer">
+        <div id="count"></div>
+        <div class="question-number"></div>
+        <div class="answers-indicator"></div>
+      </footer>
+    </section>
+  </section>
+</main>
+
+<script>
+  //Arr of obj
+  const quiz = [
+    {
+      q: "Пуск первого циклотрона в Европе был осуществлен",
+      options: ["Великобритания / 1935", "СССР / 1937", "Германия / 1939"],
+      answer: [0, 1],
+      theme: "Атомный проект",
+      pic: "img/q-bg/01.jpg",
+    },
+    {
+      q: "Когда закончатся еврейские карты?",
+      options: ["2020", "2021", "Никогда"],
+      answer: 2,
+      theme: "Еврейский проект",
+      pic: "img/q-bg/02.jpg",
+    },
+    {
+      q: "Ответ на все вопросы",
+      options: ["42", "43"],
+      answer: 0,
+      theme: "Важный проект",
+      pic: "img/q-bg/03.jpg",
+    },
+    {
+      q: "Мы молодцы?",
+      options: ["Да", "Скорее всего да", "Нет :("],
+      answer: 0,
+      theme: "Важный проект",
+      pic: "img/q-bg/03.jpg",
+    },
+  ];
+
+// const questions = [
+//   {
+//     q: "Пуск первого циклотрона в Европе был осуществлен",
+//     options: ["Великобритания / 1935", "СССР / 1937", "Германия / 1939"],
+//     answer: 1,
+//   },
+//   {
+//     q: "Когда закончатся еврейские карты?",
+//     options: ["2020", "2021", "Никогда"],
+//     answer: 1,
+//   },
+// ];
+
+</script>
+
+<script>
+  const quizSection = document.querySelector(".quiz");
+  const quizStartBlock = document.querySelector(".quiz-start");
+  const quizStartText = document.querySelector(".quiz-start-text");
+  const quizStartLogo = document.querySelector(".quiz-start-logo");
+  const questionNumber = document.querySelector(".question-number");
+  const questionText = document.querySelector(".question-text");
+  const optionContainer = document.querySelector(".option-container");
+  const answersIndicatorContainer = document.querySelector(".answers-indicator");
+  const questionPic = document.querySelector(".question-picture");
+  const startBtn = document.querySelector(".start-btn");
+  const homeBox = document.querySelector(".home-box");
+  const quizBox = document.querySelector(".quiz-box");
+  const resultBox = document.querySelector(".results-box");
+
+  const title = document.querySelector(".question-theme-title");
+
+  let questionCounter = 0;
+  let currentQuestion;
+  let availableQuestions = [];
+  let availableOptions = [];
+  let correctAnswers = 0;
+  let attemt = 0;
+
+  startBtn.addEventListener("click", function () {
+    startBtn.classList.add("fadetoright");
+    quizStartText.classList.add("fadetobottom");
+    quizStartBlock.classList.add("fadetorightbg");
+    quizStartLogo.classList.add("fadetoright");
+    setTimeout(() => {
+      quizSection.classList.remove("hide");
+      quizStartBlock.classList.add("hide");
+    }, 1100);
+
+    getNewQuestion();
+
+    intervalId = setInterval("next()", 5000);
+  });
+
+  function playVideo(video) {
+    let videoEl = document.querySelector(video);
+    let videoElDur = videoEl.duration;
+    clearInterval(intervalId);
+
+    console.log(videoElDur);
+
+    videoEl.classList.remove("hide");
+    videoEl.play();
+
+    videoEl.addEventListener(
+      "ended",
+      function () {
+        videoEl.classList.add("hide");
+        intervalId = setInterval("next()", 5000);
+      },
+      false
+    );
+  }
+
+  //push questions into availableQuestions arr
+  function setAvailableQuestions() {
+    const totalQuestion = quiz.length;
+    for (let i = 0; i < totalQuestion; i++) {
+      availableQuestions.push(quiz[i]);
+    }
+    // console.log(savailableQuestions);
+  }
+
+  //set question number and question options
+  function getNewQuestion() {
+    //set question number
+
+    // if (questionCounter === 1) {
+    //   playVideo("#v1");
+    // }
+
+    // if (questionCounter === 3) {
+    //   playVideo("#v2");
+    // }
+
+    // if (questionCounter === quiz.length) {
+    //   clearInterval(intervalId);
+    // }
+
+    questionNumber.innerHTML = `Вопрос ${questionCounter + 1}  из ${quiz.length}`;
+
+    console.log("Вопрос номер " + questionCounter);
+
+    //set rundom questions text
+    // const questionIndex =
+    //   availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+    // currentQuestion = questionIndex;
+    // questionText.innerHTML = currentQuestion.q;
+
+    // const index1 = availableQuestions.indexOf(questionIndex);
+    // availableQuestions.splice(index1, 1);
+
+    //set question text
+
+    const questionIndex = availableQuestions[0];
+    currentQuestion = questionIndex;
+    // console.log(currentQuestion);
+    questionText.innerHTML = currentQuestion.q;
+
+    title.innerHTML = currentQuestion.theme;
+    questionPic.src = currentQuestion.pic;
+
+    const index1 = availableQuestions.indexOf(questionIndex);
+    availableQuestions.splice(index1, 1);
+
+    //set options
+    const optionLen = currentQuestion.options.length;
+
+    // console.log(currentQuestion.options);
+
+    //Push options into availibleOptions arr
+    for (let i = 0; i < optionLen; i++) {
+      availableOptions.push(i);
+    }
+    // console.log(availableOptions);
+
+    optionContainer.innerHTML = "";
+    let animationDelay = 0.2;
+
+    //create options in html
+    for (let i = 0; i < optionLen; i++) {
+      const optonIndex =
+        availableOptions[Math.floor(Math.random() * availableOptions.length)];
+      // const optonIndex = availableQuestions[0];
+
+      const index2 = availableOptions.indexOf(optonIndex);
+      availableOptions.splice(index2, 1);
+
+      const option = document.createElement("div");
+      option.innerHTML = `<input type="checkbox"> ${currentQuestion.options[optonIndex]} </input>`;
+      option.id = optonIndex;
+      option.style.animationDelay = animationDelay + "s";
+      animationDelay = animationDelay + 0.2;
+      option.className = "option";
+      optionContainer.appendChild(option);
+      option.setAttribute("onclick", "getResult(this)");
+
+      const par = option.querySelector("input");
+      par.style.animationDelay = animationDelay + "s";
+    }
+
+    questionCounter++;
+  }
+
+  //get result of current question
+  function getResult(element) {
+    const id = parseInt(element.id);
+    //compere answer id of clicked option
+    if (id === currentQuestion.answer) {
+      console.log("correct");
+      //set green color to correct option
+      element.classList.add("correct");
+
+      //add indicator corrects mark
+      updateAnswersIndicator("correct");
+      correctAnswers++;
+      console.log("Правильных ответов " + correctAnswers);
+    } else {
+      console.log("incorrect");
+      //set red color to incorrect option
+      element.classList.add("wrong");
+      //add indicator incorrect mark
+      updateAnswersIndicator("wrong");
+
+      // if the answer is incorrect show correct by adding class
+      const optionLen = optionContainer.children.length;
+      for (let i = 0; i < optionLen; i++) {
+        if (parseInt(optionContainer.children[i].id) === currentQuestion.answer) {
+          optionContainer.children[i].classList.add("correct");
+        }
+      }
+      attemt++;
+      console.log("не правильных ответов " + attemt);
+    }
+    unclickableOptions();
+
+    setTimeout(function () {
+      if (questionCounter === quiz.length) {
+        console.log("quiz over");
+        quizOver();
+      } else {
+        clearInterval(intervalId);
+        next();
+      }
+      // next();
+    }, 1000);
+  }
+
+  //Disable option after check answer
+  function unclickableOptions() {
+    const optionLen = optionContainer.children.length;
+
+    for (let i = 0; i < optionLen; i++) {
+      optionContainer.children[i].classList.add("already-answered");
+    }
+  }
+
+  function answersIndicator() {
+    const totalQuestion = quiz.length;
+    for (let i = 0; i < totalQuestion; i++) {
+      const indicator = document.createElement("div");
+      answersIndicatorContainer.appendChild(indicator);
+    }
+  }
+
+  function updateAnswersIndicator(markType) {
+    answersIndicatorContainer.children[questionCounter - 1].classList.add(
+      markType
+    );
+  }
+
+  function next() {
+    if (questionCounter === quiz.length) {
+      console.log("quiz over");
+      // timer(false);
+      quizOver();
+    } else {
+      getNewQuestion();
+    }
+  }
+
+  function quizOver() {
+    quizBox.classList.add("hide");
+    resultBox.classList.remove("hide");
+    resultBox.innerHTML =
+      `Вы ответили правильно на ` +
+      correctAnswers +
+      " " +
+      enumerate(correctAnswers, ["вопрос", "вопроса", "вопросов"]);
+    // clearInterval(intervalId);
+    clearInterval(intervalId);
+  }
+
+  function enumerate(num, dec) {
+    if (num > 100) num = num % 100;
+    if (num <= 20 && num >= 10) return dec[2];
+    if (num > 20) num = num % 10;
+    return num === 1 ? dec[0] : num > 1 && num < 5 ? dec[1] : dec[2];
+  }
+
+  window.onload = function () {
+    //1-set all questions in availableQuestions arr
+    setAvailableQuestions();
+
+    //2- call getNewQuestion()
+    // getNewQuestion();
+
+    //4- answer indicator
+
+    answersIndicator();
+  };
+
+</script>
+
+{% endblock %}

@@ -7,8 +7,13 @@ import { ScrollTrigger } from "../../node_modules/gsap/ScrollTrigger";
 
 import LocomotiveScroll from "../../node_modules/locomotive-scroll/dist/locomotive-scroll";
 
+require("./libs/jquery.event.move");
+require("./libs/jquery.twentytwenty");
 require("/js/openseadragon/openseadragon");
 require("../../node_modules/magnific-popup/dist/jquery.magnific-popup");
+require("./slickQuiz");
+require("./master");
+// require("./slickQuiz-config");
 
 const menuButton = document.querySelector(".main-nav__button");
 const menuList = document.querySelector(".main-nav__list");
@@ -397,21 +402,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// const cardsVideo = document.querySelectorAll(".section__card-video");
-// const cardsVideo = document.querySelectorAll(
-//   ".section__image-deepzoom-link video"
-// );
-
-// if (cardsVideo) {
-//   cardsVideo.forEach((cardVideo) => {
-//     cardVideo.addEventListener("mouseover", function () {
-//       this.play();
-//       console.log("play");
-//     });
-
-//     cardVideo.addEventListener("mouseleave", function () {
-//       this.pause();
-//       console.log("stop");
-//     });
-//   });
-// }
+$(function () {
+  $("#slickQuiz").slickQuiz({});
+});
