@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary Meta Tags -->
-    <title>Index page</title>
+    <title>Тканое великолепие - Спецпроект отдела реставрации</title>
     <meta name="description" content="Description index">
     <link rel="stylesheet" media="all" href="css/style.min.css" />
     <!-- BEGIN social data -->
@@ -30,236 +30,380 @@
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><!-- 180×180 -->
     <link rel="manifest" href="favicon/manifest.webmanifest">
   </head>
-  <!-- 
-
-<body>
-
-	 -->
-  <header class="header  header--inner">
-    <nav class="header__wrapper  main-nav">
-      <div class="logo"><a class="logo__link" href="#"><img src="images/gmii-logo.svg" width="200" alt=""></a></div>
-      <h1 class="header__title"><a href="index.html">Тканое великолепие</a></h1>
-      <div class="header__user-block">
-        <div class="volume">
-          <button class="volume__button" type="button">
-            <svg class="volume__button-icon" aria-hidden="true" width="30" height="30">
-              <use class="volume__button-icon-play" href="images/sprite_auto.svg#icon-volume"></use>
-              <use class="volume__button-icon-mute" href="images/sprite_auto.svg#icon-mute"></use>
+  <!--  -->
+  <body class="page__body">
+    <!--  -->
+    <header class="header">
+      <nav class="header__wrapper  main-nav">
+        <div class="logo"><a class="logo__link" href="#"><img src="images/gmii-logo.svg" width="200" alt=""></a></div>
+        <h1 class="header__title"><a href="index.html">Тканое великолепие</a></h1>
+        <div class="header__user-block">
+          <div class="volume">
+            <button class="volume__button" type="button">
+              <svg class="volume__button-icon" aria-hidden="true" width="30" height="30">
+                <use class="volume__button-icon-play" href="images/sprite_auto.svg#icon-volume"></use>
+                <use class="volume__button-icon-mute" href="images/sprite_auto.svg#icon-mute"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="lang">
+            <a href="#" class="lang__link">EN</a>
+          </div>
+          <button class="main-nav__button" type="button" aria-expanded="false" aria-controls="main-nav__list">
+            <svg class="main-nav__icon" aria-hidden="true" width="50" height="50">
+              <use class="main-nav__icon-menu" href="images/sprite_auto.svg#menu"></use>
+              <use class="main-nav__icon-cross" href="images/sprite_auto.svg#cross"></use>
             </svg>
           </button>
         </div>
-        <div class="lang">
-          <a href="#" class="lang__link">EN</a>
-        </div>
-        <button class="main-nav__button" type="button" aria-expanded="false" aria-controls="main-nav__list">
-          <svg class="main-nav__icon" aria-hidden="true" width="50" height="50">
-            <use class="main-nav__icon-menu" href="images/sprite_auto.svg#menu"></use>
-            <use class="main-nav__icon-cross" href="images/sprite_auto.svg#cross"></use>
-          </svg>
-        </button>
-      </div>
-      <ul class="main-nav__list" id="main-nav__list">
-        <li class="main-nav__item"><a href="index.html">На главную</a></li>
-        <li class="main-nav__item"><a href="#">История шпалерного ткачества</a></li>
-        <li class="main-nav__item  main-nav__item--with-dropdown">
-          <a href="#"> &laquo;Триумф Славы&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
-              <use href="images/sprite_auto.svg#arrow-down"></use>
-            </svg>
-          </a>
-          <ul class="main-nav__sublist">
-            <li class="main-nav__sublist-nav__item"><a href="about.html">О шпалере</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="deepzoom.html">Серия шпалер «Триумфы Петрарки»</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация </a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Одежды и мода</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
-          </ul>
-        </li>
-        <li class="main-nav__item  main-nav__item--with-dropdown">
-          <a href="#"> &laquo;Триумф Надежды&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
-              <use href="images/sprite_auto.svg#arrow-down"></use>
-            </svg>
-          </a>
-          <ul class="main-nav__sublist">
-            <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Серия шпалер «Триумф семи Добродетелей»</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация </a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">История костюма</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
-          </ul>
-        </li>
-        <li class="main-nav__item  main-nav__item--with-dropdown">
-          <a href="#"> &laquo;Иоанн Креститель&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
-              <use href="images/sprite_auto.svg#arrow-down"></use>
-            </svg>
-          </a>
-          <ul class="main-nav__sublist">
-            <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Приемы шпалерного ткачества </a></li>
-          </ul>
-        </li>
-        <li class="main-nav__item  main-nav__item--with-dropdown">
-          <a href="#"> &laquo;Встреча Исава и Иакова&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
-              <use href="images/sprite_auto.svg#arrow-down"></use>
-            </svg>
-          </a>
-          <ul class="main-nav__sublist">
-            <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Серия шпалер «История Иакова»</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">История костюма </a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Компьютерная реконструкция</a></li>
-          </ul>
-        </li>
-        <li class="main-nav__item  main-nav__item--with-dropdown">
-          <a href="#"> &laquo;Триумф Помпея&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
-              <use href="images/sprite_auto.svg#arrow-down"></use>
-            </svg>
-          </a>
-          <ul class="main-nav__sublist">
-            <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Серия шпалер «История Помпея Великого»</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">История костюма </a></li>
-          </ul>
-        </li>
-        <li class="main-nav__item  main-nav__item--with-dropdown">
-          <a href="#"> &laquo;Дети Венеры&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
-              <use href="images/sprite_auto.svg#arrow-down"></use>
-            </svg>
-          </a>
-          <ul class="main-nav__sublist">
-            <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Шпалеры «Дети Венеры»</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">История костюма</a></li>
-            <li class="main-nav__sublist-nav__item"><a href="#">Тема «детей Венеры» в разных видах искусств</a></li>
-          </ul>
-        </li>
-        <li class="main-nav__item"><a href="glossary.html">Глоссарий</a></li>
-        <li class="main-nav__item"><a href="contributors.html">Над проектом работали</a></li>
-        <li class="main-nav__item"><a href="#">Партнеры и участники проекта</a></li>
-        <li class="main-nav__item"><a href="#">Квесты и квизы</a></li>
-        <li class="main-nav__item"><a href="#">Шпалеры в Москве и МО</a></li>
-        <li class="main-nav__contacts">
-          <ul class="social">
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Страница на фейсбуке">
-                <svg class="main-nav__sublist-icon" aria-hidden="true" width="60" height="60">
-                  <use href="images/sprite_auto.svg#fb-icon"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Канал на ютубе">
-                <svg class="main-nav__sublist-icon" aria-hidden="true" width="60" height="60">
-                  <use href="images/sprite_auto.svg#yt-icon"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <p><a href="#">Назад на сайт Отдела реставрации</a></p>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <!-- BEGIN content -->
-  <div data-scroll-container class="container">
-    <div class="hero">
-      <div data-scroll data-scroll-speed="3" class="copy">
-        <blockquote> Хоть и вторгается ужасное присутствие смерти, однако крепка Надежда на милость Божию <cite> — Автор неизвестен </cite>
-        </blockquote>
-        <div>
-          <p>Сверху я бы вставил цитату, как мы делали на миниатюрах в Надежде</p>
-          <p>Справа я предлагаю добавить фрагмент шпалеры.</p>
-          <p>Ниже можно добавить навигацию</p>
-          <ul class="c-summary_list">
-            <li class="c-summary_list_item u-label is-inview" data-scroll="">
-              <a href="#section-research" data-scroll-to=""> 02. Исследование нитей шпалеры <span class="c-summary_list_icon u-icon"> ↓ </span>
-              </a>
-            </li>
-            <li class="c-summary_list_item u-label is-inview" data-scroll="">
-              <a href="#section-conservation" data-scroll-to=""> 01. Реставрация <span class="c-summary_list_icon u-icon"> ↓ </span>
-              </a>
-            </li>
-            <li class="c-summary_list_item u-label is-inview" data-scroll="">
-              <a href="#section-stories" data-scroll-to=""> 03. Истории <span class="c-summary_list_icon u-icon"> ↓ </span>
-              </a>
-            </li>
-          </ul>
+        <ul class="main-nav__list" id="main-nav__list">
+          <li class="main-nav__item"><a href="index.html">На главную</a></li>
+          <li class="main-nav__item"><a href="#">История шпалерного ткачества</a></li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Триумф Славы&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="about.html">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="deepzoom.html">Серия шпалер «Триумфы Петрарки»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация </a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Одежды и мода</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Триумф Надежды&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Серия шпалер «Триумф семи Добродетелей»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация </a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">История костюма</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Иоанн Креститель&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Приемы шпалерного ткачества </a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Встреча Исава и Иакова&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Серия шпалер «История Иакова»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">История костюма </a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Компьютерная реконструкция</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Триумф Помпея&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Серия шпалер «История Помпея Великого»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">История костюма </a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Дети Венеры&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Шпалеры «Дети Венеры»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">История костюма</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Тема «детей Венеры» в разных видах искусств</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a href="glossary.html">Глоссарий</a></li>
+          <li class="main-nav__item"><a href="contributors.html">Над проектом работали</a></li>
+          <li class="main-nav__item"><a href="#">Партнеры и участники проекта</a></li>
+          <li class="main-nav__item"><a href="#">Квесты и квизы</a></li>
+          <li class="main-nav__item"><a href="#">Шпалеры в Москве и МО</a></li>
+          <li class="main-nav__contacts">
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Страница на фейсбуке">
+                  <svg class="main-nav__sublist-icon" aria-hidden="true" width="60" height="60">
+                    <use href="images/sprite_auto.svg#fb-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Канал на ютубе">
+                  <svg class="main-nav__sublist-icon" aria-hidden="true" width="60" height="60">
+                    <use href="images/sprite_auto.svg#yt-icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <p><a href="#">Назад на сайт Отдела реставрации</a></p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- BEGIN content -->
+    <main class="page__content">
+      <div class="quiz" id="slickQuiz">
+        <div class="quiz__wrapper">
+          <h1 class="quizName">
+            <!-- where the quiz name goes -->
+          </h1>
+          <div class="quizArea">
+            <div class="quizHeader">
+              <!-- where the quiz main copy goes -->
+              <a class="quiz__button startQuiz" href="#">Начать квест</a>
+            </div>
+            <!-- where the quiz gets built -->
+          </div>
+          <div class="quizResults">
+            <h3 class="quizScore">You Scored: <span>
+                <!-- where the quiz score goes -->
+              </span></h3>
+            <h3 class="quizLevel"><strong>Ranking:</strong> <span>
+                <!-- where the quiz ranking level goes -->
+              </span></h3>
+            <div class="quizResultsCopy">
+              <!-- where the quiz result copy goes -->
+            </div>
+          </div>
         </div>
       </div>
-      <div class="image-wrapper">
-        <img src="images/intro-thumb.jpg" alt="">
-      </div>
+    </main>
+    <script>
+      var quizJSON = {
+        info:
+        {
+          name: "Онлайн-квест для детей и подростков (10+)",
+          main: "<p>Небольшой вступительный текст. В конце можно вывести количество правильных ответов если нужно. Изображение объекта на шпалере (выделенное или фрагментированное) появляется вместе с вопросом. Подписи, выделенные курсивом, появляются вместе с изображениями и являются пояснениями к ответам.Правильные ответы выделены жирным шрифтом.Изображения муляжей, гербария, могут быть заменены авторскими фото.</p>",
+          results: `<p>Вы отлично справились! Форма пока ничего не отправляет</p>
+        <form action="#" class="quiz__form">
+          <label>
+            <p>Имя</p><input type="text" name="Имя">
+          </label>
+          <label>
+            <p>Фамилия</p><input type="text" name="Фамилия">
+          </label>
+          <label>
+            <p>Email</p><input type="text" name="Email">
+          </label>
+          <button type="submit">Получить приз</button>
+        </form>
+        `,
+        },
+        questions: [
+          {
+            // Question 1 - Multiple Choice, Single True Answer
+            q: "На шпалере «Иоанн Креститель» мы видим изображение плодов и листьев растения, которое по-научному называется Смоковница обыкновенная (Ficus carica L.). В христианстве она является образом мудрости, исцеления, благополучия, божьего благословения. Как ещё называют это растение? Выбери правильные ответы.",
+            a: [
+              {
+                option: "инжир",
+                correct: true
+              },
+              {
+                option: "финик",
+                correct: false
+              },
+              {
+                option: "винная ягода",
+                correct: true
+              },
+              {
+                option: "смо́ква",
+                correct: true
+              },
+              {
+                option: "фиговое дерево",
+                correct: true
+              },
+              {
+                option: "фикус каучуконосный",
+                correct: false
+              }, // no comma here
+            ],
+            correct: `<div class="quiz__answer">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/3069933/large.jpg?1456595822">
+            <div class="quiz__answer-text">
+            <p>
+            <span>Верно!</span>
+            Смоковница обыкновенная – это фикус колхидский. Фикус каучуконосный относится к тому же роду и является ближайшим родственником смоковницы. Финик относится к другому семейству Пальмовые.</p>
+            </div>
+          </div>
+          `,
+            incorrect: `<div class="quiz__answer">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/3069933/large.jpg?1456595822">
+            <div class="quiz__answer-text">
+            <p>
+            <span>Не верно!</span>
+            Смоковница обыкновенная – это фикус колхидский. Фикус каучуконосный относится к тому же роду и является ближайшим родственником смоковницы. Финик относится к другому семейству Пальмовые.</p>
+            </div>
+          </div>`, // no comma here
+          },
+          {
+            // Question 2 - Multiple Choice, Multiple True Answers, Select Any
+            q: "На шпалере «Иоанн Креститель» мы видим плоды дерева, по форме напоминающие женскую фигуру, расширенную книзу. Поэтому в античности она ассоциировалась с богиней красоты Афродитой (Венерой).",
+            a: [
+              {
+                option: "Яблоко",
+                correct: false
+              },
+              {
+                option: "Груша",
+                correct: true
+              },
+              {
+                option: "Апельсин",
+                correct: false
+              },
+              {
+                option: "Ежевика",
+                correct: false
+              }, // no comma here
+            ],
+            select_any: true,
+            correct: "<p><span>Верно</span> Груша с её сладкими плодами часто появляется в изображениях Девы Марии с младенцем Иисусом. Она указывает на сладость добродетели.</p>",
+            incorrect: "<p><span>Не верно</span> Груша с её сладкими плодами часто появляется в изображениях Девы Марии с младенцем Иисусом. Она указывает на сладость добродетели.</p>", // no comma here
+          },
+          {
+            // Question 3 - Multiple Choice, Multiple True Answers, Select All
+            q: "Плод этого дерева — аллегория церкви, способной объединять в вере много разных людей. К этому утверждению люди пришли в древности, изучив строение плода.",
+            a: [
+              {
+                option: "Гранат",
+                correct: true
+              },
+              {
+                option: "Груша",
+                correct: false
+              },
+              {
+                option: "Яблоко",
+                correct: false
+              },
+              {
+                option: "Мандарин",
+                correct: false
+              }, // no comma here
+            ],
+            correct: "<p><span>Верно</span> Плод граната содержит много семян, объединённых под одной оболочкой.</p>",
+            incorrect: "<p><span>Не верно</span> Плод граната содержит много семян, объединённых под одной оболочкой.</p>", // no comma here
+          },
+          {
+            // Question 4
+            q: "На шпалере «Иоанн Креститель» мы видим плод, который в разные времена в различных культурах являлся символом вечной молодости и красоты, раздора и любви, искушения и греха.",
+            a: [
+              {
+                option: "Яблоко",
+                correct: true
+              },
+              {
+                option: "Шиповник",
+                correct: false
+              },
+              {
+                option: "Клубника",
+                correct: false
+              },
+              {
+                option: "Ежевика",
+                correct: false
+              }, // no comma here
+            ],
+            correct: "<p><span>Верно</span> Яблоки Гесперид – символ вечной молодости. <br>Яблоко любви и раздора привело к Троянской войне.</p>",
+            incorrect: "<p><span>Не верно</span> Яблоки Гесперид – символ вечной молодости. <br>Яблоко любви и раздора привело к Троянской войне.</p>", // no comma here
+          },
+          {
+            // Question 5
+            q: "В христианской религии красная роза — символ милосердия и мученичества, она выросла из капель крови Христа на Голгофе, а её шипы — символ Страстей Господних. Какое ещё название розе дали учёные-ботаники?",
+            a: [
+              {
+                option: "Шиповник",
+                correct: true
+              },
+              {
+                option: "Клубника",
+                correct: false
+              },
+              {
+                option: "Ежевика",
+                correct: false
+              },
+              {
+                option: "Яблоко",
+                correct: false
+              }, // no comma here
+            ],
+            correct: "<p><span>Good Job!</span> You must be very observant!</p>",
+            incorrect: "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>", // no comma here
+          }, // no comma here
+          {
+            // Question 6
+            q: "По современным представлениям в христианстве несколько растений считают райским Древом познания Добра и Зла. Выбери правильные ответы.",
+            a: [
+              {
+                option: "Гранат",
+                correct: true
+              },
+              {
+                option: "Слива",
+                correct: false
+              },
+              {
+                option: "Яблоня",
+                correct: true
+              },
+              {
+                option: "Апельсин",
+                correct: true
+              },
+              {
+                option: "Груша",
+                correct: false
+              },
+              {
+                option: "Финик",
+                correct: false
+              }, // no comma here
+            ],
+            correct: "<p><span>Верное</span> Чаще всего считают, что это — яблоня. В латинском языке есть слово \"malum\", обозначающее одновременно \"зло\" и \"яблоко\". Средневековые богословы могли рассуждать так: вкусив от Древа познания, первые люди совершили зло, а значит, плод был плодом зла, то есть яблоком. Но филологи считают, что в слове \"malum\", обозначающем \"зло\", звук \"a\" короткий, а в случае с \"яблоком\" — долгий \"mālum\". В Библии также не уточняется, что это было за дерево. В разных культурах, почитающих Писание, сформировались различные представления на этот счёт. В иудаизме чаще всего считают, что это были смоквы (фиги); в исламе – персик. Некоторые богословы упоминаю гранат, апельсин и вишни. </p>",
+            incorrect: "<p><span>Верное</span> Чаще всего считают, что это — яблоня. В латинском языке есть слово \"malum\", обозначающее одновременно \"зло\" и \"яблоко\". Средневековые богословы могли рассуждать так: вкусив от Древа познания, первые люди совершили зло, а значит, плод был плодом зла, то есть яблоком. Но филологи считают, что в слове \"malum\", обозначающем \"зло\", звук \"a\" короткий, а в случае с \"яблоком\" — долгий \"mālum\". В Библии также не уточняется, что это было за дерево. В разных культурах, почитающих Писание, сформировались различные представления на этот счёт. В иудаизме чаще всего считают, что это были смоквы (фиги); в исламе – персик. Некоторые богословы упоминаю гранат, апельсин и вишни. </p>"
+          }, // no comma here
+        ],
+      };
+
+    </script>
+    <!-- END content -->
+    <div class="tooltip-content">
     </div>
-    <div class="section-0" data-scroll data-scroll-speed="2">
-      <p data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2"> ШПАЛЕРА </p>
-      <p data-scroll data-scroll-direction="horizontal" data-scroll-speed="2"> «ТРИУМФ НАДЕЖДЫ» </p>
-      <cite>Автор или какая-то другая информация</cite>
-      <div class="text">
-        <p>Основная тема композиции шпалеры «Триумф Надежды» — сила искреннего религиозного чувства. Аллегорический смысл выражен в надписи, расположенной в верхней части бордюра, — прием, характерный для произведений эпохи готики. Двустишие на латинском языке гласит:</p>
-        <p>Irruat horribilis quamquam presentia mortis Тuta tamen Spes est in bonitate Dei.</p>
-        <p>(«Хоть и вторгается ужасное присутствие смерти, однако крепка Надежда на милость Божию»)</p>
-        <p>Явление смерти представлено бурной сценой кораблекрушения в верхней части шпалеры — аллюзия на историю Ионы. Частично заслоняя гибнущий корабль, слева движется ладья с фигурой Надежды. Ладья — один из атрибутов Надежды, так же как коса и серп в ее руках (символы надежды на урожай, который будет собран как на земле, так и на небе). Клетка с птицей, висящая на мачте, — обозначение томящейся в земном плену человеческой души. На носу ладьи пылает огонь, из которого возрождается птица феникс, — символ возрождения, а следовательно, и надежды на спасение. Ладью тянут двое мужчин в коротких одеждах, железных ошейниках, цепях и оковах, с мольбой простирающих руки к Богу Отцу. Возникающая из облаков в верхнем правом углу шпалеры его фигура — смысловой центр, к которому направлено движение всей композиции. К нему обращены с мольбой и ожиданием персонажи Ветхого Завета, представленные на первом плане и по краям шпалеры и символизирующие «надежду на милость Божию».</p>
-      </div>
-    </div>
-    <div class="section-1">
-      <div class="image-mask" style="background-image: url(../images/main-slider-2/full-1.png);">
-        <!-- <img src="images/main-slider-2/full-1.png" alt=""> -->
-      </div>
-    </div>
-    <div class="section-3" id="section-research">
-      <div class="image-wrapper">
-        <img src="images/research-thumb.jpg" alt="">
-      </div>
-      <div class="copy">
-        <div data-scroll-speed="2" data-scroll>
-          <h2 class="text-title">Исследование нитей</h2>
-          <p> В ходе предварительных исследований было выявлено, что более 85% поверхности мозаичного набора находится в стадии отслоения. Из-за деструкции мастики под ним образовались многочисленные пустоты. Для укрепления набора было решено проклеить выявленные пустоты. После составления картограммы состояния сохранности был изготовлен «кондуктор» — лист прозрачного оргстекла толщиной 5 мм в размер столешницы. В местах отслоения мозаичного набора, в зонах черного мрамора через «кондуктор» было проведено сверление отверстий диаметром 1 мм. </p>
-        </div>
-      </div>
-    </div>
-    <div class="section-3  section-3--invert" id="section-conservation">
-      <div class="copy">
-        <div data-scroll-speed="2" data-scroll>
-          <h2 class="text-title">Реставрация</h2>
-          <p> В ходе предварительных исследований было выявлено, что более 85% поверхности мозаичного набора находится в стадии отслоения. Из-за деструкции мастики под ним образовались многочисленные пустоты. Для укрепления набора было решено проклеить выявленные пустоты. После составления картограммы состояния сохранности был изготовлен «кондуктор» — лист прозрачного оргстекла толщиной 5 мм в размер столешницы. В местах отслоения мозаичного набора, в зонах черного мрамора через «кондуктор» было проведено сверление отверстий диаметром 1 мм. </p>
-        </div>
-      </div>
-      <div class="image-wrapper">
-        <img src="images/conservation-thumb.jpg" alt="">
-      </div>
-    </div>
-    <div class="section-2" id="section-stories">
-      <div id="pinSection" class="pinned-quote">
-        <blockquote data-scroll data-scroll-sticky data-scroll-target="#pinSection"> Краткое описание раздела. Показываем плитку из изображений, при клике на которое пользователь переходит на дипзум. </blockquote>
-      </div>
-      <div class="images-container">
-        <img src="images/type-thumb-1.jpg" alt="">
-        <img src="images/type-thumb-2.jpg" alt="">
-        <img src="images/type-thumb-1.jpg" alt="">
-        <img src="images/type-thumb-2.jpg" alt="">
-        <img src="images/type-thumb-1.jpg" alt="">
-        <img src="images/type-thumb-2.jpg" alt="">
-        <img src="images/type-thumb-1.jpg" alt="">
-        <img src="images/type-thumb-2.jpg" alt="">
-      </div>
-    </div>
-  </div>
-  <!-- END content -->
-  <div class="tooltip-content">
-  </div>
-  <!-- BEGIN scripts -->
-  <script>
-    const tooltipData = [
-    {
-      id: 1,
-      txt: `
+    <!-- BEGIN scripts -->
+    <script>
+      const tooltipData = [
+      {
+        id: 1,
+        txt: `
 						<div class="tooptip-content__text">
 							<p>Шпале́ра (польск. szраlerа, нем. Spalier от итал. spalliera, из spalla «опора, плечо»):
 							<ul>
@@ -275,10 +419,10 @@
 							<img src="images/tooltip-thumb.jpg" alt="">
 						</div>
 					`,
-    },
-    {
-      id: 2,
-      txt: `
+      },
+      {
+        id: 2,
+        txt: `
 						<div class="tooptip-content__text">
 							<p>Вторая половина XV века
 							<ul>
@@ -293,260 +437,257 @@
 							</ul>
 						</div>
 					`,
-    },
-    {
-      id: 3,
-      txt: `
+      },
+      {
+        id: 3,
+        txt: `
 						<div class="tooltip-content__image">
 							<img src="images/tooltip-thumb.jpg" alt="">
 						</div>
 					`,
-    }, ];
+      }, ];
 
-  </script>
-  <script src="js/main.min.js"></script>
-  <script src="js/openseadragon/hotspots.js"></script>
-  <script src="js/libs/jquery.event.move.js"></script>
-  <script src="js/libs/jquery.twentytwenty.js"></script>
-  <script>
-    let twenty = () =>
-    {
-      setTimeout(() =>
+    </script>
+    <script src="js/main.min.js"></script>
+    <script>
+      let twenty = () =>
       {
-        $(".before-after").twentytwenty();
-      }, 1000);
-    }
-    if (document.querySelector("#ssb-banner"))
-    {
-      var map = (function(me, $)
+        setTimeout(() =>
+        {
+          $(".before-after").twentytwenty();
+        }, 1000);
+      }
+      if (document.querySelector("#ssb-banner"))
       {
-        "use strict";
-        me.name = 'map';
-        var viewer, pad, $window, $ssb, $info, $controls;
-        pad = 1000;
-        viewer = new OpenSeadragon.Viewer(
+        var map = (function(me, $)
         {
-          id: "ssb-banner",
-          tileSources: "tiles/tapestry-1.dzi",
-          minZoomImageRatio: 1.0,
-          maxZoomPixelRatio: 1.0,
-          animationTime: 3,
-          minZoomLevel: 2,
-          maxZoomLevel: 6,
-          zoomPerClick: 1.0,
-          prefixUrl: "",
-          immediateRender: true,
-          showNavigationControl: false,
-          showNavigator: true,
-          navigatorAutoFade: false,
-          navigatorPosition: "BOTTOM_RIGHT",
-        });
-        $window = $(window);
-        $ssb = $(".ssb");
-        $info = $(".ssb__info", $ssb);
-        $controls = $(".ssb__controls", $ssb);
-        $info.find(".ssb__info-inner").toggleClass("scroll", !!("ontouchstart" in window));
-        var zoomIn = function()
-        {
-          viewer.viewport.zoomBy(2.5).applyConstraints();
-          //viewer.viewport.zoomBy(1.5).applyConstraints();
-        };
-        var zoomOut = function()
-        {
-          viewer.viewport.zoomBy(1 / 1.5).applyConstraints();
-        };
-        var reset = function()
-        {
-          viewer.viewport.goHome();
-        };
-        var toggleHotspots = function()
-        {
-          var $hotspots = $(".ssb-hotspot", $ssb),
-            $hotspotsToggleButton = $(this);
-          $hotspots.toggleClass("is-hidden");
-          if ($hotspots.is(".is-hidden"))
+          "use strict";
+          me.name = 'map';
+          var viewer, pad, $window, $ssb, $info, $controls;
+          pad = 1000;
+          viewer = new OpenSeadragon.Viewer(
           {
-            $hotspotsToggleButton.addClass("icon-show-hotspots").removeClass("icon-hide-hotspots").attr("title", "Включить метки");
-          }
-          else
-          {
-            $hotspotsToggleButton.addClass("icon-hide-hotspots").removeClass("icon-show-hotspots").attr("title", "Выключить метки");
-          }
-        };
-        var toggleControls = function()
-        {
-          var $controlsToggleButton = $(".ssb__controls-toggle", $controls);
-          $controls.toggleClass("is-expanded");
-          if ($controls.is(".is-expanded"))
-          {
-            $controlsToggleButton.addClass("ssb__controls-toggle--open").removeClass("ssb__controls-toggle--close").attr("title", "Close Tools");
-          }
-          else
-          {
-            $controlsToggleButton.addClass("ssb__controls-toggle--close").removeClass("ssb__controls-toggle--open").attr("title", "Открыть панель управления");
-          }
-        };
-        var reorient = function(e)
-        {
-          if ($window.width() <= 600)
-          {
-            toggleInfo();
-          }
-          return false;
-        };
-        var toggleInfo = function(event)
-        {
-          if (event) event.stopPropagation();
-          var $infoToggleButton = $(".ssb__info-toggle-button", $info);
-          $ssb.toggleClass("ssb__info-expanded");
-          if ($ssb.is(".ssb__info-expanded"))
-          {
-            $infoToggleButton.addClass("ssb__info-toggle-button--close").removeClass("ssb__info-toggle-button--open").attr("title", "Открыть панель");
-          }
-          else
-          {
-            $infoToggleButton.addClass("ssb__info-toggle-button--open").removeClass("ssb__info-toggle-button--close").attr("title", "Закрыть панель");
-          }
-          return false;
-        };
-        var showInfo = function()
-        {
-          $(".ssb__welcome", $info).hide();
-          $(".ssb__info-container").show();
-        };
-        var showWelcome = function()
-        {
-          $(".ssb__info-container").hide();
-          $(".volume__button").removeClass("volume__button--play");
-          $("audio")[0].pause();
-          var $welcome = $(".ssb__welcome");
-          if (!$welcome.is(":visible") && $ssb.is(".ssb__info-expanded"))
-          {
-            $welcome.show();
-          }
-          else
-          {
-            $welcome.show();
-            toggleInfo();
-          }
-        };
-        var activateHotspot = function(e)
-        {
-          var $hotspot = $(this),
-            $hotspotImg = $info.find(".ssb__info-img"),
-            $hotspotMainTitle = $info.find(".ssb__info-main-title"),
-            $hotspotTitle = $info.find(".ssb__info-title"),
-            $hotspotDescription = $info.find(".ssb__info-description"),
-            $hotspotLink = $info.find(".ssb__info-link"),
-            $hotspotAudio = $info.find(".ssb__info-audio");
-          $hotspotImg.attr("src", "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==").hide();
-          $hotspotMainTitle.hide();
-          $hotspotTitle.hide();
-          $hotspotDescription.hide();
-          $hotspotLink.hide();
-          $hotspotAudio.attr("src", "").hide();
-          $hotspot.addClass("is-active is-viewed").siblings().removeClass("is-active");
-          $(".volume__button").removeClass("volume__button--play");
-          showInfo();
-          $hotspotImg.attr("src", $hotspot.data("image")).show();
-          $hotspotMainTitle.html($hotspot.data("category")).show();
-          $hotspotTitle.html($hotspot.data("title")).show();
-          $hotspotDescription.html($hotspot.data("description")).show();
-          $hotspotLink.attr("href", $hotspot.data("link")).show();
-          $hotspotAudio.attr("src", $hotspot.data("audio")).show();
-          $(".ssb-hotspot").on("click", function()
-          {
-            $(".ssb__info-inner").scrollTop(0);
+            id: "ssb-banner",
+            tileSources: "tiles/tapestry-1.dzi",
+            minZoomImageRatio: 1.0,
+            maxZoomPixelRatio: 1.0,
+            animationTime: 3,
+            minZoomLevel: 2,
+            maxZoomLevel: 6,
+            zoomPerClick: 1.0,
+            prefixUrl: "",
+            immediateRender: true,
+            showNavigationControl: false,
+            showNavigator: true,
+            navigatorAutoFade: false,
+            navigatorPosition: "BOTTOM_RIGHT",
           });
-          viewer.viewport.fitBounds($hotspot.data("zoomTo"));
-          setTimeout(function()
+          $window = $(window);
+          $ssb = $(".ssb");
+          $info = $(".ssb__info", $ssb);
+          $controls = $(".ssb__controls", $ssb);
+          $info.find(".ssb__info-inner").toggleClass("scroll", !!("ontouchstart" in window));
+          var zoomIn = function()
           {
-            if (!$ssb.is(".ssb__info-expanded")) toggleInfo();
-          }, 2000);
-          twenty();
-          $(".ssb__gallery-popup-link").magnificPopup(
+            viewer.viewport.zoomBy(2.5).applyConstraints();
+            //viewer.viewport.zoomBy(1.5).applyConstraints();
+          };
+          var zoomOut = function()
           {
-            type: "image",
-            //delegate: "a",
-            gallery:
+            viewer.viewport.zoomBy(1 / 1.5).applyConstraints();
+          };
+          var reset = function()
+          {
+            viewer.viewport.goHome();
+          };
+          var toggleHotspots = function()
+          {
+            var $hotspots = $(".ssb-hotspot", $ssb),
+              $hotspotsToggleButton = $(this);
+            $hotspots.toggleClass("is-hidden");
+            if ($hotspots.is(".is-hidden"))
             {
-              tCounter: '<span class="mfp-counter">%curr% / %total%</span>', // markup of counter
-              enabled: true,
-              tPrev: 'Предыдущее изображение', // Alt text on left arrow
-              tNext: 'Следущее изображение', // Alt text on right arrow
-              arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
-            },
-            image:
+              $hotspotsToggleButton.addClass("icon-show-hotspots").removeClass("icon-hide-hotspots").attr("title", "Включить метки");
+            }
+            else
             {
-              titleSrc: 'data-caption'
-            },
-          });
-          return false;
-        };
-        viewer.addHandler("open", function()
-        {
-          var aspectRatio = viewer.source.width / viewer.source.height;
-          $info.on("click", "a:not(.ssb__gallery-popup-link)", function()
+              $hotspotsToggleButton.addClass("icon-hide-hotspots").removeClass("icon-show-hotspots").attr("title", "Выключить метки");
+            }
+          };
+          var toggleControls = function()
           {
-            window.open(this.href);
+            var $controlsToggleButton = $(".ssb__controls-toggle", $controls);
+            $controls.toggleClass("is-expanded");
+            if ($controls.is(".is-expanded"))
+            {
+              $controlsToggleButton.addClass("ssb__controls-toggle--open").removeClass("ssb__controls-toggle--close").attr("title", "Close Tools");
+            }
+            else
+            {
+              $controlsToggleButton.addClass("ssb__controls-toggle--close").removeClass("ssb__controls-toggle--open").attr("title", "Открыть панель управления");
+            }
+          };
+          var reorient = function(e)
+          {
+            if ($window.width() <= 600)
+            {
+              toggleInfo();
+            }
             return false;
-          });
-          $info.on("click", reorient);
-          $(".ssb__touch-to-begin", $ssb).on("click", toggleInfo);
-          $(".ssb__controls-zoom-in", $controls).on("click", zoomIn);
-          $(".ssb__controls-zoom-out", $controls).on("click", zoomOut);
-          $(".ssb__controls-reset", $controls).on("click", reset);
-          $(".ssb__controls-toggle-hotspots", $controls).on("click", toggleHotspots);
-          $(".ssb__controls-toggle", $controls).on("click", toggleControls);
-          $(".ssb__controls-toggle-info", $controls).on("click", showWelcome);
-          $(".ssb__info-toggle-button", $info).on("click", toggleInfo);
-          // Setup the hotspots...
-          $.each(me.hotspots, function(index, hotspot)
+          };
+          var toggleInfo = function(event)
           {
-            var $hotspot = $("<a/>").addClass("ssb-hotspot"),
-              x = hotspot.x,
-              y = hotspot.y,
-              w = hotspot.w, //выводит размеры из hotspots
-              h = hotspot.h, //выводит размеры из hotspots
-              center = new OpenSeadragon.Point(
-                (x + w / 2) / viewer.source.width,
-                (y + h / 2) / viewer.source.height / aspectRatio),
-              rect = new OpenSeadragon.Rect(x / viewer.source.width, y / viewer.source.height / aspectRatio, w / viewer.source.width, h / viewer.source.height / aspectRatio),
-              zoomTo = new OpenSeadragon.Rect(
-                (x - pad / 2) / viewer.source.width,
-                (y - pad / 2) / viewer.source.height / aspectRatio,
-                (w + pad) / viewer.source.width,
-                (h + pad) / viewer.source.height / aspectRatio),
-              hotspotPlacement = OpenSeadragon.OverlayPlacement.TOP_LEFT;
-            $hotspot.attr(
+            if (event) event.stopPropagation();
+            var $infoToggleButton = $(".ssb__info-toggle-button", $info);
+            $ssb.toggleClass("ssb__info-expanded");
+            if ($ssb.is(".ssb__info-expanded"))
             {
-              // title: hotspot.title,
-              // text: hotspot.description,
-              class: `ssb-hotspot  ${hotspot.data}`,
-              href: hotspot.link,
-              id: hotspot.id,
-            });
-            $hotspot.data(
+              $infoToggleButton.addClass("ssb__info-toggle-button--close").removeClass("ssb__info-toggle-button--open").attr("title", "Открыть панель");
+            }
+            else
             {
-              index: index,
-              zoomTo: zoomTo,
-              image: hotspot.image,
-              category: hotspot.category,
-              title: hotspot.title,
-              description: hotspot.description,
-              link: hotspot.link,
-              audio: hotspot.audio
+              $infoToggleButton.addClass("ssb__info-toggle-button--open").removeClass("ssb__info-toggle-button--close").attr("title", "Закрыть панель");
+            }
+            return false;
+          };
+          var showInfo = function()
+          {
+            $(".ssb__welcome", $info).hide();
+            $(".ssb__info-container").show();
+          };
+          var showWelcome = function()
+          {
+            $(".ssb__info-container").hide();
+            $(".volume__button").removeClass("volume__button--play");
+            $("audio")[0].pause();
+            var $welcome = $(".ssb__welcome");
+            if (!$welcome.is(":visible") && $ssb.is(".ssb__info-expanded"))
+            {
+              $welcome.show();
+            }
+            else
+            {
+              $welcome.show();
+              toggleInfo();
+            }
+          };
+          var activateHotspot = function(e)
+          {
+            var $hotspot = $(this),
+              $hotspotImg = $info.find(".ssb__info-img"),
+              $hotspotMainTitle = $info.find(".ssb__info-main-title"),
+              $hotspotTitle = $info.find(".ssb__info-title"),
+              $hotspotDescription = $info.find(".ssb__info-description"),
+              $hotspotLink = $info.find(".ssb__info-link"),
+              $hotspotAudio = $info.find(".ssb__info-audio");
+            $hotspotImg.attr("src", "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==").hide();
+            $hotspotMainTitle.hide();
+            $hotspotTitle.hide();
+            $hotspotDescription.hide();
+            $hotspotLink.hide();
+            $hotspotAudio.attr("src", "").hide();
+            $hotspot.addClass("is-active is-viewed").siblings().removeClass("is-active");
+            $(".volume__button").removeClass("volume__button--play");
+            showInfo();
+            $hotspotImg.attr("src", $hotspot.data("image")).show();
+            $hotspotMainTitle.html($hotspot.data("category")).show();
+            $hotspotTitle.html($hotspot.data("title")).show();
+            $hotspotDescription.html($hotspot.data("description")).show();
+            $hotspotLink.attr("href", $hotspot.data("link")).show();
+            $hotspotAudio.attr("src", $hotspot.data("audio")).show();
+            $(".ssb-hotspot").on("click", function()
+            {
+              $(".ssb__info-inner").scrollTop(0);
             });
-            $hotspot.on("click touchend", activateHotspot);
-            viewer.drawer.addOverlay($hotspot[0], rect, hotspotPlacement);
+            viewer.viewport.fitBounds($hotspot.data("zoomTo"));
+            setTimeout(function()
+            {
+              if (!$ssb.is(".ssb__info-expanded")) toggleInfo();
+            }, 2000);
+            twenty();
+            $(".ssb__gallery-popup-link").magnificPopup(
+            {
+              type: "image",
+              //delegate: "a",
+              gallery:
+              {
+                tCounter: '<span class="mfp-counter">%curr% / %total%</span>', // markup of counter
+                enabled: true,
+                tPrev: 'Предыдущее изображение', // Alt text on left arrow
+                tNext: 'Следущее изображение', // Alt text on right arrow
+                arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+              },
+              image:
+              {
+                titleSrc: 'data-caption'
+              },
+            });
+            return false;
+          };
+          viewer.addHandler("open", function()
+          {
+            var aspectRatio = viewer.source.width / viewer.source.height;
+            $info.on("click", "a:not(.ssb__gallery-popup-link)", function()
+            {
+              window.open(this.href);
+              return false;
+            });
+            $info.on("click", reorient);
+            $(".ssb__touch-to-begin", $ssb).on("click", toggleInfo);
+            $(".ssb__controls-zoom-in", $controls).on("click", zoomIn);
+            $(".ssb__controls-zoom-out", $controls).on("click", zoomOut);
+            $(".ssb__controls-reset", $controls).on("click", reset);
+            $(".ssb__controls-toggle-hotspots", $controls).on("click", toggleHotspots);
+            $(".ssb__controls-toggle", $controls).on("click", toggleControls);
+            $(".ssb__controls-toggle-info", $controls).on("click", showWelcome);
+            $(".ssb__info-toggle-button", $info).on("click", toggleInfo);
+            // Setup the hotspots...
+            $.each(me.hotspots, function(index, hotspot)
+            {
+              var $hotspot = $("<a/>").addClass("ssb-hotspot"),
+                x = hotspot.x,
+                y = hotspot.y,
+                w = hotspot.w, //выводит размеры из hotspots
+                h = hotspot.h, //выводит размеры из hotspots
+                center = new OpenSeadragon.Point(
+                  (x + w / 2) / viewer.source.width,
+                  (y + h / 2) / viewer.source.height / aspectRatio),
+                rect = new OpenSeadragon.Rect(x / viewer.source.width, y / viewer.source.height / aspectRatio, w / viewer.source.width, h / viewer.source.height / aspectRatio),
+                zoomTo = new OpenSeadragon.Rect(
+                  (x - pad / 2) / viewer.source.width,
+                  (y - pad / 2) / viewer.source.height / aspectRatio,
+                  (w + pad) / viewer.source.width,
+                  (h + pad) / viewer.source.height / aspectRatio),
+                hotspotPlacement = OpenSeadragon.OverlayPlacement.TOP_LEFT;
+              $hotspot.attr(
+              {
+                // title: hotspot.title,
+                // text: hotspot.description,
+                class: `ssb-hotspot  ${hotspot.data}`,
+                href: hotspot.link,
+                id: hotspot.id,
+              });
+              $hotspot.data(
+              {
+                index: index,
+                zoomTo: zoomTo,
+                image: hotspot.image,
+                category: hotspot.category,
+                title: hotspot.title,
+                description: hotspot.description,
+                link: hotspot.link,
+                audio: hotspot.audio
+              });
+              $hotspot.on("click touchend", activateHotspot);
+              viewer.drawer.addOverlay($hotspot[0], rect, hotspotPlacement);
+            });
           });
-        });
-        return me;
-      })(map ||
-      {}, jQuery);
-    }
+          return me;
+        })(map ||
+        {}, jQuery);
+      }
 
-  </script>
-  <!-- END scripts -->
+    </script>
+    <!-- END scripts -->
   </body>
 </html>

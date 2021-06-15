@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Тканое великолепие - Спецпроект отдела реставрации</title>
+    <meta name="description" content="Description index">
+    <link rel="stylesheet" media="all" href="css/style.min.css" />
+    <!-- BEGIN social data -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+    <!-- END social data -->
+    <link rel="preload" href="fonts/playfair-display-v22-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/playfair-display-v22-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="icon" href="favicon/favicon.ico"><!-- 32×32 -->
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="favicon/manifest.webmanifest">
+  </head>
+  <!--  -->
+  <body class="page__body">
+    <!--  -->
+    <header class="header">
+      <nav class="header__wrapper  main-nav">
+        <div class="logo"><a class="logo__link" href="#"><img src="images/gmii-logo.svg" width="200" alt=""></a></div>
+        <h1 class="header__title"><a href="index.html">Тканое великолепие</a></h1>
+        <div class="header__user-block">
+          <div class="volume">
+            <button class="volume__button" type="button">
+              <svg class="volume__button-icon" aria-hidden="true" width="30" height="30">
+                <use class="volume__button-icon-play" href="images/sprite_auto.svg#icon-volume"></use>
+                <use class="volume__button-icon-mute" href="images/sprite_auto.svg#icon-mute"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="lang">
+            <a href="#" class="lang__link">EN</a>
+          </div>
+          <button class="main-nav__button" type="button" aria-expanded="false" aria-controls="main-nav__list">
+            <svg class="main-nav__icon" aria-hidden="true" width="50" height="50">
+              <use class="main-nav__icon-menu" href="images/sprite_auto.svg#menu"></use>
+              <use class="main-nav__icon-cross" href="images/sprite_auto.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="main-nav__list" id="main-nav__list">
+          <li class="main-nav__item"><a href="index.html">На главную</a></li>
+          <li class="main-nav__item"><a href="#">История шпалерного ткачества</a></li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Триумф Славы&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="about.html">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="deepzoom.html">Серия шпалер «Триумфы Петрарки»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация </a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Одежды и мода</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Триумф Надежды&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Серия шпалер «Триумф семи Добродетелей»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация </a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">История костюма</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Иоанн Креститель&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Приемы шпалерного ткачества </a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Встреча Исава и Иакова&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Серия шпалер «История Иакова»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">История костюма </a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Компьютерная реконструкция</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Триумф Помпея&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Серия шпалер «История Помпея Великого»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">История костюма </a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item  main-nav__item--with-dropdown">
+            <a href="#"> &laquo;Дети Венеры&raquo; <svg class="main-nav__sublist-icon" aria-hidden="true" width="10" height="10">
+                <use href="images/sprite_auto.svg#arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="main-nav__sublist">
+              <li class="main-nav__sublist-nav__item"><a href="#">О шпалере</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Шпалеры «Дети Венеры»</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Исследование и реставрация</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Растения и птицы</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">История костюма</a></li>
+              <li class="main-nav__sublist-nav__item"><a href="#">Тема «детей Венеры» в разных видах искусств</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a href="glossary.html">Глоссарий</a></li>
+          <li class="main-nav__item"><a href="contributors.html">Над проектом работали</a></li>
+          <li class="main-nav__item"><a href="#">Партнеры и участники проекта</a></li>
+          <li class="main-nav__item"><a href="#">Квесты и квизы</a></li>
+          <li class="main-nav__item"><a href="#">Шпалеры в Москве и МО</a></li>
+          <li class="main-nav__contacts">
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Страница на фейсбуке">
+                  <svg class="main-nav__sublist-icon" aria-hidden="true" width="60" height="60">
+                    <use href="images/sprite_auto.svg#fb-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Канал на ютубе">
+                  <svg class="main-nav__sublist-icon" aria-hidden="true" width="60" height="60">
+                    <use href="images/sprite_auto.svg#yt-icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <p><a href="#">Назад на сайт Отдела реставрации</a></p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- BEGIN content -->
+    <main class="page__content">
+      <section class="quiz">
+        <div class="quiz-start">
+          <button class="start-btn " id="start-btn" type="button"> Старт <span>Викторины</span>
+          </button>
+          <div class="quiz-start-text">Проверьте, насколько хорошо вы <br> знаете историю атомной отрасли!</div>
+          <img src="img/start-logo.svg" alt="" class="quiz-start-logo" width="1166">
+        </div>
+        <section class="quiz  hide">
+          <header class="quiz-header">
+            <div class="question-theme">
+              <h1 class="question-theme-title"></h1>
+              <h2 class="question-theme-subtitle"><span>тема вопроса</span></h2>
+            </div>
+            <button class="finish-quiz" type="button" onclick="quizOver()">закончить тест</button>
+          </header>
+          <article class="quiz-box  custom-box">
+            <!-- <img src="img/map.svg" alt="" class="map" width="773"> -->
+            <img src="" alt="" class="question-picture">
+            <div class="question-text"></div>
+            <div class="option-container"></div>
+            <div class="next-question-btn">
+              <!-- <button type="button" class="btn" onclick="next()">Следующий вопрос</button> -->
+            </div>
+            <!-- <img src="img/logo_orbit.svg" alt="" class="logo" width="470"> -->
+          </article>
+          <div class="results-box hide"></div>
+          <footer class="quiz-footer">
+            <div id="count"></div>
+            <div class="question-number"></div>
+            <div class="answers-indicator"></div>
+          </footer>
+        </section>
+      </section>
+    </main>
+    <script>
+      //Arr of obj
+      const quiz = [
+      {
+        q: "Пуск первого циклотрона в Европе был осуществлен",
+        options: ["Великобритания / 1935", "СССР / 1937", "Германия / 1939"],
+        answer: [0, 1],
+        theme: "Атомный проект",
+        pic: "img/q-bg/01.jpg",
+      },
+      {
+        q: "Когда закончатся еврейские карты?",
+        options: ["2020", "2021", "Никогда"],
+        answer: 2,
+        theme: "Еврейский проект",
+        pic: "img/q-bg/02.jpg",
+      },
+      {
+        q: "Ответ на все вопросы",
+        options: ["42", "43"],
+        answer: 0,
+        theme: "Важный проект",
+        pic: "img/q-bg/03.jpg",
+      },
+      {
+        q: "Мы молодцы?",
+        options: ["Да", "Скорее всего да", "Нет :("],
+        answer: 0,
+        theme: "Важный проект",
+        pic: "img/q-bg/03.jpg",
+      }, ];
+      // const questions = [
+      //   {
+      //     q: "Пуск первого циклотрона в Европе был осуществлен",
+      //     options: ["Великобритания / 1935", "СССР / 1937", "Германия / 1939"],
+      //     answer: 1,
+      //   },
+      //   {
+      //     q: "Когда закончатся еврейские карты?",
+      //     options: ["2020", "2021", "Никогда"],
+      //     answer: 1,
+      //   },
+      // ];
+
+    </script>
+    <script>
+      const quizSection = document.querySelector(".quiz");
+      const quizStartBlock = document.querySelector(".quiz-start");
+      const quizStartText = document.querySelector(".quiz-start-text");
+      const quizStartLogo = document.querySelector(".quiz-start-logo");
+      const questionNumber = document.querySelector(".question-number");
+      const questionText = document.querySelector(".question-text");
+      const optionContainer = document.querySelector(".option-container");
+      const answersIndicatorContainer = document.querySelector(".answers-indicator");
+      const questionPic = document.querySelector(".question-picture");
+      const startBtn = document.querySelector(".start-btn");
+      const homeBox = document.querySelector(".home-box");
+      const quizBox = document.querySelector(".quiz-box");
+      const resultBox = document.querySelector(".results-box");
+      const title = document.querySelector(".question-theme-title");
+      let questionCounter = 0;
+      let currentQuestion;
+      let availableQuestions = [];
+      let availableOptions = [];
+      let correctAnswers = 0;
+      let attemt = 0;
+      startBtn.addEventListener("click", function()
+      {
+        startBtn.classList.add("fadetoright");
+        quizStartText.classList.add("fadetobottom");
+        quizStartBlock.classList.add("fadetorightbg");
+        quizStartLogo.classList.add("fadetoright");
+        setTimeout(() =>
+        {
+          quizSection.classList.remove("hide");
+          quizStartBlock.classList.add("hide");
+        }, 1100);
+        getNewQuestion();
+        intervalId = setInterval("next()", 5000);
+      });
+
+      function playVideo(video)
+      {
+        let videoEl = document.querySelector(video);
+        let videoElDur = videoEl.duration;
+        clearInterval(intervalId);
+        console.log(videoElDur);
+        videoEl.classList.remove("hide");
+        videoEl.play();
+        videoEl.addEventListener("ended", function()
+        {
+          videoEl.classList.add("hide");
+          intervalId = setInterval("next()", 5000);
+        }, false);
+      }
+      //push questions into availableQuestions arr
+      function setAvailableQuestions()
+      {
+        const totalQuestion = quiz.length;
+        for (let i = 0; i < totalQuestion; i++)
+        {
+          availableQuestions.push(quiz[i]);
+        }
+        // console.log(savailableQuestions);
+      }
+      //set question number and question options
+      function getNewQuestion()
+      {
+        //set question number
+        // if (questionCounter === 1) {
+        //   playVideo("#v1");
+        // }
+        // if (questionCounter === 3) {
+        //   playVideo("#v2");
+        // }
+        // if (questionCounter === quiz.length) {
+        //   clearInterval(intervalId);
+        // }
+        questionNumber.innerHTML = `Вопрос ${questionCounter + 1}  из ${quiz.length}`;
+        console.log("Вопрос номер " + questionCounter);
+        //set rundom questions text
+        // const questionIndex =
+        //   availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+        // currentQuestion = questionIndex;
+        // questionText.innerHTML = currentQuestion.q;
+        // const index1 = availableQuestions.indexOf(questionIndex);
+        // availableQuestions.splice(index1, 1);
+        //set question text
+        const questionIndex = availableQuestions[0];
+        currentQuestion = questionIndex;
+        // console.log(currentQuestion);
+        questionText.innerHTML = currentQuestion.q;
+        title.innerHTML = currentQuestion.theme;
+        questionPic.src = currentQuestion.pic;
+        const index1 = availableQuestions.indexOf(questionIndex);
+        availableQuestions.splice(index1, 1);
+        //set options
+        const optionLen = currentQuestion.options.length;
+        // console.log(currentQuestion.options);
+        //Push options into availibleOptions arr
+        for (let i = 0; i < optionLen; i++)
+        {
+          availableOptions.push(i);
+        }
+        // console.log(availableOptions);
+        optionContainer.innerHTML = "";
+        let animationDelay = 0.2;
+        //create options in html
+        for (let i = 0; i < optionLen; i++)
+        {
+          const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+          // const optonIndex = availableQuestions[0];
+          const index2 = availableOptions.indexOf(optonIndex);
+          availableOptions.splice(index2, 1);
+          const option = document.createElement("div");
+          option.innerHTML = `<input type="checkbox"> ${currentQuestion.options[optonIndex]} </input>`;
+          option.id = optonIndex;
+          option.style.animationDelay = animationDelay + "s";
+          animationDelay = animationDelay + 0.2;
+          option.className = "option";
+          optionContainer.appendChild(option);
+          option.setAttribute("onclick", "getResult(this)");
+          const par = option.querySelector("input");
+          par.style.animationDelay = animationDelay + "s";
+        }
+        questionCounter++;
+      }
+      //get result of current question
+      function getResult(element)
+      {
+        const id = parseInt(element.id);
+        //compere answer id of clicked option
+        if (id === currentQuestion.answer)
+        {
+          console.log("correct");
+          //set green color to correct option
+          element.classList.add("correct");
+          //add indicator corrects mark
+          updateAnswersIndicator("correct");
+          correctAnswers++;
+          console.log("Правильных ответов " + correctAnswers);
+        }
+        else
+        {
+          console.log("incorrect");
+          //set red color to incorrect option
+          element.classList.add("wrong");
+          //add indicator incorrect mark
+          updateAnswersIndicator("wrong");
+          // if the answer is incorrect show correct by adding class
+          const optionLen = optionContainer.children.length;
+          for (let i = 0; i < optionLen; i++)
+          {
+            if (parseInt(optionContainer.children[i].id) === currentQuestion.answer)
+            {
+              optionContainer.children[i].classList.add("correct");
+            }
+          }
+          attemt++;
+          console.log("не правильных ответов " + attemt);
+        }
+        unclickableOptions();
+        setTimeout(function()
+        {
+          if (questionCounter === quiz.length)
+          {
+            console.log("quiz over");
+            quizOver();
+          }
+          else
+          {
+            clearInterval(intervalId);
+            next();
+          }
+          // next();
+        }, 1000);
+      }
+      //Disable option after check answer
+      function unclickableOptions()
+      {
+        const optionLen = optionContainer.children.length;
+        for (let i = 0; i < optionLen; i++)
+        {
+          optionContainer.children[i].classList.add("already-answered");
+        }
+      }
+
+      function answersIndicator()
+      {
+        const totalQuestion = quiz.length;
+        for (let i = 0; i < totalQuestion; i++)
+        {
+          const indicator = document.createElement("div");
+          answersIndicatorContainer.appendChild(indicator);
+        }
+      }
+
+      function updateAnswersIndicator(markType)
+      {
+        answersIndicatorContainer.children[questionCounter - 1].classList.add(markType);
+      }
+
+      function next()
+      {
+        if (questionCounter === quiz.length)
+        {
+          console.log("quiz over");
+          // timer(false);
+          quizOver();
+        }
+        else
+        {
+          getNewQuestion();
+        }
+      }
+
+      function quizOver()
+      {
+        quizBox.classList.add("hide");
+        resultBox.classList.remove("hide");
+        resultBox.innerHTML = `Вы ответили правильно на ` + correctAnswers + " " + enumerate(correctAnswers, ["вопрос", "вопроса", "вопросов"]);
+        // clearInterval(intervalId);
+        clearInterval(intervalId);
+      }
+
+      function enumerate(num, dec)
+      {
+        if (num > 100) num = num % 100;
+        if (num <= 20 && num >= 10) return dec[2];
+        if (num > 20) num = num % 10;
+        return num === 1 ? dec[0] : num > 1 && num < 5 ? dec[1] : dec[2];
+      }
+      window.onload = function()
+      {
+        //1-set all questions in availableQuestions arr
+        setAvailableQuestions();
+        //2- call getNewQuestion()
+        // getNewQuestion();
+        //4- answer indicator
+        answersIndicator();
+      };
+
+    </script>
+    <!-- END content -->
+    <div class="tooltip-content">
+    </div>
+    <!-- BEGIN scripts -->
+    <script>
+      const tooltipData = [
+      {
+        id: 1,
+        txt: `
+						<div class="tooptip-content__text">
+							<p>Шпале́ра (польск. szраlerа, нем. Spalier от итал. spalliera, из spalla «опора, плечо»):
+							<ul>
+								<li>
+									<p>Шпалера (садоводство) — решётка, служащая опорой для растений. Шпалера (ковёр) — безворсовый тканый
+										настенный ковёр с сюжетными и орнаментальными композициями. </p>
+								<li>
+									<p>Шпалера (военное дело) — шеренга войск по сторонам пути следования кого-нибудь.</p>
+								</li>
+							</ul>
+						</div>
+						<div class="tooltip-content__image">
+							<img src="images/tooltip-thumb.jpg" alt="">
+						</div>
+					`,
+      },
+      {
+        id: 2,
+        txt: `
+						<div class="tooptip-content__text">
+							<p>Вторая половина XV века
+							<ul>
+								<li>
+									<p>Византийская империя (395—1453) прекратила существование после падения Константинополя (1453).</p>
+								<li>
+									<p>Тринадцатилетняя война (1454—1466). Польша покоряет Тевтонский орден и получает выход к Балтийскому морю.</p>
+								</li>
+								<li>
+									<p>Война Алой и Белой розы (1455—1487). Начало династии Тюдоров.</p>
+								</li>
+							</ul>
+						</div>
+					`,
+      },
+      {
+        id: 3,
+        txt: `
+						<div class="tooltip-content__image">
+							<img src="images/tooltip-thumb.jpg" alt="">
+						</div>
+					`,
+      }, ];
+
+    </script>
+    <script src="js/main.min.js"></script>
+    <script>
+      let twenty = () =>
+      {
+        setTimeout(() =>
+        {
+          $(".before-after").twentytwenty();
+        }, 1000);
+      }
+      if (document.querySelector("#ssb-banner"))
+      {
+        var map = (function(me, $)
+        {
+          "use strict";
+          me.name = 'map';
+          var viewer, pad, $window, $ssb, $info, $controls;
+          pad = 1000;
+          viewer = new OpenSeadragon.Viewer(
+          {
+            id: "ssb-banner",
+            tileSources: "tiles/tapestry-1.dzi",
+            minZoomImageRatio: 1.0,
+            maxZoomPixelRatio: 1.0,
+            animationTime: 3,
+            minZoomLevel: 2,
+            maxZoomLevel: 6,
+            zoomPerClick: 1.0,
+            prefixUrl: "",
+            immediateRender: true,
+            showNavigationControl: false,
+            showNavigator: true,
+            navigatorAutoFade: false,
+            navigatorPosition: "BOTTOM_RIGHT",
+          });
+          $window = $(window);
+          $ssb = $(".ssb");
+          $info = $(".ssb__info", $ssb);
+          $controls = $(".ssb__controls", $ssb);
+          $info.find(".ssb__info-inner").toggleClass("scroll", !!("ontouchstart" in window));
+          var zoomIn = function()
+          {
+            viewer.viewport.zoomBy(2.5).applyConstraints();
+            //viewer.viewport.zoomBy(1.5).applyConstraints();
+          };
+          var zoomOut = function()
+          {
+            viewer.viewport.zoomBy(1 / 1.5).applyConstraints();
+          };
+          var reset = function()
+          {
+            viewer.viewport.goHome();
+          };
+          var toggleHotspots = function()
+          {
+            var $hotspots = $(".ssb-hotspot", $ssb),
+              $hotspotsToggleButton = $(this);
+            $hotspots.toggleClass("is-hidden");
+            if ($hotspots.is(".is-hidden"))
+            {
+              $hotspotsToggleButton.addClass("icon-show-hotspots").removeClass("icon-hide-hotspots").attr("title", "Включить метки");
+            }
+            else
+            {
+              $hotspotsToggleButton.addClass("icon-hide-hotspots").removeClass("icon-show-hotspots").attr("title", "Выключить метки");
+            }
+          };
+          var toggleControls = function()
+          {
+            var $controlsToggleButton = $(".ssb__controls-toggle", $controls);
+            $controls.toggleClass("is-expanded");
+            if ($controls.is(".is-expanded"))
+            {
+              $controlsToggleButton.addClass("ssb__controls-toggle--open").removeClass("ssb__controls-toggle--close").attr("title", "Close Tools");
+            }
+            else
+            {
+              $controlsToggleButton.addClass("ssb__controls-toggle--close").removeClass("ssb__controls-toggle--open").attr("title", "Открыть панель управления");
+            }
+          };
+          var reorient = function(e)
+          {
+            if ($window.width() <= 600)
+            {
+              toggleInfo();
+            }
+            return false;
+          };
+          var toggleInfo = function(event)
+          {
+            if (event) event.stopPropagation();
+            var $infoToggleButton = $(".ssb__info-toggle-button", $info);
+            $ssb.toggleClass("ssb__info-expanded");
+            if ($ssb.is(".ssb__info-expanded"))
+            {
+              $infoToggleButton.addClass("ssb__info-toggle-button--close").removeClass("ssb__info-toggle-button--open").attr("title", "Открыть панель");
+            }
+            else
+            {
+              $infoToggleButton.addClass("ssb__info-toggle-button--open").removeClass("ssb__info-toggle-button--close").attr("title", "Закрыть панель");
+            }
+            return false;
+          };
+          var showInfo = function()
+          {
+            $(".ssb__welcome", $info).hide();
+            $(".ssb__info-container").show();
+          };
+          var showWelcome = function()
+          {
+            $(".ssb__info-container").hide();
+            $(".volume__button").removeClass("volume__button--play");
+            $("audio")[0].pause();
+            var $welcome = $(".ssb__welcome");
+            if (!$welcome.is(":visible") && $ssb.is(".ssb__info-expanded"))
+            {
+              $welcome.show();
+            }
+            else
+            {
+              $welcome.show();
+              toggleInfo();
+            }
+          };
+          var activateHotspot = function(e)
+          {
+            var $hotspot = $(this),
+              $hotspotImg = $info.find(".ssb__info-img"),
+              $hotspotMainTitle = $info.find(".ssb__info-main-title"),
+              $hotspotTitle = $info.find(".ssb__info-title"),
+              $hotspotDescription = $info.find(".ssb__info-description"),
+              $hotspotLink = $info.find(".ssb__info-link"),
+              $hotspotAudio = $info.find(".ssb__info-audio");
+            $hotspotImg.attr("src", "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==").hide();
+            $hotspotMainTitle.hide();
+            $hotspotTitle.hide();
+            $hotspotDescription.hide();
+            $hotspotLink.hide();
+            $hotspotAudio.attr("src", "").hide();
+            $hotspot.addClass("is-active is-viewed").siblings().removeClass("is-active");
+            $(".volume__button").removeClass("volume__button--play");
+            showInfo();
+            $hotspotImg.attr("src", $hotspot.data("image")).show();
+            $hotspotMainTitle.html($hotspot.data("category")).show();
+            $hotspotTitle.html($hotspot.data("title")).show();
+            $hotspotDescription.html($hotspot.data("description")).show();
+            $hotspotLink.attr("href", $hotspot.data("link")).show();
+            $hotspotAudio.attr("src", $hotspot.data("audio")).show();
+            $(".ssb-hotspot").on("click", function()
+            {
+              $(".ssb__info-inner").scrollTop(0);
+            });
+            viewer.viewport.fitBounds($hotspot.data("zoomTo"));
+            setTimeout(function()
+            {
+              if (!$ssb.is(".ssb__info-expanded")) toggleInfo();
+            }, 2000);
+            twenty();
+            $(".ssb__gallery-popup-link").magnificPopup(
+            {
+              type: "image",
+              //delegate: "a",
+              gallery:
+              {
+                tCounter: '<span class="mfp-counter">%curr% / %total%</span>', // markup of counter
+                enabled: true,
+                tPrev: 'Предыдущее изображение', // Alt text on left arrow
+                tNext: 'Следущее изображение', // Alt text on right arrow
+                arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+              },
+              image:
+              {
+                titleSrc: 'data-caption'
+              },
+            });
+            return false;
+          };
+          viewer.addHandler("open", function()
+          {
+            var aspectRatio = viewer.source.width / viewer.source.height;
+            $info.on("click", "a:not(.ssb__gallery-popup-link)", function()
+            {
+              window.open(this.href);
+              return false;
+            });
+            $info.on("click", reorient);
+            $(".ssb__touch-to-begin", $ssb).on("click", toggleInfo);
+            $(".ssb__controls-zoom-in", $controls).on("click", zoomIn);
+            $(".ssb__controls-zoom-out", $controls).on("click", zoomOut);
+            $(".ssb__controls-reset", $controls).on("click", reset);
+            $(".ssb__controls-toggle-hotspots", $controls).on("click", toggleHotspots);
+            $(".ssb__controls-toggle", $controls).on("click", toggleControls);
+            $(".ssb__controls-toggle-info", $controls).on("click", showWelcome);
+            $(".ssb__info-toggle-button", $info).on("click", toggleInfo);
+            // Setup the hotspots...
+            $.each(me.hotspots, function(index, hotspot)
+            {
+              var $hotspot = $("<a/>").addClass("ssb-hotspot"),
+                x = hotspot.x,
+                y = hotspot.y,
+                w = hotspot.w, //выводит размеры из hotspots
+                h = hotspot.h, //выводит размеры из hotspots
+                center = new OpenSeadragon.Point(
+                  (x + w / 2) / viewer.source.width,
+                  (y + h / 2) / viewer.source.height / aspectRatio),
+                rect = new OpenSeadragon.Rect(x / viewer.source.width, y / viewer.source.height / aspectRatio, w / viewer.source.width, h / viewer.source.height / aspectRatio),
+                zoomTo = new OpenSeadragon.Rect(
+                  (x - pad / 2) / viewer.source.width,
+                  (y - pad / 2) / viewer.source.height / aspectRatio,
+                  (w + pad) / viewer.source.width,
+                  (h + pad) / viewer.source.height / aspectRatio),
+                hotspotPlacement = OpenSeadragon.OverlayPlacement.TOP_LEFT;
+              $hotspot.attr(
+              {
+                // title: hotspot.title,
+                // text: hotspot.description,
+                class: `ssb-hotspot  ${hotspot.data}`,
+                href: hotspot.link,
+                id: hotspot.id,
+              });
+              $hotspot.data(
+              {
+                index: index,
+                zoomTo: zoomTo,
+                image: hotspot.image,
+                category: hotspot.category,
+                title: hotspot.title,
+                description: hotspot.description,
+                link: hotspot.link,
+                audio: hotspot.audio
+              });
+              $hotspot.on("click touchend", activateHotspot);
+              viewer.drawer.addOverlay($hotspot[0], rect, hotspotPlacement);
+            });
+          });
+          return me;
+        })(map ||
+        {}, jQuery);
+      }
+
+    </script>
+    <!-- END scripts -->
+  </body>
+</html>
