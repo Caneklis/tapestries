@@ -55,6 +55,7 @@
     "prettier": "2.2.1",
     "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "^0.1.4",
+    "three": "^0.129.0",
     "webpack": "^5.36.2",
     "webpack-stream": "^6.1.2"
   },

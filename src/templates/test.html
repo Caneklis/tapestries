@@ -1,10 +1,19 @@
 ---
-title: Тканое великолепие - Спецпроект отдела реставрации
+title: Квест
 description: Description index
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+
+<div class="pagination">
+  <ul class="pagination__list">
+    <li class="pagination__item"><a href="index.html">На главную</a></li>
+    <li class="pagination__item"><a href="about.html">Триумф Надежды</a></li>
+    <li class="pagination__item"><a>{% if title %}{{ title }}{% else %}Название страницы{% endif %}</a></li>
+  </ul>
+</div>
+
 <main class="page__content">
   <div class="quiz" id="slickQuiz">
     <div class="quiz__wrapper">

@@ -13,7 +13,8 @@ require("/js/openseadragon/openseadragon");
 require("../../node_modules/magnific-popup/dist/jquery.magnific-popup");
 require("./slickQuiz");
 require("./master");
-// require("./slickQuiz-config");
+require("../js/libs/three.min");
+require("../js/libs/panolens.min");
 
 const menuButton = document.querySelector(".main-nav__button");
 const menuList = document.querySelector(".main-nav__list");
