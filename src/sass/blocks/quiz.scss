@@ -87,6 +87,7 @@ ul.responses li {
 }
 
 .questionCount {
+  margin-bottom: 35px;
   font-size: 14px;
   font-style: italic;
 }
@@ -113,7 +114,7 @@ ul.responses li {
 ul.responses li p span {
   display: block;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 30px;
 }
 .complete ul.answers li.correct,
 ul.responses li.correct p span {
@@ -151,6 +152,18 @@ ul.responses li.incorrect p span {
 
 .quiz__answer-text {
   flex: 1;
+
+  span {
+    font-size: 30px;
+  }
+}
+
+.quiz__answer-gallery {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .quiz {
@@ -292,5 +305,40 @@ ul.responses li.incorrect p span {
     color: $s-color;
     border: none;
     text-transform: uppercase;
+  }
+}
+
+.question {
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    position: relative;
+  }
+}
+
+.question__bg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.questionCount + div {
+  display: flex;
+}
+
+.question__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-left: 20px;
+
+  p {
+    font-weight: 700;
+    margin: 0;
   }
 }

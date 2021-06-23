@@ -293,7 +293,7 @@
             } else {
               formatQuestion = question.q;
             }
-            questionHTML.append("<h3>" + formatQuestion + "</h3>");
+            questionHTML.append("<div>" + formatQuestion + "</div>");
 
             // Count the number of true values
             var truths = 0;
