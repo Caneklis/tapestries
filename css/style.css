@@ -4657,6 +4657,110 @@ svg path.rast3 {
   display: block;
 }
 
+.cards-section {
+  height: 100%;
+  padding-top: 40px;
+
+  background-color: #e2dac7;
+}
+
+.cards-section__wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 1024px) {
+  .cards-section__wrapper {
+    padding: 0 20px;
+  }
+}
+
+.cards-section__list {
+  display: flex; 
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+@media (max-width: 767px) {
+  .cards-section__list {
+    display: -ms-grid;
+    display:     grid;
+  }
+}
+
+.cards-section__title {
+  margin: 0;
+  margin: 0 0 35px;
+
+  font-weight: 600;
+  font-size: 50px;
+  text-align: center;
+  text-align: center; 
+  color: #1f1f1f;
+}
+
+.cards-section__item {
+  position: relative;
+
+  flex: 1;
+  height: 65vh;
+  margin: 10px;
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  filter: grayscale(0.6); 
+
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 767px) {
+  .cards-section__item {
+    height: 300px;
+  }
+}
+
+.cards-section__item h3 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin: 0;
+
+  font-size: 24px;
+
+  opacity: 0;
+}
+
+.cards-section__item.active {
+  flex: 10;
+
+  filter: grayscale(0);
+}
+
+.cards-section__item.active h3 {
+  min-height: 200px;
+  padding-top: 40px;
+  padding-left: 40px;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+
+  transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width: 767px) {
+  .cards-section__item.active h3 {
+    min-height: 100px;
+  }
+}
+
 /* BASE QUIZ STYLES */
 /* These styles ensure that the necessary elements are hidden for toggling */
 /* DO NOT EDIT UNLESS YOU KNOW WHAT YOU ARE DOING!! */
@@ -4753,6 +4857,8 @@ ul.responses li {
 }
 
 .questionCount {
+  margin-bottom: 35px;
+
   font-style: italic; 
   font-size: 14px;
 }
@@ -4783,7 +4889,7 @@ ul.responses li p span {
   display: block;
 
   font-weight: bold;
-  font-size: 22px;
+  font-size: 30px;
 }
 
 .complete ul.answers li.correct,
@@ -4834,6 +4940,17 @@ ul.responses li.incorrect p span {
 
 .quiz__answer-text {
   flex: 1;
+}
+.quiz__answer-text span {
+  font-size: 30px;
+}
+
+.quiz__answer-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  gap: 20px;
 }
 
 .quiz {
@@ -4976,6 +5093,46 @@ ul.responses li.incorrect p span {
 
   background-color: #1f1f1f;
   border: none;
+}
+
+.question {
+  position: relative;
+
+  overflow: hidden;
+}
+.question h3 {
+  position: relative;
+}
+
+.question__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  display: block;
+
+  opacity: 0.5;
+}
+
+.questionCount + div {
+  display: flex;
+}
+
+.question__wrapper {
+  display: -ms-grid;
+  display:     grid;
+  padding-left: 20px; 
+
+  -ms-grid-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr;
+}
+.question__wrapper p {
+  margin: 0; 
+
+  font-weight: 700;
 }
 
 .poimapbox-heading {
