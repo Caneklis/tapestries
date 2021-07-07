@@ -85,7 +85,7 @@
     width: 80%;
     margin: 25px auto;
     font-size: 30px;
-    text-align: justify;
+    // text-align: justify;
 
     @media (max-width: $mobile) {
       width: 100%;
@@ -243,6 +243,7 @@
     // height: 350px;
     border-radius: 50%;
     overflow: hidden;
+    margin-bottom: 20px;
 
     // @media (max-width: $tablet) {
     //   width: 320px;
@@ -264,8 +265,16 @@
     }
   }
 
+  &--no-border {
+    a {
+      border-radius: 0;
+    }
+  }
+
   p {
     font-size: 20px;
+    margin: 0;
+    text-align: center;
   }
 }
 
