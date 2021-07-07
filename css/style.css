@@ -4218,7 +4218,6 @@ img {
   margin: 25px auto;
 
   font-size: 30px;
-  text-align: justify;
 }
 @media (max-width: 767px) {
   .textpage__article p,
@@ -4369,7 +4368,8 @@ img {
   margin: 12px;
 }
 .textpage__gallery-item a {
-  overflow: hidden; 
+  margin-bottom: 20px; 
+  overflow: hidden;
 
   border-radius: 50%;
 }
@@ -4386,8 +4386,14 @@ img {
 .textpage__gallery-item a:hover img {
   transform: scale(1.1);
 }
+.textpage__gallery-item--no-border a {
+  border-radius: 0;
+}
 .textpage__gallery-item p {
+  margin: 0;
+
   font-size: 20px;
+  text-align: center;
 }
 
 .textpage__figure {
