@@ -1,5 +1,5 @@
 ---
-title: Квесты
+title: История шпалерного ткачества
 description: История шпалерного ткачества
 ---
 {% extends "layouts/_layout.html" %}
@@ -26,22 +26,28 @@ description: История шпалерного ткачества
 
         <div class="textpage__gallery">
           <ul class="textpage__gallery-list">
+            {% for i in range(1, 4) -%}
             <li class="textpage__gallery-item">
               <a class="textpage__iframe-popup" href="https://www.youtube.com/watch?v=59yVwVhAQgA">
-                <img src="images/personal-photo.jpg" alt="Описание к картинке" loading="lazy">
+                <img src="images/photo-{{i}}.jpg" alt="Описание к картинке" loading="lazy">
               </a>
               <p>Елена Яковлевна Кальницкая</p>
               <p>Российский искусствовед и музеевед, с 2009 года — генеральный директор Государственного
                 музея-заповедника «Петергоф»</p>
             </li>
+            {% endfor %}
+          </ul>
+          <ul class="textpage__gallery-list">
+            {% for i in range(1, 4) -%}
             <li class="textpage__gallery-item  textpage__gallery-item--no-border">
               <a class="textpage__iframe-popup" href="https://www.youtube.com/watch?v=59yVwVhAQgA">
-                <img src="images/personal-photo.jpg" alt="Описание к картинке" loading="lazy">
+                <img src="images/photo-{{i}}.jpg" alt="Описание к картинке" loading="lazy">
               </a>
               <p>Елена Яковлевна Кальницкая</p>
               <p>Российский искусствовед и музеевед, с 2009 года — генеральный директор Государственного
                 музея-заповедника «Петергоф»</p>
             </li>
+            {% endfor %}
           </ul>
         </div>
 

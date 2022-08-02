@@ -342,3 +342,402 @@ ul.responses li.incorrect p span {
     margin: 0;
   }
 }
+
+// new
+
+.question-theme {
+  color: $m-color;
+}
+
+.option-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.option {
+  width: auto;
+  color: $s-color;
+  padding: 5px 0;
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  line-height: 1.2;
+  cursor: pointer;
+  background-color: $m-color;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.quiz-box {
+  color: $m-color;
+}
+
+.quiz {
+  padding-top: 0;
+  color: $m-color;
+
+  .start-btn {
+    display: flex;
+    margin: 0 auto;
+    padding: 5px 0;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    border-bottom: 2px dashed $m-color;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.quiz-start {
+  padding-top: 60px;
+}
+
+.quiz__section {
+  height: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quiz-start-text {
+  h2 {
+    margin: 0;
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+}
+
+.quiz__wrapper {
+  max-width: 960px;
+}
+
+.question-text {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.answer-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: $s-color;
+  padding: 60px;
+  font-size: 25px;
+}
+
+.fadeOut {
+  animation: fadeToLeft 0.5s linear forwards;
+}
+
+.fadeIn {
+  animation: fadeInLeft 0.5s linear forwards;
+}
+
+.scale-out {
+  animation: scaleOut 0.5s linear forwards;
+
+  display: none;
+}
+@keyframes scaleOut {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    // transform: translateX(50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.answer-popup__btn {
+  display: flex;
+  margin: 0 auto;
+  padding: 5px 0;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-bottom: 2px dashed $m-color;
+}
+
+.circle__box {
+  width: 150px;
+  height: 150px;
+  // margin: 50px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // box-shadow: inset 0 0 0px 20px #000;
+  background-color: #051333;
+  border-radius: 50%;
+  color: $s-color;
+
+  #app {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // display: block;
+    // width: 50px;
+    // height: 50px;
+  }
+
+  @media (max-width: 1199px) {
+    width: 70px;
+    height: 70px;
+
+    #app {
+      font-size: 20px;
+    }
+  }
+}
+
+.circle__wrapper {
+  width: 75px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+
+  @media (max-width: 1199px) {
+    width: 35px;
+    height: 70px;
+  }
+}
+
+.circle__wrapper--right {
+  right: 0;
+}
+
+.circle__wrapper--left {
+  left: 0;
+}
+
+.circle__whole {
+  width: 150px;
+  height: 150px;
+  border: 20px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transform: rotate(-135deg);
+
+  @media (max-width: 1199px) {
+    width: 70px;
+    height: 70px;
+    border: 10px solid transparent;
+  }
+}
+
+.circle__right {
+  border-top: 20px solid #5f7df7;
+  border-right: 20px solid #5f7df7;
+  right: 1px;
+  // animation: circleRight 5s linear forwards;
+  animation-iteration-count: infinite;
+  // transition-timing-function: linear;
+
+  @media (max-width: 1199px) {
+    border-top: 10px solid #5f7df7;
+    border-right: 10px solid #5f7df7;
+  }
+}
+
+.circle__left {
+  border-bottom: 20px solid #5f7df7;
+  border-left: 20px solid #5f7df7;
+  left: 1px;
+  // animation: circleLeft 5s linear forwards;
+  animation-iteration-count: infinite;
+  // transition-timing-function: linear;
+  @media (max-width: 1199px) {
+    border-bottom: 10px solid #5f7df7;
+    border-left: 10px solid #5f7df7;
+  }
+}
+
+.circleRightAnim {
+  animation: circleRight 5s linear forwards;
+}
+
+.circleLeftAnim {
+  animation: circleLeft 5s linear forwards;
+}
+
+.paused {
+  animation-play-state: paused !important;
+}
+
+@keyframes circleRight {
+  0% {
+    transform: rotate(-135deg);
+  }
+  50%,
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes circleLeft {
+  0%,
+  50% {
+    transform: rotate(-135deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+.answers-indicator {
+  display: flex;
+  padding-bottom: 25px;
+  animation: fade 2s forwards;
+
+  .wrong,
+  .correct {
+    // box-shadow: none;
+
+    &::before,
+    &::after {
+      background-image: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 10px;
+  }
+}
+
+.answers-indicator div {
+  width: 8px;
+  height: 34px;
+  margin-right: 7px;
+  background-color: #081950;
+  transform: skewX(-30deg);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    display: block;
+    width: 8px;
+    height: 5px;
+    // transform: skewX(-45deg);
+    background-color: #2f5dc7;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    display: block;
+    width: 8px;
+    height: 5px;
+    // transform: skewX(-45deg);
+    background-color: #2f5dc7;
+  }
+
+  @media (max-width: 1200px) {
+    height: 18px;
+  }
+
+  @media (max-width: 767px) {
+    width: 2px;
+    margin-right: 6px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: 0;
+      display: block;
+      width: 2px;
+      height: 2px;
+      // transform: skewX(-45deg);
+      background-color: #2f5dc7;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      display: block;
+      width: 2px;
+      height: 2px;
+      // transform: skewX(-45deg);
+      background-color: #2f5dc7;
+    }
+  }
+}
+
+.answers-indicator .correct {
+  background-color: #03e547;
+}
+
+.answers-indicator .wrong {
+  background-color: #a84d45;
+}
